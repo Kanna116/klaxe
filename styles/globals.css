@@ -10,6 +10,9 @@
   --secondary-font: 'Satoshi', sans-serif;
   --display: none;
   --logo-color:black;
+  --primary-background:#ffffff;
+  --secondary-background:#000000;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,6 +22,8 @@
     --background-end-rgb: 0, 0, 0;
     --display: visible;
     --logo-color:white;
+    --primary-background:#000000;
+    --secondary-background:#ffffff;
   }
   
 }
@@ -39,7 +44,7 @@ body {
 }
 
 
-.navbar-logo {
+.navbar-logo,.star {
   fill: var(--logo-color);
 
 }
