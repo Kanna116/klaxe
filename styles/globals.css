@@ -8,19 +8,35 @@
   --background-end-rgb: 255, 255, 255;
   --primary-font: 'Poppins', sans-serif;
   --secondary-font: 'Satoshi', sans-serif;
+  --display: none;
+  --logo-color: black;
+  --primary-background: #ffffff;
+  --secondary-background: #000000;
+
+  --primary-text: #000000;
+  --secondary-text: #ffffff;
+
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --display: visible;
+    --logo-color: white;
+    --primary-background: #000000;
+    --secondary-background: #ffffff;
+    --primary-text: #ffffff;
+    --secondary-text: #000000;
   }
-} */
+
+}
 
 body {
   font-family: var(--primary-font);
   color: rgb(var(--foreground-rgb));
+  overflow-x: hidden;
   background: linear-gradient(to bottom,
       transparent,
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
@@ -30,4 +46,11 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+.navbar-logo,
+.star {
+  fill: var(--logo-color);
+
 }
