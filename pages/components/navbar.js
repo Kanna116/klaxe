@@ -3,7 +3,7 @@ import Logo from './logo'
 
 function Navbar() {
   return (
-    <div className='w-full h-[60px] p-[10px] fixed top-[10px] left-0 lg:px-[96px] md:px-[64px] px-[24px] flex items-center justify-between'>
+    <div className='w-full h-[50px] p-[10px] fixed top-[10px] left-0 lg:px-[96px] md:px-[64px] px-[24px] flex items-center justify-between'>
       <div className='h-full w-fit'>
         <Logo />
       </div>
@@ -14,8 +14,15 @@ function Navbar() {
         <li className='cursor-pointer'>Contact</li>
       </ul>
 
+      {/* menu for mobile  */}
 
-      
+      <div className='group w-10 aspect-square bg-white rounded-full flex items-center justify-evenly  flex-col p-[10px]'>
+        <div className='w-2/3 h-[2px] bg-black group-hover:w-full duration-200'></div>
+        <div className='w-full h-[3px] bg-black'></div>
+        <div className='w-2/3 h-[2px] bg-black group-hover:w-full duration-200'></div>
+      </div>
+
+
 
     </div>
   )
