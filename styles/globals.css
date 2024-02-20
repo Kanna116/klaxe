@@ -9,9 +9,12 @@
   --primary-font: 'Poppins', sans-serif;
   --secondary-font: 'Satoshi', sans-serif;
   --display: none;
-  --logo-color:black;
-  --primary-background:#ffffff;
-  --secondary-background:#000000;
+  --logo-color: black;
+  --primary-background: #ffffff;
+  --secondary-background: #000000;
+
+  --primary-text: #000000;
+  --secondary-text: #ffffff;
 
 }
 
@@ -21,11 +24,13 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
     --display: visible;
-    --logo-color:white;
-    --primary-background:#000000;
-    --secondary-background:#ffffff;
+    --logo-color: white;
+    --primary-background: #000000;
+    --secondary-background: #ffffff;
+    --primary-text: #ffffff;
+    --secondary-text: #000000;
   }
-  
+
 }
 
 body {
@@ -44,7 +49,8 @@ body {
 }
 
 
-.navbar-logo,.star {
+.navbar-logo,
+.star {
   fill: var(--logo-color);
 
 }

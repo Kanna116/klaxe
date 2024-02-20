@@ -11,6 +11,10 @@ module.exports = {
         "primary":'var(--primary-background)',
         "secondary":'var(--secondary-background)'
       },
+      textColor:{
+        "primary":'var(--primary-text)',
+        "secondary":'var(--secondary-text)'
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
