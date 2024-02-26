@@ -18,8 +18,7 @@ const HeroSection = () => {
                     autoPlay
                     loop
                     muted
-                    // controls={true}
-                    className='w-full h-full object-cover scale-[1]'
+                    className='w-full h-full object-cover'
                     src="/videos/hero-background-video1.webm">
                 </video>
             </div>

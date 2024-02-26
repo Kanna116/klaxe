@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Logo from './logo';
+import { navitems } from '../constants';
 
 function Navbar() {
 
@@ -11,10 +12,9 @@ function Navbar() {
         <Logo />
       </div>
       <ul className='lg:flex md:flex items-center gap-5 bg-zinc-100 w-fit text-black px-5 py-1 rounded text-xs hidden'>
-        <li className='cursor-pointer'>Home</li>
-        <li className='cursor-pointer'>About</li>
-        <li className='cursor-pointer'>Projects</li>
-        <li className='cursor-pointer'>Contact</li>
+        {
+          navitems.map((item, index) => <li key={index} className='cursor-pointer'>{item.name}</li>)
+        }
       </ul>
 
       {/* menu for mobile  */}
@@ -29,10 +29,9 @@ function Navbar() {
 
       <ul
         className={`fixed top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2  w-[300px] h-[300px] rounded-full flex items-center justify-center font-secondary flex-col gap-2 bg-secondary text-secondary duration-300 origin-center  ${isMenuOpen ? 'scale-100' : 'scale-0'} lg:hidden md:hidden `}>
-        <li className='text-lg font-semibold uppercase'>Home</li>
-        <li className='text-lg font-semibold uppercase'>About</li>
-        <li className='text-lg font-semibold uppercase'>Projects</li>
-        <li className='text-lg font-semibold uppercase'>Contact</li>
+        {
+          navitems.map((item, index) => <li key={index} className='cursor-pointer text-lg hover:font-extrabold font-semibold uppercase'>{item.name}</li>)
+        }
       </ul>
     </div>
   )
