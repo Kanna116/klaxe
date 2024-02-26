@@ -10,8 +10,15 @@ const HeroSection = () => {
                 <h4 className='font-semibold text-[#ffffff] text-xs lg:text-xl'>"Code with precision design with passion"</h4>
                 <button className='lg:px-[50px] px-[20px] lg:py-[15px] py-[10px] bg-white text-black text-xs lg:text-xl mt-5'>Connect</button>
             </div>
-            <div className="back absolute top-0 left-1/2 -translate-x-1/2 bg-blue-200 h-screen w-screen -z-[1]">
-                <video src=""></video>
+            <div className="back absolute top-0 left-1/2 -translate-x-1/2 bg-blue-200 h-screen w-screen -z-[1] overflow-hidden">
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    // controls={true}
+                    className='w-full h-full object-cover scale-[1]'
+                    src="/videos/hero-background-video1.webm">
+                </video>
             </div>
         </div>
     )
