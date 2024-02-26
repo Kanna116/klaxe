@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
-import Logo from './logo'
-import Image from 'next/image';
+import { useState } from 'react';
+import Logo from './logo';
 
 function Navbar() {
 
@@ -35,10 +34,6 @@ function Navbar() {
         <li className='text-lg font-semibold uppercase'>Projects</li>
         <li className='text-lg font-semibold uppercase'>Contact</li>
       </ul>
-
-
-
-
     </div>
   )
 }
