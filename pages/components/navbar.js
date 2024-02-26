@@ -1,13 +1,12 @@
-import React, { useState } from 'react'
-import Logo from './logo'
-import Image from 'next/image';
+import { useState } from 'react';
+import Logo from './logo';
 
 function Navbar() {
 
   const [isMenuOpen, SetIsMenuOpen] = useState(false);
 
   return (
-    <div className='w-full h-[50px] p-[10px] fixed top-[10px] left-0 lg:px-[96px] md:px-[64px] px-[24px] flex items-center justify-between'>
+    <div className='w-full h-[50px] p-[10px] fixed top-[10px] left-0 lg:px-[96px] md:px-[64px] px-[24px] flex items-center justify-between z-[100]'>
       <div className='h-full w-fit shrink-0'>
         <Logo />
       </div>
@@ -35,10 +34,6 @@ function Navbar() {
         <li className='text-lg font-semibold uppercase'>Projects</li>
         <li className='text-lg font-semibold uppercase'>Contact</li>
       </ul>
-
-
-
-
     </div>
   )
 }
