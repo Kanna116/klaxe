@@ -3,12 +3,12 @@ import React from 'react'
 const HeroSection = () => {
     return (
         <div className='w-full h-screen'>
-            <div className="front w-full h-full pt-[60px] flex flex-col items-center justify-center gap-6">
-                <h4 className='font-semibold text-[#ffffff90] text-3xl'>Hello, I am Murali Krishna Sake  ( Klaxe ). And I</h4>
-                <h1 className='text-7xl font-bold'>Navigate The Intersection of</h1>
-                <h1 className='text-6xl font-semibold'>Design & Functionality</h1>
-                <h4 className='font-semibold text-[#ffffff90] text-xl'>"Code with precision design with passion"</h4>
-                <button className='px-[30px] py-[5px] bg-white text-black'>Connect</button>
+            <div className="front w-full h-full pt-[60px] flex flex-col items-center justify-center lg:gap-6 gap-2">
+                <h4 className='font-semibold text-[#ffffff] text-xs lg:text-3xl'>Hello, I am Murali Krishna Sake  ( Klaxe ). And I</h4>
+                <h1 className='lg:text-6xl md:text-4xl text-xl font-bold capitalize'>Navigate The Intersection of</h1>
+                <h1 className='lg:text-5xl md:text-3xl text-xl font-semibold capitalize'>Design & Functionality</h1>
+                <h4 className='font-semibold text-[#ffffff] text-xs lg:text-xl'>"Code with precision design with passion"</h4>
+                <button className='lg:px-[50px] px-[20px] lg:py-[15px] py-[10px] bg-white text-black text-xs lg:text-xl mt-5'>Connect</button>
             </div>
         </div>
     )
