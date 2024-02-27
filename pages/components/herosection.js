@@ -2,6 +2,8 @@ import { BsMouseFill } from "react-icons/bs";
 import { HiArrowDown } from "react-icons/hi2";
 import { heroText } from '../constants';
 
+import QuickSocialLinks from "./quicksociallinks";
+
 const HeroSection = () => {
 
 
@@ -20,6 +22,10 @@ const HeroSection = () => {
                 <span className="text-2xl arrow scrolldownarrow"><HiArrowDown /></span>
             </div>
             
+            {/* Quick social icons */}
+            <QuickSocialLinks />
+
+
             </div>
             <div className="back absolute top-0 left-1/2 -translate-x-1/2 h-screen w-screen -z-[1] overflow-hidden brightness-50">
                 <video
