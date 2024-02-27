@@ -34,23 +34,23 @@ import { FaXTwitter } from "react-icons/fa6";
 export const socialIcons = [
     {
         icon: <FaLinkedinIn />,
-        link: ''
+        link: 'https://www.linkedin.com/in/murali-krishna-sake/'
     },
     {
         icon: <FaGithub />,
-        link: ''
+        link: 'https://github.com/Kanna116'
     },
     {
         icon: <FaGlobeAmericas />,
-        link: ''
+        link: 'https://muralikanna77.wixsite.com/designerkanna'
     },
     {
         icon: <FaXTwitter />,
-        link: ''
+        link: 'https://twitter.com/klax_e'
     },
     {
         icon: <FaCodepen />,
-        link: ''
+        link: 'https://codepen.io/Klax'
     }
 ]
 
