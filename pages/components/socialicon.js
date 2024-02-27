@@ -31,7 +31,7 @@ const SocialIcon = ({ item }) => {
                 target='_blank'
                 className='w-fit h-fit duration-75 ease-linear cursor-pointer'>
                 <span
-                    className="text-xl">
+                    className="text-xl text-white">
                     {item.icon}
                 </span>
             </a>
