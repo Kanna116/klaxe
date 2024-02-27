@@ -1,5 +1,6 @@
-import React from 'react'
-import { heroText } from '../constants'
+import { BsMouseFill } from "react-icons/bs";
+import { HiArrowDown } from "react-icons/hi2";
+import { heroText } from '../constants';
 
 const HeroSection = () => {
 
@@ -12,6 +13,13 @@ const HeroSection = () => {
                 <h1 className='lg:text-5xl md:text-3xl text-white text-xl font-semibold capitalize'>{heroText[2]}</h1>
                 <h4 className='font-semibold text-[#ffffff] text-xs lg:text-xl'>{heroText[3]}</h4>
                 <button className='lg:px-[50px] px-[20px] lg:py-[15px] py-[10px] bg-white text-black text-xs lg:text-xl mt-5'>Connect</button>
+            
+            {/* scroll down suggestion */}
+            <div className="scroll-down absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col gap-3">
+                <span className="text-2xl rotate-180"><BsMouseFill /></span>
+                <span className="text-2xl arrow scrolldownarrow"><HiArrowDown /></span>
+            </div>
+            
             </div>
             <div className="back absolute top-0 left-1/2 -translate-x-1/2 h-screen w-screen -z-[1] overflow-hidden brightness-50">
                 <video
