@@ -8,8 +8,8 @@ const HeroSection = () => {
         <div className='w-full h-screen relative'>
             <div className="front w-full h-full pt-[60px] flex flex-col items-center justify-center lg:gap-6 gap-2">
                 <h4 className='font-semibold text-[#ffffff] text-xs lg:text-3xl'>{heroText[0]}</h4>
-                <h1 className='lg:text-6xl md:text-4xl text-xl font-bold capitalize'>{heroText[1]}</h1>
-                <h1 className='lg:text-5xl md:text-3xl text-xl font-semibold capitalize'>{heroText[2]}</h1>
+                <h1 className='lg:text-6xl md:text-4xl text-white text-xl font-bold capitalize'>{heroText[1]}</h1>
+                <h1 className='lg:text-5xl md:text-3xl text-white text-xl font-semibold capitalize'>{heroText[2]}</h1>
                 <h4 className='font-semibold text-[#ffffff] text-xs lg:text-xl'>{heroText[3]}</h4>
                 <button className='lg:px-[50px] px-[20px] lg:py-[15px] py-[10px] bg-white text-black text-xs lg:text-xl mt-5'>Connect</button>
             </div>
