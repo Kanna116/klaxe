@@ -3,9 +3,9 @@ import { handpickedProjects } from '../constants'
 
 const HandPickedProjects = () => {
     return (
-        <div className='w-full h-screen sticky top-0 py-10 overflow-y-scroll'>
+        <div className='w-full h-screen py-10 overflow-hidden'>
             <h1 className='text-center text-4xl sticky top-0 z-[20] font-semibold'>Hand Picked Projects</h1>
-            <div className='w-full h-fit mt-10 flex flex-col items-center justify-start gap-[20vh]'>
+            <div className='w-full h-full mt-10 flex flex-col items-center justify-start gap-[20vh]  overflow-y-scroll sticky top-0'>
                 {
                     handpickedProjects.map((item, index) => {
                         return (
