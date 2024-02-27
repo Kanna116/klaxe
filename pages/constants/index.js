@@ -110,6 +110,42 @@ export const techStackIcons = [
 ]
 
 
+export const handpickedProjects = [
+    {
+        name:'Klick It',
+        link:'',
+        image:'',
+    },
+    {
+        name:'Velvet Vista',
+        link:'',
+        image:'',
+    },
+    {
+        name:'Zinav',
+        link:'',
+        image:'',
+    },
+    // {
+    //     name:'Hummer Company',
+    //     link:'',
+    //     image:'',
+    // },
+    {
+        name:'Mira',
+        link:'',
+        image:'',
+    },
+    {
+        name:'COCO Coffee',
+        link:'',
+        image:'',
+    },
+]
+
+
+
+
 const index = () => <></>
 
 export default index
