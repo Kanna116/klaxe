@@ -112,34 +112,34 @@ export const techStackIcons = [
 
 export const handpickedProjects = [
     {
-        name:'Klick It',
+        title:'Klick It',
         link:'',
-        image:'',
+        image:'/images/handpicked-projects/Project-1.png',
     },
     {
-        name:'Velvet Vista',
+        title:'Velvet Vista',
         link:'',
-        image:'',
+        image:'/images/handpicked-projects/Project-2.png',
     },
     {
-        name:'Zinav',
+        title:'Zinav',
         link:'',
-        image:'',
+        image:'/images/handpicked-projects/Project-3.png',
     },
     // {
-    //     name:'Hummer Company',
+    //     title:'Hummer Company',
     //     link:'',
-    //     image:'',
+    //     image:'/images/handpicked-projects/Project-1.png',
     // },
     {
-        name:'Mira',
+        title:'Mira',
         link:'',
-        image:'',
+        image:'/images/handpicked-projects/Project-4.png',
     },
     {
-        name:'COCO Coffee',
+        title:'COCO Coffee',
         link:'',
-        image:'',
+        image:'/images/handpicked-projects/Project-5.png',
     },
 ]
 
