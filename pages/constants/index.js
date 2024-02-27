@@ -59,18 +59,54 @@ import { FaDatabase } from "react-icons/fa6";
 import { IoLogoFigma, IoLogoJavascript, IoLogoReact } from "react-icons/io5";
 import { SiAdobexd, SiNextdotjs, SiTailwindcss } from "react-icons/si";
 export const techStackIcons = [
-    <FaHtml5 />,
-    <FaCss3Alt />,
-    <IoLogoJavascript />,
-    <IoLogoReact />,
-    <SiNextdotjs />,
-    <SiTailwindcss />,
-    <IoLogoFigma />,
-    <SiAdobexd />,
-    <FaJava />,
-    <FaDatabase />,
-    <FaGitAlt />,
-    <FaGithub />,
+    {
+        icon: <FaHtml5 />,
+        title: 'HTML'
+    },
+    {
+        icon: <FaCss3Alt />,
+        title: 'CSS'
+    },
+    {
+        icon: <IoLogoJavascript />,
+        title: 'JavaScript'
+    },
+    {
+        icon: <IoLogoReact />,
+        title: 'React'
+    },
+    {
+        icon: <SiNextdotjs />,
+        title: 'Next js'
+    },
+    {
+        icon: <SiTailwindcss />,
+        title: 'Tailwind CSS'
+    },
+    {
+        icon: <IoLogoFigma />,
+        title: 'Figma'
+    },
+    {
+        icon: <SiAdobexd />,
+        title: 'Adobe XD'
+    },
+    {
+        icon: <FaJava />,
+        title: 'Java'
+    },
+    {
+        icon: <FaDatabase />,
+        title: 'Oracle SQl'
+    },
+    {
+        icon: <FaGitAlt />,
+        title: 'Git'
+    },
+    {
+        icon: <FaGithub />,
+        title: 'GitHub'
+    },
 ]
 
 

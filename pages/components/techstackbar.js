@@ -6,9 +6,12 @@ function TechStackbar() {
         <div className='w-full h-fit py-5 px-3 flex items-center mb-3 justify-between border-[#fffffff] border-y-[1px]'>
             {
                 techStackIcons.map((item, index) => <span
-                 key={index}
-                 className='text-2xl'
-                 >{item}</span>)
+                    key={index}
+                    title={item.title}
+                    className='text-2xl'
+                >
+                    {item.icon}
+                </span>)
             }
         </div>
     )
