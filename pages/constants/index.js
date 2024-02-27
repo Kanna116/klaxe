@@ -54,6 +54,24 @@ export const socialIcons = [
     }
 ]
 
+import { FaCss3Alt, FaGitAlt, FaHtml5, FaJava } from "react-icons/fa";
+import { FaDatabase } from "react-icons/fa6";
+import { IoLogoFigma, IoLogoJavascript, IoLogoReact } from "react-icons/io5";
+import { SiAdobexd, SiNextdotjs, SiTailwindcss } from "react-icons/si";
+export const techStackIcons = [
+    <FaHtml5 />,
+    <FaCss3Alt />,
+    <IoLogoJavascript />,
+    <IoLogoReact />,
+    <SiNextdotjs />,
+    <SiTailwindcss />,
+    <IoLogoFigma />,
+    <SiAdobexd />,
+    <FaJava />,
+    <FaDatabase />,
+    <FaGitAlt />,
+    <FaGithub />,
+]
 
 
 const index = () => <></>
