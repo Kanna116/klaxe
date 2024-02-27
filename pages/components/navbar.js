@@ -11,9 +11,9 @@ function Navbar() {
       <div className='h-full w-fit shrink-0'>
         <Logo />
       </div>
-      <ul className='lg:flex md:flex items-center gap-5 bg-zinc-100 w-fit text-black px-5 py-1 rounded text-xs hidden'>
+      <ul className='lg:flex md:flex items-center  bg-zinc-100 w-fit text-black  rounded-sm text-xs hidden'>
         {
-          navitems.map((item, index) => <li key={index} className='cursor-pointer'>{item.name}</li>)
+          navitems.map((item, index) => <li key={index} className='cursor-pointer hover:bg-black hover:text-white h-full py-1 px-4 duration-150 ease-in-out'>{item.name}</li>)
         }
       </ul>
 
