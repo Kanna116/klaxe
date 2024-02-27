@@ -32,11 +32,26 @@ import { FaCodepen, FaGithub, FaGlobeAmericas, FaLinkedinIn } from "react-icons/
 import { FaXTwitter } from "react-icons/fa6";
 
 export const socialIcons = [
-    <FaLinkedinIn />,
-    <FaGithub />,
-    <FaGlobeAmericas />,
-    <FaXTwitter />,
-    <FaCodepen />
+    {
+        icon: <FaLinkedinIn />,
+        link: ''
+    },
+    {
+        icon: <FaGithub />,
+        link: ''
+    },
+    {
+        icon: <FaGlobeAmericas />,
+        link: ''
+    },
+    {
+        icon: <FaXTwitter />,
+        link: ''
+    },
+    {
+        icon: <FaCodepen />,
+        link: ''
+    }
 ]
 
 

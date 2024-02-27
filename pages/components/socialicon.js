@@ -1,8 +1,7 @@
 import { useState } from 'react';
 
-const SocialIcon = ({ icon }) => {
+const SocialIcon = ({ item }) => {
 
-    console.log(icon)
     const [transformStyle, setTransformStyle] = useState({});
     const handleMouseMove = (e) => {
         const rect = e.currentTarget.getBoundingClientRect();
@@ -28,8 +27,8 @@ const SocialIcon = ({ icon }) => {
             className="w-fit h-fit p-4 icon-container flex items-center justify-center">
             <span
                 style={transformStyle}
-                className="text-xl icon  duration-75 ease-linear">
-                    {icon}
+                className="text-xl icon  duration-75 ease-linear cursor-pointer">
+                    {item.icon}
             </span>
         </div>
     )
