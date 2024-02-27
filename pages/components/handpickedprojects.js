@@ -5,7 +5,7 @@ const HandPickedProjects = () => {
     return (
         <div className='w-full h-screen sticky top-0 py-10 overflow-y-scroll'>
             <h1 className='text-center text-4xl sticky top-0 z-[20] font-semibold'>Hand Picked Projects</h1>
-            <div className='w-full h-full mt-10 flex flex-col items-center justify-start gap-5'>
+            <div className='w-full h-fit mt-10 flex flex-col items-center justify-start gap-[20vh]'>
                 {
                     handpickedProjects.map((item, index) => {
                         return (
@@ -15,8 +15,8 @@ const HandPickedProjects = () => {
 
                             >
                                 <div
-                                    style={{ left: `${60- Math.random()*60}%` }}
-                                    className='h-[40vh] aspect-square relative'>
+                                    style={{ left: `${60 - Math.random() * 60}%` }}
+                                    className='group h-[40vh] aspect-square relative overflow-hidden'>
                                     <Image
                                         src={item.image}
                                         width={500}
@@ -25,7 +25,9 @@ const HandPickedProjects = () => {
                                         draggable={false}
                                         className='w-full h-full object-cover object-center'
                                     />
-                                    {/* <h1>{item.title}</h1> */}</div>
+                                    <div className='absolute inset-0  group-hover:bg-[#000000aa] duration-200 ease-in-out'></div>
+                                    <h1 className='absolute bottom-5 left-5 text-2xl font-semibold translate-y-14 group-hover:translate-y-0 duration-200 ease-in-out'>{item.title}</h1>
+                                </div>
                             </div>
                         )
                     })
