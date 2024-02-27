@@ -54,3 +54,17 @@ body {
   fill: var(--logo-color);
 
 }
+
+.scrolldownarrow {
+  animation: scrolldownarrow 750ms ease-in-out 0s infinite alternate;
+}
+
+@keyframes scrolldownarrow {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(50%);
+  }
+}
