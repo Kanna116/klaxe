@@ -13,4 +13,4 @@ const QuickSocialLinks = () => {
     )
 }
 
-export default QuickSocialLinksq
+export default QuickSocialLinks
