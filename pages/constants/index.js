@@ -110,6 +110,42 @@ export const techStackIcons = [
 ]
 
 
+export const handpickedProjects = [
+    {
+        title:'Klick It',
+        link:'',
+        image:'/images/handpicked-projects/Project-1.png',
+    },
+    {
+        title:'Velvet Vista',
+        link:'',
+        image:'/images/handpicked-projects/Project-2.png',
+    },
+    {
+        title:'Zinav',
+        link:'',
+        image:'/images/handpicked-projects/Project-3.png',
+    },
+    // {
+    //     title:'Hummer Company',
+    //     link:'',
+    //     image:'/images/handpicked-projects/Project-1.png',
+    // },
+    {
+        title:'Mira',
+        link:'',
+        image:'/images/handpicked-projects/Project-4.png',
+    },
+    {
+        title:'COCO Coffee',
+        link:'',
+        image:'/images/handpicked-projects/Project-5.png',
+    },
+]
+
+
+
+
 const index = () => <></>
 
 export default index
