@@ -15,7 +15,7 @@ const Footer = () => {
                 {
                     socialIcons.map((item, index) => {
                         return (
-                            <a href={item.link} target='_blank' className='hover:scale-[1.5] duration-150'>
+                            <a key={index} href={item.link} target='_blank' className='hover:scale-[1.5] duration-150'>
                                 <span className='text-2xl'>{item.icon}</span>
                             </a>
                         )
