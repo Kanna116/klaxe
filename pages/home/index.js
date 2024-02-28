@@ -5,6 +5,7 @@ import SimpleAbout from '../components/simpleabout'
 import TechStackbar from '../components/techstackbar'
 import HandPickedProjects from '../components/handpickedprojects'
 import Connect from '../components/connect'
+import Footer from '../components/footer'
 
 const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage = () => {
         <TechStackbar />
         <HandPickedProjects />
         <Connect />
+        <Footer />
     </div>
   )
 }
