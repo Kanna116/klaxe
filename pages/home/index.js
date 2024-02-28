@@ -4,6 +4,7 @@ import HeroSection from '../components/herosection'
 import SimpleAbout from '../components/simpleabout'
 import TechStackbar from '../components/techstackbar'
 import HandPickedProjects from '../components/handpickedprojects'
+import Connect from '../components/connect'
 
 const HomePage = () => {
   return (
@@ -13,6 +14,7 @@ const HomePage = () => {
         <SimpleAbout />
         <TechStackbar />
         <HandPickedProjects />
+        <Connect />
     </div>
   )
 }
