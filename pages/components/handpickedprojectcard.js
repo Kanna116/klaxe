@@ -11,6 +11,7 @@ const HandPickedProjectCard = ({ item }) => {
                 height={500}
                 alt={`project image of ${item.title}`}
                 draggable={false}
+                priority
                 className='w-full h-full object-cover object-center'
             />
             <div className='absolute inset-0  lg:group-hover:bg-[#000000aa] bg-gradient-to-t lg:from-transparent from-black duration-200 ease-in-out'></div>
