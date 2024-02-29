@@ -1,11 +1,11 @@
 export const navitems = [
     {
         name: 'Home',
-        link: '',
+        link: '/',
     },
     {
         name: 'About',
-        link: '',
+        link: '/about',
     },
     {
         name: 'Projects',
@@ -26,7 +26,7 @@ export const heroText = [
 
 export const simpleAbout = {
     text: `I'm Murali Krishna Sake, a self-taught UX designer and front-end developer. I specialize in solving everyday problems through innovative and modern design trends. My approach involves empowering today's digital experiences with cross-functional development, ensuring a seamless user journey and elevating brand value. From ideation to deployment, I take pride in bringing creativity and functionality together. Explore my portfolio to witness how I transform ideas into impactful designs.`,
-    link: ''
+    link: '/about'
 }
 import { FaCodepen, FaGithub, FaGlobeAmericas, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -126,11 +126,6 @@ export const handpickedProjects = [
         link:'',
         image:'/images/handpicked-projects/Project-3.png',
     },
-    // {
-    //     title:'Hummer Company',
-    //     link:'',
-    //     image:'/images/handpicked-projects/Project-1.png',
-    // },
     {
         title:'Mira',
         link:'',
