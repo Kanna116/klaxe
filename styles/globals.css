@@ -69,18 +69,20 @@ body {
   }
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 10px;
 }
-::-webkit-scrollbar-track{
+
+::-webkit-scrollbar-track {
   background-color: transparent;
   margin-inline: 30px;
 }
-::-webkit-scrollbar-track:hover{
+
+::-webkit-scrollbar-track:hover {
   background-color: #ffffff10;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background-color: white;
   border-radius: 30px;
   border: 3px solid black;
