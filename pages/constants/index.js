@@ -112,37 +112,39 @@ export const techStackIcons = [
 
 export const handpickedProjects = [
     {
-        title:'Klick It',
-        link:'',
-        image:'/images/handpicked-projects/Project-1.png',
+        title: 'Klick It',
+        link: '',
+        image: '/images/handpicked-projects/Project-1.png',
     },
     {
-        title:'Velvet Vista',
-        link:'',
-        image:'/images/handpicked-projects/Project-2.png',
+        title: 'Velvet Vista',
+        link: '',
+        image: '/images/handpicked-projects/Project-2.png',
     },
     {
-        title:'Zinav',
-        link:'',
-        image:'/images/handpicked-projects/Project-3.png',
+        title: 'Zinav',
+        link: '',
+        image: '/images/handpicked-projects/Project-3.png',
     },
     {
-        title:'Mira',
-        link:'',
-        image:'/images/handpicked-projects/Project-4.png',
+        title: 'Mira',
+        link: '',
+        image: '/images/handpicked-projects/Project-4.png',
     },
     {
-        title:'COCO Coffee',
-        link:'',
-        image:'/images/handpicked-projects/Project-5.png',
+        title: 'COCO Coffee',
+        link: '',
+        image: '/images/handpicked-projects/Project-5.png',
     },
 ]
 
 
 //about
 export const heroAbout = {
-    desc:`Hey, I am Murali Krishna. I am Frontend Developer and UX Designer.  I specialize in making modern designs with functional interfaces. My goals are always towards great User Experience while enhancing the brand power.I am Mechanical Engineering Graduate but my strength in designing and developing made me revise my goals and choose the best path for me.`,
-    link:''
+    desc: [`Hey, I am Murali Krishna. I am Frontend Developer and UX Designer.  I specialize in making modern designs with functional interfaces. My goals are always towards great User Experience while enhancing the brand power.`,
+        `I am Mechanical Engineering Graduate but my strength in designing and developing made me revise my goals and choose the best path for me.`
+    ],
+    link: ''
 }
 
 

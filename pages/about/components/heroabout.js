@@ -19,8 +19,14 @@ const HeroAbout = () => {
 
             <div className='lg:w-1/2 md:w-1/2 w-full h-full  flex flex-col items-start justify-between gap-5'>
                 <h1 className='text-3xl font-bold'>About Me</h1>
-                <h4 className='w-full lg:text-2xl md:text-xl text-base font-normal'>{heroAbout.desc}</h4>
-                <a href={heroAbout.link}><button className='lg:px-[30px] px-[20px] lg:py-[10px] py-[10px] rounded-[3px] bg-white text-black font-semibold text-xs lg:text-xl mt-5 flex gap-2 items-center'>Support <span className='text-2xl'><FiArrowUpRight /></span></button></a>
+                {
+                    heroAbout.desc.map((item, index) => <p key={index} className='w-full lg:text-2xl md:text-xl text-base font-normal'>{item}</p>)
+                }
+                <a href={heroAbout.link}>
+                    <button className='lg:px-[30px] px-[20px] lg:py-[10px] py-[10px] rounded-[3px] bg-white text-black font-semibold text-xs lg:text-xl mt-5 flex gap-2 items-center'>
+                        Support <span className='text-2xl'><FiArrowUpRight /></span>
+                    </button>
+                </a>
             </div>
 
         </div>
