@@ -1,11 +1,11 @@
 export const navitems = [
     {
         name: 'Home',
-        link: '',
+        link: '/',
     },
     {
         name: 'About',
-        link: '',
+        link: '/about',
     },
     {
         name: 'Projects',
@@ -26,7 +26,7 @@ export const heroText = [
 
 export const simpleAbout = {
     text: `I'm Murali Krishna Sake, a self-taught UX designer and front-end developer. I specialize in solving everyday problems through innovative and modern design trends. My approach involves empowering today's digital experiences with cross-functional development, ensuring a seamless user journey and elevating brand value. From ideation to deployment, I take pride in bringing creativity and functionality together. Explore my portfolio to witness how I transform ideas into impactful designs.`,
-    link: ''
+    link: '/about'
 }
 import { FaCodepen, FaGithub, FaGlobeAmericas, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -112,37 +112,40 @@ export const techStackIcons = [
 
 export const handpickedProjects = [
     {
-        title:'Klick It',
-        link:'',
-        image:'/images/handpicked-projects/Project-1.png',
+        title: 'Klick It',
+        link: '',
+        image: '/images/handpicked-projects/Project-1.png',
     },
     {
-        title:'Velvet Vista',
-        link:'',
-        image:'/images/handpicked-projects/Project-2.png',
+        title: 'Velvet Vista',
+        link: '',
+        image: '/images/handpicked-projects/Project-2.png',
     },
     {
-        title:'Zinav',
-        link:'',
-        image:'/images/handpicked-projects/Project-3.png',
-    },
-    // {
-    //     title:'Hummer Company',
-    //     link:'',
-    //     image:'/images/handpicked-projects/Project-1.png',
-    // },
-    {
-        title:'Mira',
-        link:'',
-        image:'/images/handpicked-projects/Project-4.png',
+        title: 'Zinav',
+        link: '',
+        image: '/images/handpicked-projects/Project-3.png',
     },
     {
-        title:'COCO Coffee',
-        link:'',
-        image:'/images/handpicked-projects/Project-5.png',
+        title: 'Mira',
+        link: '',
+        image: '/images/handpicked-projects/Project-4.png',
+    },
+    {
+        title: 'COCO Coffee',
+        link: '',
+        image: '/images/handpicked-projects/Project-5.png',
     },
 ]
 
+
+//about
+export const heroAbout = {
+    desc: [`Hey, I am Murali Krishna. I am Frontend Developer and UX Designer.  I specialize in making modern designs with functional interfaces. My goals are always towards great User Experience while enhancing the brand power.`,
+        `I am Mechanical Engineering Graduate but my strength in designing and developing made me revise my goals and choose the best path for me.`
+    ],
+    link: ''
+}
 
 
 
