@@ -147,7 +147,25 @@ export const heroAbout = {
     link: ''
 }
 
-
+export const whatIDoChips = [
+    {
+        title:`Web development`,
+        desc:`Transforming great UI’s into code from the past year. With immense concentration and pixel perfection weaved into every product.
+        Transforming modern designs into actual working projects through mastery in code`,
+        isOpen: false,
+    },
+    {
+        title:`UX design`,
+        desc:`Transforming great UI’s into code from the past year. With immense concentration and pixel perfection weaved into every product.
+        Transforming modern designs into actual working projects through mastery in code`,
+        isOpen: false,
+    },
+    {
+        title:`Full Stack Web development`,
+        desc:`I am currently undergoing a training for this. Thus far I completed core java, JDBC, hibernates with JPA, and frontend I can do in various languages`,
+        isOpen: false,
+    }
+]
 
 const index = () => <></>
 
