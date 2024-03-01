@@ -8,7 +8,7 @@ const HeroAbout = () => {
         <div className='w-full h-fit py-16 mt-[60px] flex flex-col lg:flex-row md:flex-row lg:items-center items-center lg:justify-between md:justify-between justify-start gap-5 lg:gap-20 md:gap-20'>
             <div className='lg:w-[30vw] md:w-[30vw] w-[50vw] aspect-square rounded-full overflow-hidden shrink-0'>
                 <Image
-                    src={"/images/about/hero-about-image.jpg"}
+                    src={"/images/about/hero-about-image.webp"}
                     width={1000}
                     height={1000}
                     priority
