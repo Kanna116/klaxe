@@ -3,6 +3,7 @@ import Navbar from '../components/navbar'
 import HeroAbout from './components/heroabout'
 import WhatIdo from './components/whatido'
 import MyPics from './components/mypics'
+import MyTech from './components/mytech'
 
 const index = () => {
     return (
@@ -11,6 +12,7 @@ const index = () => {
             <HeroAbout />
             <WhatIdo />
             <MyPics />
+            <MyTech />
         </div>
     )
 }
