@@ -8,7 +8,7 @@ const MyPics = () => {
             {
                 myPics.map((item, index) => {
                     return (
-                        <div className='lg:w-1/3 md:w-1/3 w-full lg:h-1/2 md:h-1/2 h-fit shrink-0 flex items-center justify-center lg:p-14 md:p-6 p-5 '>
+                        <div key={index} className='lg:w-1/3 md:w-1/3 w-full lg:h-1/2 md:h-1/2 h-fit shrink-0 flex items-center justify-center lg:p-14 md:p-6 p-5 '>
                             <Image
                                 src={item.image}
                                 width={500}
