@@ -4,6 +4,7 @@ import HeroAbout from './components/heroabout'
 import WhatIdo from './components/whatido'
 import MyPics from './components/mypics'
 import MyTech from './components/mytech'
+import ConnectInAbout from './components/connectinabout'
 
 const index = () => {
     return (
@@ -13,6 +14,7 @@ const index = () => {
             <WhatIdo />
             <MyTech />
             <MyPics />
+            <ConnectInAbout />
         </div>
     )
 }
