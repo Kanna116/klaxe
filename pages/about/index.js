@@ -5,6 +5,7 @@ import WhatIdo from './components/whatido'
 import MyPics from './components/mypics'
 import MyTech from './components/mytech'
 import ConnectInAbout from './components/connectinabout'
+import Footer from '../components/footer'
 
 const index = () => {
     return (
@@ -15,6 +16,7 @@ const index = () => {
             <MyTech />
             <MyPics />
             <ConnectInAbout />
+            <Footer />
         </div>
     )
 }
