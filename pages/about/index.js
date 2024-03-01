@@ -11,8 +11,8 @@ const index = () => {
             <Navbar />
             <HeroAbout />
             <WhatIdo />
-            <MyPics />
             <MyTech />
+            <MyPics />
         </div>
     )
 }
