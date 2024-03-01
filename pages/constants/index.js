@@ -149,25 +149,52 @@ export const heroAbout = {
 
 export const whatIDoChips = [
     {
-        id:1,
-        title:`Web development`,
-        desc:`Transforming great UI’s into code from the past year. With immense concentration and pixel perfection weaved into every product.
+        id: 1,
+        title: `Web development`,
+        desc: `Transforming great UI’s into code from the past year. With immense concentration and pixel perfection weaved into every product.
         Transforming modern designs into actual working projects through mastery in code`,
         isOpen: true,
     },
     {
-        id:2,
-        title:`UX design`,
-        desc:`Transforming great UI’s into code from the past year. With immense concentration and pixel perfection weaved into every product.
+        id: 2,
+        title: `UX design`,
+        desc: `Transforming great UI’s into code from the past year. With immense concentration and pixel perfection weaved into every product.
         Transforming modern designs into actual working projects through mastery in code`,
         isOpen: false,
     },
     {
-        id:3,
-        title:`Full Stack Web development`,
-        desc:`I am currently undergoing a training for this. Thus far I completed core java, JDBC, hibernates with JPA, and frontend I can do in various languages`,
+        id: 3,
+        title: `Full Stack Web development`,
+        desc: `I am currently undergoing a training for this. Thus far I completed core java, JDBC, hibernates with JPA, and frontend I can do in various languages`,
         isOpen: false,
     }
+]
+
+export const myPics = [
+    {
+        id: 1,
+        image: '/images/about/mypics/photo-1.webp',
+    },
+    {
+        id: 2,
+        image: '/images/about/mypics/photo-2.webp',
+    },
+    {
+        id: 3,
+        image: '/images/about/mypics/photo-3.webp',
+    },
+    {
+        id: 4,
+        image: '/images/about/mypics/photo-4.webp',
+    },
+    {
+        id: 5,
+        image: '/images/about/mypics/photo-5.webp',
+    },
+    {
+        id: 6,
+        image: '/images/about/mypics/photo-6.webp',
+    },
 ]
 
 const index = () => <></>
