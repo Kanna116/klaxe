@@ -5,6 +5,7 @@ import { FiArrowUpRight } from 'react-icons/fi';
 import Navbar from '../components/navbar';
 import projectdata from './projectdata';
 import Connect from '../components/connect';
+import Footer from '../components/footer';
 
 const ProjectDetail = () => {
 
@@ -133,6 +134,8 @@ const ProjectDetail = () => {
                     <button className='text-black bg-white px-[30px] py-[10px] rounded-[3px] text-base font-semibold'>Let's create</button>
                 </div>
             </div>
+
+            <Footer />
         </div>
     )
 }
