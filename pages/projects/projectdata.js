@@ -12,7 +12,7 @@ const projectdata = [
         details: [
             {
                 heading: `Type`,
-                information: [`Frontend Development`,`Web development`, `Ecommerce`]
+                information: [`Frontend Development`, `Web development`, `Ecommerce`]
             },
             {
                 heading: `Tools Used`,
@@ -94,11 +94,11 @@ const projectdata = [
         details: [
             {
                 heading: `Type`,
-                information: [`Web development`, `Ecommerce`,`Design to Code`]
+                information: [`Web development`, `Ecommerce`, `Design to Code`]
             },
             {
                 heading: `Skills Used`,
-                information: [`HTML5`,`CSS3`,`JavaScript`,`GSAP`]
+                information: [`HTML5`, `CSS3`, `JavaScript`, `GSAP`]
             },
             {
                 heading: `Role`,
@@ -134,11 +134,11 @@ const projectdata = [
         details: [
             {
                 heading: `Type`,
-                information: [`Web development`, `Learning`,`Design to Code`]
+                information: [`Web development`, `Learning`, `Design to Code`]
             },
             {
                 heading: `Skills Used`,
-                information: [`HTML5`,`CSS3`,`JavaScript`,`GSAP`]
+                information: [`HTML5`, `CSS3`, `JavaScript`, `GSAP`]
             },
             {
                 heading: `Role`,

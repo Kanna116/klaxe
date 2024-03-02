@@ -6,11 +6,17 @@ import ProjectBigListType from './components/projectbiglisttype'
 import ProjectCardType from './components/projectcardtype'
 import ProjectListType from './components/projectlisttype'
 import projectdata from './projectdata'
+import { BsList } from "react-icons/bs";
+import { IoGrid } from 'react-icons/io5'
+import { MdTableRows } from "react-icons/md";
 
 const Projects = () => {
     const [data, setData] = useState(projectdata);
 
     const projects = data
+
+    const [listStyle, setListStyle] = useState('grid');
+
 
     return (
         <div className='px-[24px] md:px-[64px] lg:px-[96px] min-h-screen w-full'>
@@ -19,20 +25,31 @@ const Projects = () => {
                 <h1 className='text-5xl capitalize font-semibold'>Our Projects</h1>
                 <p className='text-2xl'>A place where you will find wonders.</p>
             </div>
-            <div className='flex w-full h-fit flex-wrap my-20 justify-evenly'>
-                {
-                    projects.map((project) => <ProjectCardType key={project.id} {...project} />)
-                }
+
+            <div className='list-style-controller flex items-center gap-2 mx-auto w-fit h-fit'>
+                <span onClick={() => setListStyle('list')} style={{ backgroundColor: listStyle === 'list' ? 'white' : 'black', color: listStyle === 'list' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><BsList /></span>
+                <span onClick={() => setListStyle('grid')} style={{ backgroundColor: listStyle === 'grid' ? 'white' : 'black', color: listStyle === 'grid' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><IoGrid /></span>
+                <span onClick={() => setListStyle('bigList')} style={{ backgroundColor: listStyle === 'bigList' ? 'white' : 'black', color: listStyle === 'bigList' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><MdTableRows /></span>
             </div>
 
 
-
             {
-                projects.map((project) => <ProjectListType key={project.id} {...project} />)
-            }
+                projects.map((project) => {
+                    if (listStyle === 'grid') {
+                        return <div className='flex w-full h-fit flex-wrap my-20 justify-between gap-y-5'>
+                            {
+                                projects.map((project) => <ProjectCardType key={project.id} {...project} />)
+                            }
+                        </div>
+                    }
+                    else if (listStyle === 'list') {
+                        return <ProjectListType key={project.id} {...project} />
+                    }
+                    else if (listStyle === 'bigList') {
+                        return <ProjectBigListType key={project.id} {...project} />
+                    }
+                })
 
-            {
-                projects.map((project) => <ProjectBigListType key={project.id} {...project} />)
             }
 
 
