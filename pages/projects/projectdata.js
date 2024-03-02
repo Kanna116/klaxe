@@ -35,7 +35,9 @@ const projectdata = [
         problemSolved: `Made an Ecommerce site which allows the user enjoy the excellence the joy and pride in buying or wearing our  jewellary. Made with pixel perfection. Focused mainly on building the user satisfaction along with increasing the brand power and prestige. `,
         demoVideo: `/videos/projects/velvet-vista-demo-video.webm`,
         collection: [
-            ``, ``
+            `/images/projects/velvet-vista/collection-image-1.png`,
+            `/images/projects/velvet-vista/collection-image-2.png`,
+            `/images/projects/velvet-vista/collection-image-3.png`
         ],
 
         url: 'velvet-vista'
