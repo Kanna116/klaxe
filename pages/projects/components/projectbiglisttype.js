@@ -1,11 +1,20 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FiArrowUpRight } from 'react-icons/fi'
 
-const ProjectBigListType = ({ title, desc, liveLink, codeLink, heroImage, details, problemSolved, demoVideo, collection, url }) => {
+const ProjectBigListType = ({ id, title, desc, liveLink, codeLink, heroImage, details, problemSolved, demoVideo, collection, url }) => {
+
+    const [type, setType] = useState(false);
+    useEffect(() => {
+        if (id % 2 === 0) {
+            setType(true)
+        }
+    }, []);
+
+
     return (
-        <div className='w-2/3 h-[50vh] flex gap-5 mx-auto mt-[50px]'>
+        <div className={`w-2/3 h-[50vh] flex gap-5 mx-auto mt-[50px] ${type ? "flex-row" : "flex-row-reverse"}`}>
             <div className='h-full aspect-square bg-zinc-100'>
                 <Image
                     src={collection[0]}
