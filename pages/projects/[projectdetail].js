@@ -4,8 +4,14 @@ import { useState } from 'react';
 import { FiArrowUpRight } from 'react-icons/fi';
 import Navbar from '../components/navbar';
 import projectdata from './projectdata';
-import Connect from '../components/connect';
+import Connect from './components/connect';
 import Footer from '../components/footer';
+import ProjectHero from './components/projecthero';
+import ProjectInfo from './components/projectinfo';
+import ProblemSolved from './components/problemsolved';
+import DemoVideo from './components/demovideo';
+import ImageCollection from './components/imagecollection';
+import ProjectOpinion from './components/projectopinion';
 
 const ProjectDetail = () => {
 
@@ -41,103 +47,13 @@ const ProjectDetail = () => {
     return (
         <div className='px-[24px] md:px-[64px] lg:px-[96px] min-h-screen w-full mt-[60px]'>
             <Navbar />
-            <div className='w-full h-fit flex py-20'>
-                <div className='w-full flex gap-5'>
-                    <h1 className='text-5xl font-semibold w-1/2'>{title}</h1>
-                    <p className='text-sm w-1/2 font-extralight'>{desc}</p>
-                </div>
-                <div className='w-fit h-full px-10 flex flex-col items-start justify-start gap-5'>
-                    <a href={liveLink} target='_blank'>
-                        <button className='px-[40px] py-[15px] bg-white mix-blend-difference rounded-special text-black font-semibold text-lg flex items-center gap-3'>View <span className='text-2xl'><FiArrowUpRight /></span></button>
-                    </a>
-                    <a href={codeLink} target='_blank'>
-                        <button className='px-[40px] py-[15px]  mix-blend-difference rounded-special  font-semibold text-lg border-2'>Code</button>
-                    </a>
-                </div>
-            </div>
-
-            <div className='hero-image w-[80vw] aspect-video rounded-special mx-auto'>
-                <Image
-                    src={heroImage}
-                    width={3000}
-                    height={3000}
-                    priority
-                    alt={`Hero image of the Project ${title}`}
-                    draggable={false}
-                    className='w-full h-full object-cover object-center'
-                />
-            </div>
-
-
-            <div className='information w-full pt-20 pb-10 h-fit flex items-start justify-evenly'>
-                {
-                    details.map((item, index) => {
-                        return (
-                            <ul key={index} className='flex flex-col gap-2'>
-                                <li className='text-sm font-medium text-[#ffffff50] mb-2'>{item.heading}</li>
-                                {
-                                    item.information.map((info, index) => <li key={index} className='text-base'>{info}</li>)
-                                }
-                            </ul>
-                        )
-                    })
-                }
-            </div>
-
-            <div className="problem-solved w-full py-20 flex flex-col items-center justify-center gap-5">
-                <h1 className='text-3xl font-semibold'>Problem Solved</h1>
-                <p className='w-2/3 text-xl font-light'>{problemSolved}</p>
-
-            </div>
-
-            {
-                demoVideo &&
-                <div className="project-video w-screen h-screen -mx-[24px] md:-mx-[64px] lg:-mx-[96px]">
-                    <video src={demoVideo}
-                        className='w-full h-full object-contain object-center'
-                        controls
-                    >
-                    </video>
-                </div>
-            }
-
-            <div className="image-collection w-full h-[70vh] py-[10vh] flex items-center justify-between">
-                {
-                    collection.map((image, index) => {
-                        return <div key={index} className='w-1/3 h-full p-10'>
-                            <Image
-                                src={image}
-                                width={500}
-                                height={500}
-                                draggable={false}
-                                alt={`collection image ${index + 1} of the project ${title}`}
-                                className='w-full h-full object-cover object-center'
-                            />
-                        </div>
-                    })
-                }
-            </div>
-
-
-            <div className="opinion w-full h-fit py-20">
-                <h1 className='text-3xl font-semibold'>Would you like to express you opinion on this project ?</h1>
-                <textarea
-                    name="opinion"
-                    id="opinion"
-                    cols="30"
-                    rows="10"
-                    placeholder='Please express your insights of the project openly'
-                    className='w-full  bg-transparent mt-5 border-2 rounded-special p-5 resize-y min-h-[15vh] max-h-[30vh]'
-                ></textarea>
-                <button className=' py-[15px] mix-blend-difference rounded-special font-semibold text-xl flex items-center gap-3'>Send <span className='text-2xl'><FiArrowUpRight /></span></button>
-            </div>
-
-            <div className='h-screen w-full flex items-center justify-center gap-10 flex-col sticky top-0 -z-10'>
-                <h1 className='text-6xl text-center'>A Better Project <br />Makes A Best World</h1>
-                <div className='flex gap-5 items-center'>
-                    <button className='text-black bg-white px-[30px] py-[10px] rounded-[3px] text-base font-semibold'>Let's create</button>
-                </div>
-            </div>
+            <ProjectHero {...project} />
+            <ProjectInfo details={details} />
+            <ProblemSolved problemSolved={problemSolved} />
+            <DemoVideo demoVideo={demoVideo} />
+            <ImageCollection collection={collection} title={title} />
+            <ProjectOpinion />
+            <Connect />
 
             <Footer />
         </div>
