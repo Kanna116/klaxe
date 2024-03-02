@@ -19,14 +19,14 @@ const index = () => {
                 <h1 className='text-5xl capitalize font-semibold'>Our Projects</h1>
                 <p className='text-2xl'>A place where you will find wonders.</p>
             </div>
-            <div className='flex w-full h-screen justify-evenly'>
-            {
-                projects.map((project) => <ProjectCardType key={project.id} {...project} />)
-            }
+            <div className='flex w-full h-fit flex-wrap my-20 justify-evenly'>
+                {
+                    projects.map((project) => <ProjectCardType key={project.id} {...project} />)
+                }
             </div>
 
 
-            {/* 
+
             {
                 projects.map((project) => <ProjectListType key={project.id} {...project} />)
             }
@@ -34,10 +34,10 @@ const index = () => {
             {
                 projects.map((project) => <ProjectBigListType key={project.id} {...project} />)
             }
-             */}
 
-            {/* <Connect />
-            <Footer /> */}
+
+            <Connect />
+            <Footer />
         </div>
     )
 }
