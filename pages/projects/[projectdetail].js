@@ -8,23 +8,13 @@ const ProjectDetail = () => {
     const router = useRouter();
     const { projectdetail } = router.query
 
-
-    /*
+    const [projectsData, setProjectsData] = useState(null);
     
-    this data is temporary 
-    used to check the layout and how the project will be displayed
-    later the data will come from the projects page
-
-    */
-
-    const [projectsData, setProjectsData] = useState(null); // Initialize projectsData with null
-
     useEffect(() => {
-        // Fetch projectsData once projectdetail is defined
         if (projectdetail) {
             setProjectsData(projectdata);
         }
-    }, [projectdetail]); // useEffect dependency
+    }, [projectdetail]); 
 
 
     if (!projectdetail || !projectsData) {
