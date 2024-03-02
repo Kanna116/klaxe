@@ -8,7 +8,7 @@ const projectdata = [
                 Made with keen eye towards style and brand empowering in the all the ways possible. Constantly striving for the enhancement of royalty`,
         liveLink: ``,
         codeLink: ``,
-        heroImage: ``,
+        heroImage: `/images/projects/velvet-vista/hero-image.png`,
         details: [
             {
                 heading: `Type`,
@@ -38,7 +38,7 @@ const projectdata = [
             ``, ``
         ],
 
-        url:'velvet-vista'
+        url: 'velvet-vista'
 
 
     }

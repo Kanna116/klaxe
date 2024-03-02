@@ -1,9 +1,9 @@
-import { useRouter } from 'next/router'
-import React, { useState } from 'react'
+import Image from 'next/image';
+import { useRouter } from 'next/router';
+import { useState } from 'react';
+import { FiArrowUpRight } from 'react-icons/fi';
 import Navbar from '../components/navbar';
 import projectdata from './projectdata';
-import { FiArrowUpRight } from 'react-icons/fi';
-import Image from 'next/image';
 
 const ProjectDetail = () => {
 
@@ -23,8 +23,8 @@ const ProjectDetail = () => {
         return <div className='w-screen min-h-screen flex items-center justify-center'>Loading...</div>;
     }
 
-
     const [projectsData, setProjectsData] = useState(projectdata);
+
 
     const project = projectsData.find(item => item.url === projectdetail)
 
@@ -53,14 +53,32 @@ const ProjectDetail = () => {
             <div className='hero-image w-[80vw] aspect-video rounded-special mx-auto'>
                 <Image
                     src={heroImage}
-                    width={1000}
-                    height={1000}
+                    width={3000}
+                    height={3000}
                     priority
                     alt={`Hero image of the Project ${title}`}
                     draggable={false}
                     className='w-full h-full object-cover object-center'
                 />
             </div>
+
+
+            <div className='information w-full pt-20 pb-10 h-fit flex items-start justify-evenly'>
+                {
+                    details.map((item, index) => {
+                        return (
+                            <ul key={index} className='flex flex-col gap-2'>
+                                <li className='text-sm font-medium text-[#ffffff50] mb-2'>{item.heading}</li>
+                                {
+                                    item.information.map((info, index) => <li key={index} className='text-base'>{info}</li>)
+                                }
+                            </ul>
+                        )
+                    })
+                }
+            </div>
+
+
         </div>
     )
 }
