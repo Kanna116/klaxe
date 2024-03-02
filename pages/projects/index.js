@@ -32,28 +32,28 @@ const Projects = () => {
                 <span onClick={() => setListStyle('bigList')} style={{ backgroundColor: listStyle === 'bigList' ? 'white' : 'black', color: listStyle === 'bigList' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><MdTableRows /></span>
             </div>
 
-
             {
-                projects.map((project) => {
-                    if (listStyle === 'grid') {
-                        return <div key={project.id} className='flex w-full h-fit flex-wrap my-20 justify-between gap-y-5'>
-                            {
-                                projects.map((project) => <ProjectCardType key={project.id} {...project} />)
-                            }
-                        </div>
-                    }
-                    else if (listStyle === 'list') {
-                        return <ProjectListType key={project.id} {...project} />
-                    }
-                    else if (listStyle === 'bigList') {
-                        return <ProjectBigListType key={project.id} {...project} />
-                    }
-                })
+
+                //used ternary to seperate the grid style as it seeming to have a disturbance in the UI
+                listStyle === 'grid' ?
+                    <div className='flex w-full h-fit flex-wrap my-20 justify-between gap-y-5'>
+                        {
+                            projects.map((project) => <ProjectCardType key={project.id} {...project} />)
+                        }
+                    </div>
+                    :
+                    projects.map((project) => {
+                        if (listStyle === 'list') {
+                            return <ProjectListType key={project.id} {...project} />
+                        }
+                        else if (listStyle === 'bigList') {
+                            return <ProjectBigListType key={project.id} {...project} />
+                        }
+                    })
+
 
             }
-
-
-            <Connect />
+            < Connect />
             <Footer />
         </div>
     )
