@@ -20,12 +20,12 @@ const projectdata = [
                 information: [`Next js`, `React js`, `Tailwind CSS`, `JSX`, `Node js`]
             },
             {
-                heading: `Year Made`,
-                information: [`2023`]
-            },
-            {
                 heading: `Role`,
                 information: [`Front End Developer`]
+            },
+            {
+                heading: `Year Made`,
+                information: [`2023`]
             },
             {
                 heading: `Product`,

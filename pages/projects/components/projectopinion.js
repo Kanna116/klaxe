@@ -11,9 +11,9 @@ const ProjectOpinion = () => {
                 cols="30"
                 rows="10"
                 placeholder='Please express your insights of the project openly'
-                className='w-full  bg-transparent mt-5 border-2 rounded-special p-5 resize-y min-h-[15vh] max-h-[30vh]'
+                className='w-full  bg-transparent mt-5 border-2 rounded-special p-5 resize-y min-h-[15vh] max-h-[30vh] text-sm'
             ></textarea>
-            <button className=' py-[15px] mix-blend-difference rounded-special font-semibold text-xl flex items-center gap-3'>Send <span className='text-2xl'><FiArrowUpRight /></span></button>
+            <button className='py-[15px] mix-blend-difference rounded-special font-semibold text-xl flex items-center gap-3'>Send <span className='text-2xl'><FiArrowUpRight /></span></button>
         </div>
 
     )

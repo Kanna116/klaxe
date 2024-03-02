@@ -1,17 +1,15 @@
-import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import { FiArrowUpRight } from 'react-icons/fi';
-import Navbar from '../components/navbar';
-import projectdata from './projectdata';
-import Connect from './components/connect';
 import Footer from '../components/footer';
-import ProjectHero from './components/projecthero';
-import ProjectInfo from './components/projectinfo';
-import ProblemSolved from './components/problemsolved';
+import Navbar from '../components/navbar';
+import Connect from './components/connect';
 import DemoVideo from './components/demovideo';
 import ImageCollection from './components/imagecollection';
+import ProblemSolved from './components/problemsolved';
+import ProjectHero from './components/projecthero';
+import ProjectInfo from './components/projectinfo';
 import ProjectOpinion from './components/projectopinion';
+import projectdata from './projectdata';
 
 const ProjectDetail = () => {
 
@@ -54,7 +52,6 @@ const ProjectDetail = () => {
             <ImageCollection collection={collection} title={title} />
             <ProjectOpinion />
             <Connect />
-
             <Footer />
         </div>
     )
