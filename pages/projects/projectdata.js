@@ -12,7 +12,7 @@ const projectdata = [
         details: [
             {
                 heading: `Type`,
-                information: [`Web development`, `Ecommerce`]
+                information: [`Frontend Development`,`Web development`, `Ecommerce`]
             },
             {
                 heading: `Tools Used`,
@@ -81,6 +81,88 @@ const projectdata = [
         ],
 
         url: 'klick-it'
+    },
+
+
+    {
+        id: 2,
+        title: `Mira`,
+        desc: `Mira is one of the clothing brand which sells cloths through online only `,
+        liveLink: `https://kanna116.github.io/MIRA-Clothing-online/`,
+        codeLink: `https://github.com/Kanna116/MIRA-Clothing-online`,
+        heroImage: `/images/projects/mira/hero-image.png`,
+        details: [
+            {
+                heading: `Type`,
+                information: [`Web development`, `Ecommerce`,`Design to Code`]
+            },
+            {
+                heading: `Skills Used`,
+                information: [`HTML5`,`CSS3`,`JavaScript`,`GSAP`]
+            },
+            {
+                heading: `Role`,
+                information: [`Web Developer`]
+            },
+            {
+                heading: `Year Made`,
+                information: [`2023`]
+            },
+            {
+                heading: `Product`,
+                information: [`Online Clothing Brand`]
+            },
+        ],
+        problemSolved: `Provided the functionality to the user to get the products either by getting them to delivered to home or Give them the opportunity to explore nearby shops and their products and get the delivery done as soon as possible. And provide seamless user journey `,
+        demoVideo: ``,
+        collection: [
+            `/images/projects/mira/collection-image-1.png`,
+            `/images/projects/mira/collection-image-2.png`,
+            `/images/projects/mira/collection-image-3.png`,
+
+        ],
+
+        url: 'mira'
+    },
+    {
+        id: 3,
+        title: `Zinav`,
+        desc: `It is an online coaching platform where any user can learn the in-depth knowledge and essence of intelligence from a low cost coaching institute. A place where user can choose the career path by themselve and also have a strong boost in their careers. Its self paced learning and proper guidance provides user with atmost satisfaction and security in their future goals `,
+        liveLink: `https://kanna116.github.io/ZINAV-Online-Coaching-Site/`,
+        codeLink: `https://github.com/Kanna116/ZINAV-Online-Coaching-Site`,
+        heroImage: `/images/projects/zinav/hero-image.png`,
+        details: [
+            {
+                heading: `Type`,
+                information: [`Web development`, `Learning`,`Design to Code`]
+            },
+            {
+                heading: `Skills Used`,
+                information: [`HTML5`,`CSS3`,`JavaScript`,`GSAP`]
+            },
+            {
+                heading: `Role`,
+                information: [`Web Developer`]
+            },
+            {
+                heading: `Year Made`,
+                information: [`2023`]
+            },
+            {
+                heading: `Product`,
+                information: [`Online Coaching Website`]
+            },
+        ],
+        problemSolved: `Provided the functionality to the user to get the products either by getting them to delivered to home or Give them the opportunity to explore nearby shops and their products and get the delivery done as soon as possible. And provide seamless user journey `,
+        demoVideo: ``,
+        collection: [
+            `/images/projects/zinav/collection-image-1.png`,
+            `/images/projects/zinav/collection-image-2.png`,
+            `/images/projects/zinav/collection-image-3.png`,
+
+        ],
+
+        url: 'zinav'
     },
 
 ]
