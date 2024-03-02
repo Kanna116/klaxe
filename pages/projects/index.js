@@ -36,7 +36,7 @@ const Projects = () => {
             {
                 projects.map((project) => {
                     if (listStyle === 'grid') {
-                        return <div className='flex w-full h-fit flex-wrap my-20 justify-between gap-y-5'>
+                        return <div key={project.id} className='flex w-full h-fit flex-wrap my-20 justify-between gap-y-5'>
                             {
                                 projects.map((project) => <ProjectCardType key={project.id} {...project} />)
                             }
