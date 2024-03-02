@@ -33,7 +33,7 @@ const projectdata = [
             },
         ],
         problemSolved: `Made an Ecommerce site which allows the user enjoy the excellence the joy and pride in buying or wearing our  jewellary. Made with pixel perfection. Focused mainly on building the user satisfaction along with increasing the brand power and prestige. `,
-        demoVideo: ``,
+        demoVideo: `/videos/projects/velvet-vista-demo-video.webm`,
         collection: [
             ``, ``
         ],
