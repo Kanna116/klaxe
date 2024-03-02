@@ -32,7 +32,7 @@ const projectdata = [
                 information: [`Ecommerce jewellary`]
             },
         ],
-        problemSolved: ``,
+        problemSolved: `Made an Ecommerce site which allows the user enjoy the excellence the joy and pride in buying or wearing our  jewellary. Made with pixel perfection. Focused mainly on building the user satisfaction along with increasing the brand power and prestige. `,
         demoVideo: ``,
         collection: [
             ``, ``
