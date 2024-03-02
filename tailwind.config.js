@@ -7,13 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundColor:{
-        "primary":'var(--primary-background)',
-        "secondary":'var(--secondary-background)'
+      backgroundColor: {
+        "primary": 'var(--primary-background)',
+        "secondary": 'var(--secondary-background)'
       },
-      textColor:{
-        "primary":'var(--primary-text)',
-        "secondary":'var(--secondary-text)'
+      textColor: {
+        "primary": 'var(--primary-text)',
+        "secondary": 'var(--secondary-text)'
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -23,6 +23,10 @@ module.exports = {
       fontFamily: {
         "primary": "var(--primary-font);",
         "secondary": "var(--secondary-font);"
+      },
+      borderRadius: {
+        'special': '3px',
+        
       }
     },
   },
