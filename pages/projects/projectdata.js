@@ -6,8 +6,8 @@ const projectdata = [
         title: `Velvet Vista`,
         desc: `It is an Ecommerce site for the most fine international qualitied jewellary  starting from silver to diamonds. This is a multi-page site made based on next js framework and react js as library. This has been enhanced in many ways to represent the quality and prestige a consumer get through the jewellary.
                 Made with keen eye towards style and brand empowering in the all the ways possible. Constantly striving for the enhancement of royalty`,
-        liveLink: ``,
-        codeLink: ``,
+        liveLink: `https://velvet-vista-klax.vercel.app/`,
+        codeLink: `https://github.com/Kanna116/velvet-vista`,
         heroImage: `/images/projects/velvet-vista/hero-image.png`,
         details: [
             {

@@ -4,6 +4,7 @@ import Connect from './components/connect'
 import Footer from '../components/footer'
 import ProjectListType from './components/projectlisttype'
 import projectdata from './projectdata'
+import ProjectBigListType from './components/projectbiglisttype'
 
 const index = () => {
 
@@ -24,6 +25,9 @@ const index = () => {
                 projects.map((project) => <ProjectListType key={project.id} {...project} />)
             }
 
+            {
+                projects.map((project) => <ProjectBigListType key={project.id} {...project} />)
+            }
 
             {/* <Connect />
             <Footer /> */}
