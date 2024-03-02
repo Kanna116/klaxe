@@ -24,7 +24,7 @@ const ProjectDetail = () => {
     const project = projectsData.find(item => item.url === projectdetail)
 
     if (!project) {
-        return <div className='w-screen min-h-screen flex items-center justify-center'>Sorry The page You are looking for is not made yet  <br /> :'(</div>;
+        return <div className='w-screen min-h-screen flex items-center justify-center'>Sorry The page You are looking for is not made yet  <br /> {`:'(`}</div>;
     }
 
 

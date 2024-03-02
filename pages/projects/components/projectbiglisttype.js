@@ -10,7 +10,7 @@ const ProjectBigListType = ({ id, title, desc, liveLink, codeLink, heroImage, de
         if (id % 2 === 0) {
             setType(true)
         }
-    }, []);
+    }, [id]);
 
 
     return (

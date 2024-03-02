@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import { useState } from 'react'
+import Footer from '../components/footer'
 import Navbar from '../components/navbar'
 import Connect from './components/connect'
-import Footer from '../components/footer'
-import ProjectListType from './components/projectlisttype'
-import projectdata from './projectdata'
 import ProjectBigListType from './components/projectbiglisttype'
 import ProjectCardType from './components/projectcardtype'
+import ProjectListType from './components/projectlisttype'
+import projectdata from './projectdata'
 
-const index = () => {
+const Projects = () => {
     const [data, setData] = useState(projectdata);
 
     const projects = data
@@ -42,4 +42,4 @@ const index = () => {
     )
 }
 
-export default index
+export default Projects
