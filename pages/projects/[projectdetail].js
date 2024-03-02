@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { FiArrowUpRight } from 'react-icons/fi';
 import Navbar from '../components/navbar';
 import projectdata from './projectdata';
+import Connect from '../components/connect';
 
 const ProjectDetail = () => {
 
@@ -124,6 +125,13 @@ const ProjectDetail = () => {
                     className='w-full  bg-transparent mt-5 border-2 rounded-special p-5 resize-y min-h-[15vh] max-h-[30vh]'
                 ></textarea>
                 <button className=' py-[15px] mix-blend-difference rounded-special font-semibold text-xl flex items-center gap-3'>Send <span className='text-2xl'><FiArrowUpRight /></span></button>
+            </div>
+
+            <div className='h-screen w-full flex items-center justify-center gap-10 flex-col sticky top-0 -z-10'>
+                <h1 className='text-6xl text-center'>A Better Project <br />Makes A Best World</h1>
+                <div className='flex gap-5 items-center'>
+                    <button className='text-black bg-white px-[30px] py-[10px] rounded-[3px] text-base font-semibold'>Let's create</button>
+                </div>
             </div>
         </div>
     )
