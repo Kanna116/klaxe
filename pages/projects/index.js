@@ -26,7 +26,7 @@ const Projects = () => {
                 <p className='text-2xl'>A place where you will find wonders.</p>
             </div>
 
-            <div className='list-style-controller flex items-center gap-2 mx-auto w-fit h-fit'>
+            <div className='list-style-controller flex items-center gap-2 mx-auto w-fit h-fit mb-10'>
                 <span onClick={() => setListStyle('list')} style={{ backgroundColor: listStyle === 'list' ? 'white' : 'black', color: listStyle === 'list' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><BsList /></span>
                 <span onClick={() => setListStyle('grid')} style={{ backgroundColor: listStyle === 'grid' ? 'white' : 'black', color: listStyle === 'grid' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><IoGrid /></span>
                 <span onClick={() => setListStyle('bigList')} style={{ backgroundColor: listStyle === 'bigList' ? 'white' : 'black', color: listStyle === 'bigList' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><MdTableRows /></span>

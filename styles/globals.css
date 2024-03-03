@@ -102,3 +102,16 @@ body {
 
   }
 }
+
+.hovering-card{
+  animation: hoveringCard 500ms ease 0s 1 forwards;
+}
+@keyframes hoveringCard{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+
+  }
+}
