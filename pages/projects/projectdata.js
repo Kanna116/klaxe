@@ -24,7 +24,7 @@ const projectdata = [
             },
             {
                 heading: `Year Made`,
-                information: [`2023`]
+                information: [`2024`]
             },
             {
                 heading: `Product`,
@@ -39,6 +39,8 @@ const projectdata = [
             `/images/projects/velvet-vista/collection-image-3.png`,
 
         ],
+
+        ranking:1,
 
         url: 'velvet-vista'
     },
@@ -80,6 +82,7 @@ const projectdata = [
 
         ],
 
+        ranking:1,
         url: 'klick-it'
     },
 
@@ -122,6 +125,7 @@ const projectdata = [
 
         ],
 
+        ranking:3,
         url: 'mira'
     },
     {
@@ -162,6 +166,7 @@ const projectdata = [
 
         ],
 
+        ranking:2,
         url: 'zinav'
     },
 

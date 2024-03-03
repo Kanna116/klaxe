@@ -15,13 +15,12 @@ const ProjectListType = ({ title, desc, liveLink, codeLink, heroImage, details, 
     const handleMouseMove = (e) => {
 
         const rect = e.currentTarget.getBoundingClientRect();
-        // console.log((rect.width /2 - e.clientX))
 
         setFloatingValues(prevValues => {
             return {
                 ...prevValues,
                 left: e.clientX,
-                rotate: Math.floor(-(rect.width / 2 - e.clientX) / 50),
+                rotate: - Math.floor((rect.width / 2 - e.clientX) / 50),
             }
         })
     }

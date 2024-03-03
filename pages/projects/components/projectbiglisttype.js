@@ -15,7 +15,7 @@ const ProjectBigListType = ({ id, title, desc, liveLink, codeLink, heroImage, de
 
     return (
         <div className={`w-2/3 h-[50vh] flex gap-5 mx-auto mt-[50px] ${type ? "flex-row" : "flex-row-reverse"}`}>
-            <div className='h-full aspect-square bg-zinc-100'>
+            <div className='h-full aspect-square bg-zinc-100 rounded-special overflow-hidden'>
                 <Image
                     src={collection[0]}
                     width={1000}

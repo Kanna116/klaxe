@@ -12,9 +12,25 @@ import { MdTableRows } from "react-icons/md";
 
 const Projects = () => {
     const [data, setData] = useState(projectdata);
-
     const projects = data
+    let displayProjects = []
+    
+    
+    // sorting
+    
+    const [sort, setSort] = useState(null);
+    if (sort === 'Ranking') {
+        displayProjects = projects.sort((a, b) => a.ranking - b.ranking)
+    }
+    else if(sort === 'Date - old to new'){
+        displayProjects = projects.sort((a,b)=> a.details[3].information[0] - b.details[3].information[0])
+    }
+    else if(sort === 'Date - new to old'){
+        displayProjects = projects.sort((a,b)=> b.details[3].information[0] -a.details[3].information[0])
+    }
 
+
+    //list style
     const [listStyle, setListStyle] = useState('grid');
 
 
@@ -24,6 +40,19 @@ const Projects = () => {
             <div className='w-full h-fit py-10 flex flex-col items-center justify-center gap-5 mt-[60px]'>
                 <h1 className='text-5xl capitalize font-semibold'>Our Projects</h1>
                 <p className='text-2xl'>A place where you will find wonders.</p>
+            </div>
+
+            <div>Sort By :
+                <select
+                    name="sorting"
+                    id="sorting"
+                    className='bg-transparent px-2 ml-5 focus:border-0 outline-0'
+                    onChange={(e) => setSort(e.target.value)}
+                >
+                    <option className='text-black' value="Date - old to new">Date - old to new</option>
+                    <option className='text-black' value="Date - new to old">Date - new to old</option>
+                    <option className='text-black' value="Ranking">Ranking</option>
+                </select>
             </div>
 
             <div className='list-style-controller flex items-center gap-2 mx-auto w-fit h-fit mb-10'>
