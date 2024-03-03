@@ -15,7 +15,7 @@ const projectdata = [
                 information: [`Frontend Development`, `Web development`, `Ecommerce`]
             },
             {
-                heading: `Tools Used`,
+                heading: `Skills Used`,
                 information: [`Next js`, `React js`, `Tailwind CSS`, `JSX`, `Node js`]
             },
             {

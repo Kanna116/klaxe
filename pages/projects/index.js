@@ -12,21 +12,84 @@ import { MdTableRows } from "react-icons/md";
 
 const Projects = () => {
     const [data, setData] = useState(projectdata);
-    const projects = data
-    let displayProjects = []
-    
-    
+    const [projects, setProjects] = useState(data);
+
+
+
+
+    const allSkills = new Set();
+    const allYears = new Set();
+    const allTypes = new Set();
+    data.forEach(item => {
+        const skillsDetail = item.details.find(detail => detail.heading === 'Skills Used');
+        if (skillsDetail) {
+            skillsDetail.information.forEach(skill => allSkills.add(skill));
+        }
+        const yearDetails = item.details.find(detail => detail.heading === 'Year Made')
+        if (yearDetails) {
+            yearDetails.information.forEach(year => allYears.add(year));
+        }
+        const typeDetails = item.details.find(detail => detail.heading === 'Type')
+        if (typeDetails) {
+            typeDetails.information.forEach(type => allTypes.add(type));
+        }
+    });
+
+
+
+    const handleSkillFilter = (filter) => {
+        const filteredata = data.filter(item => {
+            if (filter !== 'all') {
+                const skillsDetail = item.details.find(detail => detail.heading === 'Skills Used');
+                const skillsMatch = skillsDetail.information.includes(filter)
+                return skillsMatch;
+            }
+            return true
+
+        });
+        setProjects(filteredata)
+    }
+    const handleYearFilter = (filter) => {
+        const filteredata = data.filter(item => {
+            if (filter !== 'all') {
+                const yearsDetail = item.details.find(detail => detail.heading === 'Year Made');
+                const yearMatch = yearsDetail.information.includes(filter)
+                return yearMatch;
+            }
+            return true
+
+        });
+        setProjects(filteredata)
+    }
+    const handleTypeFilter = (filter) => {
+        const filteredata = data.filter(item => {
+            if (filter !== 'all') {
+                const TypesDetail = item.details.find(detail => detail.heading === 'Type');
+                const typeMatch = TypesDetail.information.includes(filter)
+                return typeMatch;
+            }
+            return true
+
+        });
+        setProjects(filteredata)
+    }
+
+
+
+
+
+
     // sorting
-    
+
     const [sort, setSort] = useState(null);
     if (sort === 'Ranking') {
-        displayProjects = projects.sort((a, b) => a.ranking - b.ranking)
+        projects.sort((a, b) => a.ranking - b.ranking)
     }
-    else if(sort === 'Date - old to new'){
-        displayProjects = projects.sort((a,b)=> a.details[3].information[0] - b.details[3].information[0])
+    else if (sort === 'Date - old to new') {
+        projects.sort((a, b) => a.details[3].information[0] - b.details[3].information[0])
     }
-    else if(sort === 'Date - new to old'){
-        displayProjects = projects.sort((a,b)=> b.details[3].information[0] -a.details[3].information[0])
+    else if (sort === 'Date - new to old') {
+        projects.sort((a, b) => b.details[3].information[0] - a.details[3].information[0])
     }
 
 
@@ -41,25 +104,66 @@ const Projects = () => {
                 <h1 className='text-5xl capitalize font-semibold'>Our Projects</h1>
                 <p className='text-2xl'>A place where you will find wonders.</p>
             </div>
+            <div className='w-full h-fit flex items-center justify-between relative'>
+                <div>
+                    Filter By :
+                    <select
+                        id="skillsFilter"
+                        className='bg-transparent px-2 focus:border-0 outline-0 h-fit'
+                        onChange={e => {
+                            handleSkillFilter(e.target.value)
 
-            <div>Sort By :
-                <select
-                    name="sorting"
-                    id="sorting"
-                    className='bg-transparent px-2 ml-5 focus:border-0 outline-0'
-                    onChange={(e) => setSort(e.target.value)}
-                >
-                    <option className='text-black' value="Date - old to new">Date - old to new</option>
-                    <option className='text-black' value="Date - new to old">Date - new to old</option>
-                    <option className='text-black' value="Ranking">Ranking</option>
-                </select>
+                        }}>
+                        <option className='text-black' value='all'>Skill</option>
+
+                        {[...allSkills].sort().map((skill, index) => <option key={index} className='text-black' value={skill}>{skill}</option>)}
+                    </select>
+                    <select
+                        name="typeFilter"
+                        id="typeFilter"
+                        className='bg-transparent px-2 focus:border-0 outline-0 h-fit'
+                        onChange={e => handleTypeFilter(e.target.value)}
+                    >
+                        <option className='text-black' value='all'>Type</option>
+                        {
+                            [...allTypes].sort().map((type, index) => <option key={index} className='text-black' value={type}>{type}</option>)
+                        }
+                    </select>
+                    <select
+                        name="yearFilter"
+                        id="yearFilter"
+                        className='bg-transparent px-2 focus:border-0 outline-0 h-fit'
+                        onChange={e => handleYearFilter(e.target.value)}
+                    >
+                        <option className='text-black' value='all'>Year</option>
+                        {
+                            [...allYears].sort().map((year, index) => <option key={index} className='text-black' value={year}>{year}</option>)
+                        }
+                    </select>
+                </div>
+                <div className='list-style-controller flex items-center gap-2 w-fit h-fit absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
+                    <span onClick={() => setListStyle('list')} style={{ backgroundColor: listStyle === 'list' ? 'white' : 'black', color: listStyle === 'list' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><BsList /></span>
+                    <span onClick={() => setListStyle('grid')} style={{ backgroundColor: listStyle === 'grid' ? 'white' : 'black', color: listStyle === 'grid' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><IoGrid /></span>
+                    <span onClick={() => setListStyle('bigList')} style={{ backgroundColor: listStyle === 'bigList' ? 'white' : 'black', color: listStyle === 'bigList' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><MdTableRows /></span>
+                </div>
+                <div>Sort By :
+                    <select
+                        name="sorting"
+                        id="sorting"
+                        className='bg-transparent px-2 ml-5 focus:border-0 outline-0'
+                        onChange={(e) => setSort(e.target.value)}
+                    >
+                        <option className='text-black' value="Date - old to new">Date - old to new</option>
+                        <option className='text-black' value="Date - new to old">Date - new to old</option>
+                        <option className='text-black' value="Ranking">Ranking</option>
+                    </select>
+                </div>
+
+
+
+
             </div>
 
-            <div className='list-style-controller flex items-center gap-2 mx-auto w-fit h-fit mb-10'>
-                <span onClick={() => setListStyle('list')} style={{ backgroundColor: listStyle === 'list' ? 'white' : 'black', color: listStyle === 'list' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><BsList /></span>
-                <span onClick={() => setListStyle('grid')} style={{ backgroundColor: listStyle === 'grid' ? 'white' : 'black', color: listStyle === 'grid' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><IoGrid /></span>
-                <span onClick={() => setListStyle('bigList')} style={{ backgroundColor: listStyle === 'bigList' ? 'white' : 'black', color: listStyle === 'bigList' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><MdTableRows /></span>
-            </div>
 
             {
 
