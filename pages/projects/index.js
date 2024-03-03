@@ -1,4 +1,7 @@
 import { useState } from 'react'
+import { BsList } from "react-icons/bs"
+import { IoGrid } from 'react-icons/io5'
+import { PiRowsFill } from "react-icons/pi"
 import Footer from '../components/footer'
 import Navbar from '../components/navbar'
 import Connect from './components/connect'
@@ -6,9 +9,6 @@ import ProjectBigListType from './components/projectbiglisttype'
 import ProjectCardType from './components/projectcardtype'
 import ProjectListType from './components/projectlisttype'
 import projectdata from './projectdata'
-import { BsList } from "react-icons/bs";
-import { IoGrid } from 'react-icons/io5'
-import { MdTableRows } from "react-icons/md";
 
 const Projects = () => {
     const [data, setData] = useState(projectdata);
@@ -142,9 +142,9 @@ const Projects = () => {
                     </select>
                 </div>
                 <div className='list-style-controller flex items-center gap-2 w-fit h-fit absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
-                    <span onClick={() => setListStyle('list')} style={{ backgroundColor: listStyle === 'list' ? 'white' : 'black', color: listStyle === 'list' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><BsList /></span>
-                    <span onClick={() => setListStyle('grid')} style={{ backgroundColor: listStyle === 'grid' ? 'white' : 'black', color: listStyle === 'grid' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><IoGrid /></span>
-                    <span onClick={() => setListStyle('bigList')} style={{ backgroundColor: listStyle === 'bigList' ? 'white' : 'black', color: listStyle === 'bigList' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><MdTableRows /></span>
+                    <span title='list style' onClick={() => setListStyle('list')} style={{ backgroundColor: listStyle === 'list' ? 'white' : 'black', color: listStyle === 'list' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><BsList /></span>
+                    <span title='card style' onClick={() => setListStyle('grid')} style={{ backgroundColor: listStyle === 'grid' ? 'white' : 'black', color: listStyle === 'grid' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><IoGrid /></span>
+                    <span title='bigList style' onClick={() => setListStyle('bigList')} style={{ backgroundColor: listStyle === 'bigList' ? 'white' : 'black', color: listStyle === 'bigList' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><PiRowsFill /></span>
                 </div>
                 <div>Sort By :
                     <select
