@@ -10,6 +10,7 @@ import ProjectCardType from './components/projectcardtype'
 import ProjectListType from './components/projectlisttype'
 import projectdata from './projectdata'
 import Sorting from './components/sorting'
+import Filtering from './components/filtering'
 
 const Projects = () => {
     const [data, setData] = useState(projectdata);
@@ -17,63 +18,6 @@ const Projects = () => {
 
 
 
-
-    const allSkills = new Set();
-    const allYears = new Set();
-    const allTypes = new Set();
-    data.forEach(item => {
-        const skillsDetail = item.details.find(detail => detail.heading === 'Skills Used');
-        if (skillsDetail) {
-            skillsDetail.information.forEach(skill => allSkills.add(skill));
-        }
-        const yearDetails = item.details.find(detail => detail.heading === 'Year Made')
-        if (yearDetails) {
-            yearDetails.information.forEach(year => allYears.add(year));
-        }
-        const typeDetails = item.details.find(detail => detail.heading === 'Type')
-        if (typeDetails) {
-            typeDetails.information.forEach(type => allTypes.add(type));
-        }
-    });
-
-
-
-    const handleSkillFilter = (filter) => {
-        const filteredata = data.filter(item => {
-            if (filter !== 'all') {
-                const skillsDetail = item.details.find(detail => detail.heading === 'Skills Used');
-                const skillsMatch = skillsDetail.information.includes(filter)
-                return skillsMatch;
-            }
-            return true
-
-        });
-        setProjects(filteredata)
-    }
-    const handleYearFilter = (filter) => {
-        const filteredata = data.filter(item => {
-            if (filter !== 'all') {
-                const yearsDetail = item.details.find(detail => detail.heading === 'Year Made');
-                const yearMatch = yearsDetail.information.includes(filter)
-                return yearMatch;
-            }
-            return true
-
-        });
-        setProjects(filteredata)
-    }
-    const handleTypeFilter = (filter) => {
-        const filteredata = data.filter(item => {
-            if (filter !== 'all') {
-                const TypesDetail = item.details.find(detail => detail.heading === 'Type');
-                const typeMatch = TypesDetail.information.includes(filter)
-                return typeMatch;
-            }
-            return true
-
-        });
-        setProjects(filteredata)
-    }
 
 
     //list style
@@ -88,48 +32,14 @@ const Projects = () => {
                 <p className='text-2xl'>A place where you will find wonders.</p>
             </div>
             <div className='w-full h-fit flex items-center justify-between relative'>
-                <div>
-                    Filter By :
-                    <select
-                        id="skillsFilter"
-                        className='bg-transparent px-2 focus:border-0 outline-0 h-fit'
-                        onChange={e => {
-                            handleSkillFilter(e.target.value)
 
-                        }}>
-                        <option className='text-black' value='all'>Skill</option>
-
-                        {[...allSkills].sort().map((skill, index) => <option key={index} className='text-black' value={skill}>{skill}</option>)}
-                    </select>
-                    <select
-                        name="typeFilter"
-                        id="typeFilter"
-                        className='bg-transparent px-2 focus:border-0 outline-0 h-fit'
-                        onChange={e => handleTypeFilter(e.target.value)}
-                    >
-                        <option className='text-black' value='all'>Type</option>
-                        {
-                            [...allTypes].sort().map((type, index) => <option key={index} className='text-black' value={type}>{type}</option>)
-                        }
-                    </select>
-                    <select
-                        name="yearFilter"
-                        id="yearFilter"
-                        className='bg-transparent px-2 focus:border-0 outline-0 h-fit'
-                        onChange={e => handleYearFilter(e.target.value)}
-                    >
-                        <option className='text-black' value='all'>Year</option>
-                        {
-                            [...allYears].sort().map((year, index) => <option key={index} className='text-black' value={year}>{year}</option>)
-                        }
-                    </select>
-                </div>
+                <Filtering data={data} setProjects={setProjects} />
                 <div className='list-style-controller flex items-center gap-2 w-fit h-fit absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
                     <span title='list style' onClick={() => setListStyle('list')} style={{ backgroundColor: listStyle === 'list' ? 'white' : 'black', color: listStyle === 'list' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><BsList /></span>
                     <span title='card style' onClick={() => setListStyle('grid')} style={{ backgroundColor: listStyle === 'grid' ? 'white' : 'black', color: listStyle === 'grid' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><IoGrid /></span>
                     <span title='bigList style' onClick={() => setListStyle('bigList')} style={{ backgroundColor: listStyle === 'bigList' ? 'white' : 'black', color: listStyle === 'bigList' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><PiRowsFill /></span>
                 </div>
-                
+
                 <Sorting setProjects={setProjects} />
 
 
