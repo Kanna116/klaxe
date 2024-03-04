@@ -31,20 +31,18 @@ const Projects = () => {
                 <h1 className='text-5xl capitalize font-semibold'>Our Projects</h1>
                 <p className='text-2xl'>A place where you will find wonders.</p>
             </div>
-            <div className='w-full h-fit min-h-[50px] flex items-center justify-between relative'>
 
+
+
+            <div className='list-style-controller flex items-center gap-2 w-fit h-fit mx-auto'>
+                <span title='list style' onClick={() => setListStyle('list')} style={{ backgroundColor: listStyle === 'list' ? 'white' : 'black', color: listStyle === 'list' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><BsList /></span>
+                <span title='card style' onClick={() => setListStyle('grid')} style={{ backgroundColor: listStyle === 'grid' ? 'white' : 'black', color: listStyle === 'grid' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><IoGrid /></span>
+                <span title='bigList style' onClick={() => setListStyle('bigList')} style={{ backgroundColor: listStyle === 'bigList' ? 'white' : 'black', color: listStyle === 'bigList' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><PiRowsFill /></span>
+            </div>
+
+            <div className='w-full h-fit min-h-[50px] flex items-center justify-between mt-5 mb-10 px-[10px]'>
                 <Filtering data={data} setProjects={setProjects} />
-                <div className='list-style-controller flex items-center gap-2 w-fit h-fit absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
-                    <span title='list style' onClick={() => setListStyle('list')} style={{ backgroundColor: listStyle === 'list' ? 'white' : 'black', color: listStyle === 'list' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><BsList /></span>
-                    <span title='card style' onClick={() => setListStyle('grid')} style={{ backgroundColor: listStyle === 'grid' ? 'white' : 'black', color: listStyle === 'grid' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><IoGrid /></span>
-                    <span title='bigList style' onClick={() => setListStyle('bigList')} style={{ backgroundColor: listStyle === 'bigList' ? 'white' : 'black', color: listStyle === 'bigList' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><PiRowsFill /></span>
-                </div>
-
                 <Sorting setProjects={setProjects} />
-
-
-
-
             </div>
 
 
@@ -71,9 +69,9 @@ const Projects = () => {
             }
             {
                 projects.length === 0 &&
-                <div className='h-[30vh] w-full flex flex-col items-center justify-center gap-5 text-center'>
-                    <h1 className='text-4xl'>Ooops! Seems like the project you are looking for is not done yet</h1>
-                    <p>try removing the filters to see the amazing projects that are left behind</p>
+                <div className='h-[50vh] w-full flex flex-col items-center justify-center gap-5'>
+                    <h1 className='text-4xl font-semibold'>Ooops! Seems like the project you are looking for is not done yet</h1>
+                    <p className='text-center text-xl font-light'>try removing the filters to see the amazing projects that are left behind</p>
                 </div>
             }
 
