@@ -16,10 +16,6 @@ const Projects = () => {
     const [data, setData] = useState(projectdata);
     const [projects, setProjects] = useState(data);
 
-
-
-
-
     //list style
     const [listStyle, setListStyle] = useState('grid');
 
@@ -28,8 +24,8 @@ const Projects = () => {
         <div className='px-[24px] md:px-[64px] lg:px-[96px] min-h-screen w-full'>
             <Navbar />
             <div className='w-full h-fit py-10 flex flex-col items-center justify-center gap-5 mt-[60px]'>
-                <h1 className='text-5xl capitalize font-semibold'>Our Projects</h1>
-                <p className='text-2xl'>A place where you will find wonders.</p>
+                <h1 className='lg:text-5xl text-3xl text-center capitalize font-semibold'>Our Projects</h1>
+                <p className='lg:text-2xl text-base font-light lg:font-medium text-center'>A place where you will find wonders.</p>
             </div>
 
 
@@ -40,7 +36,7 @@ const Projects = () => {
                 <span title='bigList style' onClick={() => setListStyle('bigList')} style={{ backgroundColor: listStyle === 'bigList' ? 'white' : 'black', color: listStyle === 'bigList' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><PiRowsFill /></span>
             </div>
 
-            <div className='w-full h-fit min-h-[50px] flex items-center justify-between mt-5 mb-10 px-[10px]'>
+            <div className='w-full h-fit min-h-[50px] flex lg:items-center items-start justify-between mt-5 mb-10 lg:px-[10px] px-0 flex-col lg:flex-row md:flex-row lg:gap-0 gap-5'>
                 <Filtering data={data} setProjects={setProjects} />
                 <Sorting setProjects={setProjects} />
             </div>

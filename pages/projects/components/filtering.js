@@ -3,14 +3,14 @@ import { IoIosClose } from "react-icons/io";
 import { VscClose } from "react-icons/vsc";
 
 const Filtering = ({ data, setProjects }) => {
-    
-    
+
+
     const [filters, setFilters] = useState({
         skill: 'all',
         year: 'all',
         type: 'all',
     });
-    
+
 
     //making the options automatic based on the data
     const allSkills = new Set();
@@ -75,11 +75,11 @@ const Filtering = ({ data, setProjects }) => {
 
 
     return (
-        <div className='w-fit h-full flex items-center justify-start gap-2'>
+        <div className='w-fit h-full flex lg:items-center items-start justify-start gap-2 flex-col lg:flex-row'>
             Filter By :
             <select
                 id="skillsFilter"
-                className='bg-transparent px-2 focus:border-0 outline-0 h-fit'
+                className='bg-transparent lg:px-2 px-0 focus:border-0 outline-0 h-fit'
                 onChange={e => {
                     handleFilter('skill', e.target.value)
                 }}
@@ -92,7 +92,7 @@ const Filtering = ({ data, setProjects }) => {
             <select
                 name="typeFilter"
                 id="typeFilter"
-                className='bg-transparent px-2 focus:border-0 outline-0 h-fit'
+                className='bg-transparent lg:px-2 px-0 focus:border-0 outline-0 h-fit'
                 onChange={e => handleFilter('type', e.target.value)}
                 value={filters.type}
             >
@@ -104,7 +104,7 @@ const Filtering = ({ data, setProjects }) => {
             <select
                 name="yearFilter"
                 id="yearFilter"
-                className='bg-transparent px-2 focus:border-0 outline-0 h-fit'
+                className='bg-transparent lg:px-2 px-0 focus:border-0 outline-0 h-fit'
                 onChange={e => handleFilter('year', e.target.value)}
                 value={filters.year}
             >
@@ -126,8 +126,11 @@ const Filtering = ({ data, setProjects }) => {
                         type: 'all',
                     })}
                 >
-                    <span>
+                    <span className='hidden lg:block'>
                         <VscClose />
+                    </span>
+                    <span className='block lg:hidden px-5 text-sm'>
+                        clear all
                     </span>
                 </button>
             }
