@@ -9,6 +9,7 @@ import ProjectBigListType from './components/projectbiglisttype'
 import ProjectCardType from './components/projectcardtype'
 import ProjectListType from './components/projectlisttype'
 import projectdata from './projectdata'
+import Sorting from './components/sorting'
 
 const Projects = () => {
     const [data, setData] = useState(projectdata);
@@ -75,24 +76,6 @@ const Projects = () => {
     }
 
 
-
-
-
-
-    // sorting
-
-    const [sort, setSort] = useState(null);
-    if (sort === 'Ranking') {
-        projects.sort((a, b) => a.ranking - b.ranking)
-    }
-    else if (sort === 'Date - old to new') {
-        projects.sort((a, b) => a.details[3].information[0] - b.details[3].information[0])
-    }
-    else if (sort === 'Date - new to old') {
-        projects.sort((a, b) => b.details[3].information[0] - a.details[3].information[0])
-    }
-
-
     //list style
     const [listStyle, setListStyle] = useState('grid');
 
@@ -146,18 +129,8 @@ const Projects = () => {
                     <span title='card style' onClick={() => setListStyle('grid')} style={{ backgroundColor: listStyle === 'grid' ? 'white' : 'black', color: listStyle === 'grid' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><IoGrid /></span>
                     <span title='bigList style' onClick={() => setListStyle('bigList')} style={{ backgroundColor: listStyle === 'bigList' ? 'white' : 'black', color: listStyle === 'bigList' ? 'black' : 'white' }} className='h-full aspect-square rounded-full p-2 border-[1px]'><PiRowsFill /></span>
                 </div>
-                <div>Sort By :
-                    <select
-                        name="sorting"
-                        id="sorting"
-                        className='bg-transparent px-2 ml-5 focus:border-0 outline-0'
-                        onChange={(e) => setSort(e.target.value)}
-                    >
-                        <option className='text-black' value="Date - old to new">Date - old to new</option>
-                        <option className='text-black' value="Date - new to old">Date - new to old</option>
-                        <option className='text-black' value="Ranking">Ranking</option>
-                    </select>
-                </div>
+                
+                <Sorting setProjects={setProjects} />
 
 
 
