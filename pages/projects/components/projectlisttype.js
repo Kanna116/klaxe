@@ -30,10 +30,10 @@ const ProjectListType = ({ title, desc, liveLink, codeLink, heroImage, details, 
         <div
             onMouseMove={(e) => { handleMouseMove(e); setCardOpen(true) }}
             onMouseLeave={() => setCardOpen(false)}
-            className='group w-full h-fit min-h-[80px] p-[10px] flex items-center justify-between gap-10 border-b-[1px] border-zinc-100 relative cursor-pointer'>
-            <div className='w-full h-full flex items-center justify-between gap-8  z-0 group-hover:z-30 '>
-                <h1 className='w-full text-3xl font-semibold capitalize  mix-blend-difference'>{title}</h1>
-                <h3 className='shrink-0 text-xl font-thin hover:font-semibold hover:text-black'>{details[0].information[0]}</h3>
+            className='group w-full h-fit lg:min-h-[80px] md:min-h-[80px] min-h-[100px] lg:p-[10px] p-0 md:p-0 flex items-center justify-between gap-10 border-b-[1px] border-zinc-100 relative cursor-pointer'>
+            <div className='w-full h-full flex lg:items-center items-start justify-between lg:gap-8 md:gap-4 gap-2  z-0 group-hover:z-30 flex-col lg:flex-row md:flex-row'>
+                <h1 className='w-full lg:text-3xl text-2xl font-semibold capitalize  mix-blend-difference'>{title}</h1>
+                <h3 className='shrink-0 lg:text-xl text-sm font-thin hover:font-semibold hover:text-black'>{details[0].information[0]}</h3>
             </div>
             <Link href={`/projects/${url}`} className='z-0 group-hover:z-30 bg-black px-5 py-2'>
                 <button className='mix-blend-difference rounded-special font-semibold text-lg flex items-center gap-3 '>
