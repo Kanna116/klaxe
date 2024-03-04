@@ -47,7 +47,7 @@ const Projects = () => {
 
                 //used ternary to seperate the grid style as it seeming to have a disturbance in the UI
                 listStyle === 'grid' ?
-                    <div className='flex w-full h-fit flex-wrap my-20 justify-between gap-y-5'>
+                    <div className='flex w-full h-fit flex-wrap lg:my-20 md:my-10 my-0 justify-between lg:gap-y-5 gap-y-10'>
                         {
                             projects.map((project) => <ProjectCardType key={project.id} {...project} />)
                         }
@@ -61,8 +61,6 @@ const Projects = () => {
                             return <ProjectBigListType key={project.id} {...project} />
                         }
                     })
-
-
             }
             {
                 projects.length === 0 &&
