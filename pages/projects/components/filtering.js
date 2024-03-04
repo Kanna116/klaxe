@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { IoIosClose } from "react-icons/io";
+import { VscClose } from "react-icons/vsc";
 
 const Filtering = ({ data, setProjects }) => {
-    //making the options automatic based on the data
+    
+    
+    const [filters, setFilters] = useState({
+        skill: 'all',
+        year: 'all',
+        type: 'all',
+    });
+    
 
+    //making the options automatic based on the data
     const allSkills = new Set();
     const allYears = new Set();
     const allTypes = new Set();
@@ -22,56 +32,59 @@ const Filtering = ({ data, setProjects }) => {
     });
 
 
+    const handleFilter = (filterType, value) => {
+        setFilters(prevValues => ({
+            ...prevValues,
+            [filterType]: value,
+        }))
+    }
 
-    const handleSkillFilter = (filter) => {
-        const filteredata = data.filter(item => {
-            if (filter !== 'all') {
+    const applyFilters = () => {
+        let filteredData = [...data];
+        if (filters.skill !== 'all') {
+            filteredData = filteredData.filter(item => {
                 const skillsDetail = item.details.find(detail => detail.heading === 'Skills Used');
-                const skillsMatch = skillsDetail.information.includes(filter)
-                return skillsMatch;
-            }
-            return true
+                return skillsDetail && skillsDetail.information.includes(filters.skill);
+            });
+        }
 
-        });
-        setProjects(filteredata)
-    }
-    const handleYearFilter = (filter) => {
-        const filteredata = data.filter(item => {
-            if (filter !== 'all') {
-                const yearsDetail = item.details.find(detail => detail.heading === 'Year Made');
-                const yearMatch = yearsDetail.information.includes(filter)
-                return yearMatch;
-            }
-            return true
+        if (filters.year !== 'all') {
+            filteredData = filteredData.filter(item => {
+                const yearDetails = item.details.find(detail => detail.heading === 'Year Made');
+                return yearDetails && yearDetails.information.includes(filters.year);
+            });
+        }
 
-        });
-        setProjects(filteredata)
-    }
-    const handleTypeFilter = (filter) => {
-        const filteredata = data.filter(item => {
-            if (filter !== 'all') {
-                const TypesDetail = item.details.find(detail => detail.heading === 'Type');
-                const typeMatch = TypesDetail.information.includes(filter)
-                return typeMatch;
-            }
-            return true
+        if (filters.type !== 'all') {
+            filteredData = filteredData.filter(item => {
+                const typeDetails = item.details.find(detail => detail.heading === 'Type');
+                return typeDetails && typeDetails.information.includes(filters.type);
+            });
+        }
 
-        });
-        setProjects(filteredata)
+        setProjects(filteredData);
     }
+
+    // getting filtered data each time the filters are changed
+    useEffect(() => {
+        applyFilters();
+    }, [filters]);
+
+
 
 
 
     return (
-        <div>
+        <div className='w-fit h-full flex items-center justify-start gap-2'>
             Filter By :
             <select
                 id="skillsFilter"
                 className='bg-transparent px-2 focus:border-0 outline-0 h-fit'
                 onChange={e => {
-                    handleSkillFilter(e.target.value)
-
-                }}>
+                    handleFilter('skill', e.target.value)
+                }}
+                value={filters.skill}
+            >
                 <option className='text-black' value='all'>Skill</option>
 
                 {[...allSkills].sort().map((skill, index) => <option key={index} className='text-black' value={skill}>{skill}</option>)}
@@ -80,7 +93,8 @@ const Filtering = ({ data, setProjects }) => {
                 name="typeFilter"
                 id="typeFilter"
                 className='bg-transparent px-2 focus:border-0 outline-0 h-fit'
-                onChange={e => handleTypeFilter(e.target.value)}
+                onChange={e => handleFilter('type', e.target.value)}
+                value={filters.type}
             >
                 <option className='text-black' value='all'>Type</option>
                 {
@@ -91,13 +105,32 @@ const Filtering = ({ data, setProjects }) => {
                 name="yearFilter"
                 id="yearFilter"
                 className='bg-transparent px-2 focus:border-0 outline-0 h-fit'
-                onChange={e => handleYearFilter(e.target.value)}
+                onChange={e => handleFilter('year', e.target.value)}
+                value={filters.year}
             >
                 <option className='text-black' value='all'>Year</option>
                 {
                     [...allYears].sort().map((year, index) => <option key={index} className='text-black' value={year}>{year}</option>)
                 }
             </select>
+
+            {/* filter removing button */}
+            {
+                (filters.skill !== 'all' || filters.year !== 'all' || filters.type !== 'all')
+                &&
+                <button
+                    className='rounded-full border-[1px] p-2'
+                    onClick={() => setFilters({
+                        skill: 'all',
+                        year: 'all',
+                        type: 'all',
+                    })}
+                >
+                    <span>
+                        <VscClose />
+                    </span>
+                </button>
+            }
         </div>
     )
 }

@@ -31,7 +31,7 @@ const Projects = () => {
                 <h1 className='text-5xl capitalize font-semibold'>Our Projects</h1>
                 <p className='text-2xl'>A place where you will find wonders.</p>
             </div>
-            <div className='w-full h-fit flex items-center justify-between relative'>
+            <div className='w-full h-fit min-h-[50px] flex items-center justify-between relative'>
 
                 <Filtering data={data} setProjects={setProjects} />
                 <div className='list-style-controller flex items-center gap-2 w-fit h-fit absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
