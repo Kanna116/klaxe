@@ -5,12 +5,12 @@ import { PiRowsFill } from "react-icons/pi"
 import Footer from '../components/footer'
 import Navbar from '../components/navbar'
 import Connect from './components/connect'
+import Filtering from './components/filtering'
 import ProjectBigListType from './components/projectbiglisttype'
 import ProjectCardType from './components/projectcardtype'
 import ProjectListType from './components/projectlisttype'
-import projectdata from './projectdata'
 import Sorting from './components/sorting'
-import Filtering from './components/filtering'
+import projectdata from './projectdata'
 
 const Projects = () => {
     const [data, setData] = useState(projectdata);
@@ -69,6 +69,14 @@ const Projects = () => {
 
 
             }
+            {
+                projects.length === 0 &&
+                <div className='h-[30vh] w-full flex flex-col items-center justify-center gap-5 text-center'>
+                    <h1 className='text-4xl'>Ooops! Seems like the project you are looking for is not done yet</h1>
+                    <p>try removing the filters to see the amazing projects that are left behind</p>
+                </div>
+            }
+
             < Connect />
             <Footer />
         </div>
