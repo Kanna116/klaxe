@@ -38,6 +38,31 @@ const Contact = () => {
             file: null
         }))
     }
+
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = await fetch('https://formspree.io/f/mayrbyew', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setSubmitted(true);
+                console.log('Form submitted successfully');
+            } else {
+                console.error('Failed to submit form');
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+        }
+    };
+
     return (
         <div className='px-[24px] md:px-[64px] lg:px-[96px] min-h-screen w-full mt-[60px]'>
             <Navbar />
@@ -45,8 +70,7 @@ const Contact = () => {
             <div className='w-full h-fit flex items-start justify-between min-h-screen pb-10'>
                 <form
                     onSubmit={e => {
-                        e.preventDefault()
-                        console.log(formData)
+                        handleSubmit(e)
                         alert("Thank you for sending the details. We connect to you ASAP")
                     }}
                     className='w-1/2 h-full flex flex-col items-start justify-start'
