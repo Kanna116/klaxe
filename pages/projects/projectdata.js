@@ -40,7 +40,7 @@ const projectdata = [
 
         ],
 
-        ranking:1,
+        ranking: 1,
 
         url: 'velvet-vista'
     },
@@ -82,7 +82,7 @@ const projectdata = [
 
         ],
 
-        ranking:1,
+        ranking: 1,
         url: 'klick-it'
     },
 
@@ -125,7 +125,7 @@ const projectdata = [
 
         ],
 
-        ranking:3,
+        ranking: 3,
         url: 'mira'
     },
     {
@@ -166,11 +166,135 @@ const projectdata = [
 
         ],
 
-        ranking:2,
+        ranking: 3,
         url: 'zinav'
+    },
+    {
+        id: 4,
+        title: `Mount String Company`,
+        desc: `Mount String  is a Indian startup which is emerging in the field of IT industry and new technologies striving to provide great excellence in production and technology. Mount String  offers the clients to have the best project outcome by providing their great services in developing an application and improvising the one which is already created.`,
+        liveLink: `https://mount-string-redesigned.vercel.app/`,
+        codeLink: `https://github.com/Kanna116/mount-string-redesigned`,
+        heroImage: `/images/projects/mount-string-redesign/hero-image.png`,
+        details: [
+            {
+                heading: `Type`,
+                information: [`Frontend Development`, `UX Design`, `Design to Code`]
+            },
+            {
+                heading: `Skills Used`,
+                information: [`React js`, `Next js`, `JSX`, `Tailwind CSS`]
+            },
+            {
+                heading: `Role`,
+                information: [`Frontend Developer`, `UX Designer`]
+            },
+            {
+                heading: `Year Made`,
+                information: [`2024`]
+            },
+            {
+                heading: `Product`,
+                information: [`Company site`]
+            },
+        ],
+        problemSolved: `Recreated the online platform of Mount String with providing information about their products ,services, mission, and other relavant details. This is a multiple-page website consisting home page,careers page and many more.`,
+        demoVideo: ``,
+        collection: [
+            `/images/projects/mount-string-redesign/collection-image-1.png`,
+            `/images/projects/mount-string-redesign/collection-image-2.png`,
+            `/images/projects/mount-string-redesign/collection-image-3.png`,
+
+        ],
+
+        ranking: 2,
+        url: 'mount-string-redesign'
+    },
+    {
+        id: 5,
+        title: `Edie Web Services`,
+        desc: `Edie is an online web services platform which helps transform clients ideas into real world applications that will outperform their toughest competition and help them achieve their strategic goals in short period of time.`,
+        liveLink: `https://kanna116.github.io/Edie-Web-Services/`,
+        codeLink: `https://github.com/Kanna116/Edie-Web-Services`,
+        heroImage: `/images/projects/edie-web-services/hero-image.png`,
+        details: [
+            {
+                heading: `Type`,
+                information: [`Web development`, `Design to Code`]
+            },
+            {
+                heading: `Skills Used`,
+                information: [`HTML5`, `CSS3`, `JavaScript`]
+            },
+            {
+                heading: `Role`,
+                information: [`Web Developer`]
+            },
+            {
+                heading: `Year Made`,
+                information: [`2023`]
+            },
+            {
+                heading: `Product`,
+                information: [`Company site`]
+            },
+        ],
+        problemSolved: `Converted a the design of this into code. Showcasing the services and the brands uniqueness through simple and minimalistic UI, the concept is on point and direct matter conveying that theyu create web related services such as making sites for brands or updating the previous site.`,
+        demoVideo: ``,
+        collection: [
+            `/images/projects/edie-web-services/collection-image-1.png`,
+            `/images/projects/edie-web-services/collection-image-2.png`,
+            `/images/projects/edie-web-services/collection-image-3.png`,
+        ],
+
+        ranking: 4,
+        url: 'edie-web-services'
+    },
+    {
+        id: 6,
+        title: `COCO`,
+        desc: `COCO is an online coffee Store which sells fresh and stress relieving coffees and Coffee beans. COCO ensures bes quality in their products and providing instant delivery with fresh making of each product. So I developed the site from a design from dribble`,
+        liveLink: `https://coco-online-coffee-store.vercel.app/`,
+        codeLink: `https://github.com/Kanna116/COCO-online-coffee-store-using-react`,
+        heroImage: `/images/projects/coco/hero-image.png`,
+        details: [
+            {
+                heading: `Type`,
+                information: [`Frontend Development`, `UX Design`, `Design to Code`]
+            },
+            {
+                heading: `Skills Used`,
+                information: [`React js`, `Vite`, `JSX`, `CSS`, `JavaScript`]
+            },
+            {
+                heading: `Role`,
+                information: [`Frontend Developer`, `UX Designer`]
+            },
+            {
+                heading: `Year Made`,
+                information: [`2023`]
+            },
+            {
+                heading: `Product`,
+                information: [`Coffee Ecommerce`]
+            },
+        ],
+        problemSolved: `Facilitated the availability of a fresh coffee products from a company coco which sells coffee as well as coffee beans freshly made. The platform provides the users to quickly connect to stores of coco and let them buy the products with ease.`,
+        demoVideo: ``,
+        collection: [
+            `/images/projects/coco/collection-image-1.png`,
+            `/images/projects/coco/collection-image-2.png`,
+            `/images/projects/coco/collection-image-3.png`,
+
+        ],
+
+        ranking: 3,
+        url: 'coco'
     },
 
 ]
+
+//more projects will be added...
 
 
 export default projectdata
