@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { IoIosClose } from "react-icons/io";
 import { VscClose } from "react-icons/vsc";
 
@@ -39,7 +39,7 @@ const Filtering = ({ data, setProjects }) => {
         }))
     }
 
-    const applyFilters = () => {
+    const applyFilters = useCallback(() => {
         let filteredData = [...data];
         if (filters.skill !== 'all') {
             filteredData = filteredData.filter(item => {
@@ -63,12 +63,15 @@ const Filtering = ({ data, setProjects }) => {
         }
 
         setProjects(filteredData);
-    }
+    }, [filters, data, setProjects]);
+
+
 
     // getting filtered data each time the filters are changed
+
     useEffect(() => {
         applyFilters();
-    }, [filters]);
+    }, [filters, applyFilters]);
 
 
 
