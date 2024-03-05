@@ -6,8 +6,19 @@ import ContactHero from './components/contacthero';
 import ContactInput from './components/contactinput';
 import ContactMessage from './components/contactmessage';
 import ContactFiles from './components/contactfiles';
+import { useState } from 'react';
 
 const Contact = () => {
+    const [formData, setformData] = useState({
+        name: '',
+        phone: '',
+        mail: '',
+        message: '',
+        file: null
+
+    });
+
+
     return (
         <div className='px-[24px] md:px-[64px] lg:px-[96px] min-h-screen w-full mt-[60px]'>
             <Navbar />
@@ -21,7 +32,7 @@ const Contact = () => {
                     <ContactInput inputName='mail' />
                     <ContactInput inputName='phone' />
                     <ContactMessage inputName='message' />
-                    <ContactFiles inputName='files'/>
+                    <ContactFiles inputName='files' />
 
                     <button
                         type='submit'
