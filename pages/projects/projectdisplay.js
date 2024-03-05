@@ -11,7 +11,7 @@ import ProjectOpinion from './components/projectopinion';
 
 const ProjectDisplay = (project) => {
     const { title, desc, liveLink, codeLink, heroImage, details, problemSolved, demoVideo, collection } = project
-
+    
     return (
         <>
             <Navbar />

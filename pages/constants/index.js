@@ -9,7 +9,7 @@ export const navitems = [
     },
     {
         name: 'Projects',
-        link: '',
+        link: '/projects',
     },
     {
         name: 'Contact',
