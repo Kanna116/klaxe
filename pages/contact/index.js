@@ -7,6 +7,7 @@ import ContactInput from './components/contactinput';
 import ContactMessage from './components/contactmessage';
 import ContactFiles from './components/contactfiles';
 import { useState } from 'react';
+import { IoMdCheckmark } from 'react-icons/io';
 
 const Contact = () => {
     const [formData, setformData] = useState({
@@ -16,7 +17,7 @@ const Contact = () => {
         message: '',
         file: null
     });
-
+    const [submitted, setSubmitted] = useState(false);
     const handleInputChange = (e) => {
         const { name, value } = e.target
         setformData(prevData => ({
@@ -69,10 +70,7 @@ const Contact = () => {
             <ContactHero />
             <div className='w-full h-fit flex items-start justify-between min-h-screen pb-10'>
                 <form
-                    onSubmit={e => {
-                        handleSubmit(e)
-                        alert("Thank you for sending the details. We connect to you ASAP")
-                    }}
+                    onSubmit={e => handleSubmit(e)}
                     className='w-1/2 h-full flex flex-col items-start justify-start'
                 >
                     <ContactInput inputName='name' formData={formData} handleInputChange={handleInputChange} />
@@ -86,6 +84,8 @@ const Contact = () => {
                         className='bg-white text-black w-fit flex px-[100px] py-[20px]  items-center justify-center gap-5 text-2xl font-semibold mt-10'>
                         Submit <span className='text-xl'><FiArrowUpRight /></span>
                     </button>
+
+                    {submitted && <p className='text-primary text-xl font-light  mt-10 flex gap-5 items-center text-green-500'><span className='border-[1px] font-semibold p-2 rounded-full bg-green-400 text-black'><IoMdCheckmark /></span> Thank you for sending the details. We connect to you ASAP</p>}
 
                 </form>
 
