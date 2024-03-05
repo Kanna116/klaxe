@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ContactMessage = ({ inputName }) => {
+const ContactMessage = ({ inputName, handleInputChange, formData }) => {
     return (
         <div className='w-full h-fit mt-3'>
             <label
@@ -12,6 +12,8 @@ const ContactMessage = ({ inputName }) => {
                 name={inputName}
                 id={inputName}
                 cols="30" rows="10"
+                onChange={(e) => handleInputChange(e)}
+                value={formData.message}
                 className='text-black resize-y max-h-[350px] min-h-[40px] h-[150px] w-full p-5'>
             </textarea>
         </div>

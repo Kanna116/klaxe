@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { IoIosClose } from 'react-icons/io'
 
-const ContactFiles = ({ inputName }) => {
+const ContactFiles = ({ inputName, handleFileChange, handleFileRemove, formData }) => {
     return (
         <>
             <div className='w-full h-fit mt-3'>
@@ -11,11 +12,15 @@ const ContactFiles = ({ inputName }) => {
                         name={inputName}
                         id={inputName}
                         className='hidden'
+                        onChange={e => handleFileChange(e)}
                     />
                     <label htmlFor={inputName} className="cursor-pointer shrink-0 bg-white text-black h-full w-1/2 grid place-items-center">
-                        Choose File
+                        {formData.file === null ? 'Choose File' : 'Choose another file'}
                     </label>
-                    <p className='text-xs w-full'>No file Uploaded</p>
+                    <p className='text-xs w-full flex items-center justify-between'>
+                        {formData.file === null ? 'No file Uploaded' : formData.file.name}
+                        {formData.file && <span className='text-xl border-[1px] rounded-full' onClick={handleFileRemove}><IoIosClose /></span>}
+                    </p>
                 </div>
             </div>
 
