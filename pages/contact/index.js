@@ -3,6 +3,7 @@ import Navbar from '../components/navbar'
 import ContactHero from './components/contacthero'
 import { PiStarFourFill } from "react-icons/pi";
 import { FiArrowUpRight } from 'react-icons/fi';
+import Footer from '../components/footer';
 
 const Contact = () => {
     return (
@@ -46,6 +47,8 @@ const Contact = () => {
                     sljdbnas
                 </div>
             </div>
+
+            <Footer />
         </div>
     )
 }
