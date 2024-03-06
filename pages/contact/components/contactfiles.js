@@ -3,10 +3,10 @@ import { IoIosClose } from 'react-icons/io';
 const ContactFiles = ({ inputName, setFormData, formData }) => {
 
     const handleFileChange = (e) => {
-        const file = e.target.files[0];
+        const addedfile = e.target.files[0];
         setFormData(prevData => ({
             ...prevData,
-            file: file
+            file: addedfile
         }))
     }
     const handleFileRemove = (e) => {
@@ -32,7 +32,7 @@ const ContactFiles = ({ inputName, setFormData, formData }) => {
                     </label>
                     <p className='text-xs w-full flex items-center justify-center h-[50px] px-3 lg:px-0'>
                         {formData.file === null ? 'No file Uploaded' : formData.file.name}
-                        {formData.file && <span className='text-xl border-[1px] rounded-full ml-auto' onClick={handleFileRemove}><IoIosClose /></span>}
+                        {formData.file !== null && <span className='text-xl border-[1px] rounded-full ml-auto' onClick={handleFileRemove}><IoIosClose /></span>}
                     </p>
                 </div>
             </div>
