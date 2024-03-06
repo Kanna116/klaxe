@@ -13,7 +13,7 @@ export const navitems = [
     },
     {
         name: 'Contact',
-        link: '',
+        link: '/contact',
     },
 ]
 
@@ -113,28 +113,33 @@ export const techStackIcons = [
 export const handpickedProjects = [
     {
         title: 'Klick It',
-        link: '',
-        image: '/images/handpicked-projects/Project-1.png',
+        link: '/projects/klick-it',
+        image: '/images/projects/Klick-it/collection-image-1.png',
+    },
+    {
+        title: 'Mount String Company',
+        link: '/projects/mount-string-redesign',
+        image: '/images/projects/mount-string-redesign/collection-image-1.png',
     },
     {
         title: 'Velvet Vista',
-        link: '',
-        image: '/images/handpicked-projects/Project-2.png',
+        link: '/projects/velvet-vista',
+        image: '/images/projects/velvet-vista/collection-image-1.png',
     },
     {
         title: 'Zinav',
-        link: '',
-        image: '/images/handpicked-projects/Project-3.png',
+        link: '/projects/zinav',
+        image: '/images/projects/zinav/collection-image-1.png',
     },
     {
         title: 'Mira',
-        link: '',
-        image: '/images/handpicked-projects/Project-4.png',
+        link: '/projects/mira',
+        image: '/images/projects/mira/collection-image-1.png',
     },
     {
         title: 'COCO Coffee',
-        link: '',
-        image: '/images/handpicked-projects/Project-5.png',
+        link: '/projects/coco',
+        image: '/images/projects/coco/collection-image-1.png',
     },
 ]
 
