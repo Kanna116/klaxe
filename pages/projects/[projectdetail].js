@@ -1,6 +1,8 @@
+import projectdata from '@/pages/data/projectdata';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import projectdata from './projectdata';
+
+
 import ProjectDisplay from './projectdisplay';
 
 const ProjectDetail = () => {

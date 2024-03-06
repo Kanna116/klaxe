@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-const ProjectCardType = ({ id, title, desc, liveLink, codeLink, heroImage, details, problemSolved, demoVideo, collection, url }) => {
+const ProjectCardType = ({ id, title, desc, collection, url }) => {
     return (
         <Link
             className='w-fit h-fit shrink-0'

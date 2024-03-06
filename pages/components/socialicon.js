@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const SocialIcon = ({ item }) => {
+const SocialIcon = ({ icon, link }) => {
 
     const [transformStyle, setTransformStyle] = useState({});
     const handleMouseMove = (e) => {
@@ -27,12 +27,12 @@ const SocialIcon = ({ item }) => {
             className="w-fit h-fit lg:p-4 md:p-2 p-3 icon-container flex items-center justify-center cursor-pointer">
             <a
                 style={transformStyle}
-                href={item.link}
+                href={link}
                 target='_blank'
                 className='w-fit h-fit duration-75 ease-linear'>
                 <span
                     className="text-xl text-white">
-                    {item.icon}
+                    {icon}
                 </span>
             </a>
         </div>

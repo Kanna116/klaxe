@@ -14,7 +14,7 @@ const Footer = () => {
 
             <div className='h-full lg:w-fit md:w-fit w-full flex items-center lg:justify-end md:justify-end justify-between lg:gap-7 md:gap-5 gap-3 '>
                 {
-                    socialIcons.map((item, index) => <SocialIcon key={index} item={item} />)
+                    socialIcons.map((item, index) => <SocialIcon key={index} {...item} />)
                 }
             </div>
         </div>
