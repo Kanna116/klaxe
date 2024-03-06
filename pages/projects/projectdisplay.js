@@ -1,4 +1,3 @@
-import React from 'react'
 import Footer from '../components/footer';
 import Navbar from '../components/navbar';
 import Connect from './components/connect';
@@ -10,7 +9,7 @@ import ProjectInfo from './components/projectinfo';
 import ProjectOpinion from './components/projectopinion';
 
 const ProjectDisplay = (project) => {
-    const { title, desc, liveLink, codeLink, heroImage, details, problemSolved, demoVideo, collection } = project
+    const { title, details, problemSolved, demoVideo, collection } = project
 
     return (
         <>

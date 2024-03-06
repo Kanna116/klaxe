@@ -1,7 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
-import { FiArrowUpRight } from 'react-icons/fi'
 
 const ProjectCardType = ({ id, title, desc, liveLink, codeLink, heroImage, details, problemSolved, demoVideo, collection, url }) => {
     return (
