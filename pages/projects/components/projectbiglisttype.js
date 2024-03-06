@@ -6,6 +6,7 @@ import { FiArrowUpRight } from 'react-icons/fi'
 const ProjectBigListType = ({ id, title, desc, codeLink, collection, url }) => {
 
     const [type, setType] = useState(false);
+    
     useEffect(() => {
         if (id % 2 === 0) {
             setType(true)

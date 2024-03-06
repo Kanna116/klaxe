@@ -1,11 +1,16 @@
-import projectdata from '@/pages/data/projectdata';
+import projectdata from '@/data/projectdata';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-
-
 import ProjectDisplay from './projectdisplay';
+export async function getServerSideProps() {
+    return {
+        props: {},
+    };
+}
 
 const ProjectDetail = () => {
+
+
 
     const router = useRouter();
     const { projectdetail } = router.query
@@ -13,13 +18,13 @@ const ProjectDetail = () => {
     const [projectsData, setProjectsData] = useState(null);
 
     useEffect(() => {
-        if (projectdetail) {
+        if (projectdetail && projectdata.length > 0) {
             setProjectsData(projectdata);
         }
     }, [projectdetail]);
 
 
-    if (!projectdetail || !projectsData) {
+    if (!projectdetail || projectsData === null) {
         return <div className='w-screen min-h-screen flex items-center justify-center'>Loading...</div>;
     }
 

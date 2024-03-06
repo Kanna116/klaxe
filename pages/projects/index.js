@@ -11,7 +11,13 @@ import ProjectCardType from './components/projectcardtype'
 import ProjectListType from './components/projectlisttype'
 import ProjectsNotFound from './components/projectsnotfound'
 import Sorting from './components/sorting'
-import projectdata from '@/pages/data/projectdata'
+import projectdata from '@/data/projectdata'
+
+export async function getServerSideProps() {
+    return {
+        props: {},
+    };
+}
 
 const Projects = () => {
     const [data, setData] = useState(projectdata);
