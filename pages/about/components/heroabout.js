@@ -1,6 +1,5 @@
 import { heroAbout } from '@/pages/constants'
 import Image from 'next/image'
-import React from 'react'
 import { FiArrowUpRight } from 'react-icons/fi'
 
 const HeroAbout = () => {
