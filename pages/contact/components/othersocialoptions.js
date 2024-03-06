@@ -23,11 +23,11 @@ const OtherSocialOptions = () => {
             <ul className='flex flex-col items-start mt-3 gap-3 ml-2'>
                 <li className='flex items-center gap-3 text-sm cursor-pointer font-thin group'>
                     <span className='scale-0 group-hover:scale-[1] duration-300 '><BsClipboard /></span>
-                    <span className='-translate-x-8 group-hover:translate-x-0 duration-300'>muralikrishna.klax@gmail.com</span>
+                    <span className='-translate-x-8 group-hover:translate-x-0 duration-300 tracking-wider'>muralikrishna.klax@gmail.com</span>
                 </li>
                 <li className='flex items-center gap-3 text-sm cursor-pointer font-thin group'>
                     <span className='scale-0 group-hover:scale-[1] duration-300 '><BsClipboard /></span>
-                    <span className='-translate-x-8 group-hover:translate-x-0 duration-300'>7799225377</span>
+                    <span className='-translate-x-8 group-hover:translate-x-0 duration-300 tracking-wider'>779922XXXX</span>
                 </li>
             </ul>
         </>

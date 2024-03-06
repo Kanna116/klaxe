@@ -24,7 +24,7 @@ const SocialIcon = ({ item }) => {
         <div
             onMouseMove={(e) => handleMouseMove(e)}
             onMouseLeave={handleMouseLeave}
-            className="w-fit h-fit p-4 icon-container flex items-center justify-center cursor-pointer">
+            className="w-fit h-fit lg:p-4 md:p-2 p-3 icon-container flex items-center justify-center cursor-pointer">
             <a
                 style={transformStyle}
                 href={item.link}

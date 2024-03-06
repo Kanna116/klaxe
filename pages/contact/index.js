@@ -74,7 +74,7 @@ const Contact = () => {
                 </form>
 
 
-                <div className='lg:w-1/4 w-full h-fit '>
+                <div className='lg:w-1/3  w-full h-fit '>
                     <div className='border-[1px] capitalize lg:mt-5 mt-2 lg:px-5 px-2 lg:py-10 py-5 text-center lg:text-start'>
                         <h1 className='lg:text-4xl text-xl font-light'>I would love to hear what you have in mind</h1>
                         <h1 className='lg:text-4xl text-xl font-light lg:mt-10 mt-3'>Let us not wast a minute</h1>
