@@ -10,7 +10,7 @@ import { useState } from 'react';
 import { IoMdCheckmark } from 'react-icons/io';
 
 const Contact = () => {
-    const [formData, setformData] = useState({
+    const [formData, setFormData] = useState({
         name: '',
         phone: '',
         mail: '',
@@ -18,50 +18,36 @@ const Contact = () => {
         file: null
     });
     const [submitted, setSubmitted] = useState(false);
-    const handleInputChange = (e) => {
-        const { name, value } = e.target
-        setformData(prevData => ({
-            ...prevData,
-            [name]: value
-        }))
-    }
 
-    const handleFileChange = (e) => {
-        const file = e.target.files[0];
-        setformData(prevData => ({
-            ...prevData,
-            file: file
-        }))
-    }
-    const handleFileRemove = (e) => {
-        setformData(prevData => ({
-            ...prevData,
-            file: null
-        }))
-    }
+
+
+
+    
 
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log(formData)
+        setSubmitted(true)
 
-        try {
-            const response = await fetch('https://formspree.io/f/mayrbyew', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
+        // try {
+        //     const response = await fetch('https://formspree.io/f/mayrbyew', {
+        //         method: 'POST',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //         },
+        //         body: JSON.stringify(formData),
+        //     });
 
-            if (response.ok) {
-                setSubmitted(true);
-                console.log('Form submitted successfully');
-            } else {
-                console.error('Failed to submit form');
-            }
-        } catch (error) {
-            console.error('Error submitting form:', error);
-        }
+        //     if (response.ok) {
+        //         setSubmitted(true);
+        //         console.log('Form submitted successfully');
+        //     } else {
+        //         console.error('Failed to submit form');
+        //     }
+        // } catch (error) {
+        //     console.error('Error submitting form:', error);
+        // }
     };
 
     return (
@@ -73,19 +59,19 @@ const Contact = () => {
                     onSubmit={e => handleSubmit(e)}
                     className='w-1/2 h-full flex flex-col items-start justify-start'
                 >
-                    <ContactInput inputName='name' formData={formData} handleInputChange={handleInputChange} />
-                    <ContactInput inputName='mail' formData={formData} handleInputChange={handleInputChange} />
-                    <ContactInput inputName='phone' formData={formData} handleInputChange={handleInputChange} />
-                    <ContactMessage inputName='message' formData={formData} handleInputChange={handleInputChange} />
-                    <ContactFiles inputName='files' formData={formData} handleFileChange={handleFileChange} handleFileRemove={handleFileRemove} />
+                    <ContactInput inputName='name' formData={formData} setFormData={setFormData} />
+                    <ContactInput inputName='mail' formData={formData} setFormData={setFormData} />
+                    <ContactInput inputName='phone' formData={formData} setFormData={setFormData} />
+                    <ContactMessage inputName='message' formData={formData} setFormData={setFormData} />
+                    <ContactFiles inputName='files' formData={formData} setFormData={setFormData} />
 
                     <button
                         type='submit'
                         className='bg-white text-black w-fit flex px-[100px] py-[20px]  items-center justify-center gap-5 text-2xl font-semibold mt-10'>
-                        Submit <span className='text-xl'><FiArrowUpRight /></span>
+                        Send <span className='text-xl'><FiArrowUpRight /></span>
                     </button>
 
-                    {submitted && <p className='text-primary text-xl font-light  mt-10 flex gap-5 items-center text-green-500'><span className='border-[1px] font-semibold p-2 rounded-full bg-green-400 text-black'><IoMdCheckmark /></span> Thank you for sending the details. We connect to you ASAP</p>}
+                    {submitted && <p className='text-primary text-xl font-light  mt-10 flex gap-5 items-center text-green-500'><span className='border-[1px] font-semibold p-2 rounded-full bg-green-400 text-black'><IoMdCheckmark /></span> Thank you for sending the details. I will connect with you ASAP</p>}
 
                 </form>
 

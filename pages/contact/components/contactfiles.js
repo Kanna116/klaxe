@@ -1,7 +1,21 @@
 import React, { useState } from 'react'
 import { IoIosClose } from 'react-icons/io'
 
-const ContactFiles = ({ inputName, handleFileChange, handleFileRemove, formData }) => {
+const ContactFiles = ({ inputName, setFormData, formData }) => {
+
+    const handleFileChange = (e) => {
+        const file = e.target.files[0];
+        setFormData(prevData => ({
+            ...prevData,
+            file: file
+        }))
+    }
+    const handleFileRemove = (e) => {
+        setFormData(prevData => ({
+            ...prevData,
+            file: null
+        }))
+    }
     return (
         <>
             <div className='w-full h-fit mt-3'>

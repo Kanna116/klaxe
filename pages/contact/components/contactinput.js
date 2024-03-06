@@ -1,7 +1,15 @@
 import React from 'react'
 import { PiStarFourFill } from 'react-icons/pi'
 
-const ContactInput = ({ inputName, handleInputChange, formData }) => {
+const ContactInput = ({ inputName, setFormData, formData }) => {
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target
+        setFormData(prevData => ({
+            ...prevData,
+            [name]: value
+        }))
+    }
     return (
         <div className='w-full h-fit mt-3'>
             <label
