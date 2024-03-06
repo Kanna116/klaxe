@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { FiArrowUpRight } from 'react-icons/fi'
 
-const ProjectBigListType = ({ id, title, desc, liveLink, codeLink, heroImage, details, problemSolved, demoVideo, collection, url }) => {
+const ProjectBigListType = ({ id, title, desc, codeLink, heroImage, details, problemSolved, demoVideo, collection, url }) => {
 
     const [type, setType] = useState(false);
     useEffect(() => {

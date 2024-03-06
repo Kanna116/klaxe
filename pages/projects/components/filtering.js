@@ -1,5 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react'
-import { IoIosClose } from "react-icons/io";
+import { useCallback, useEffect, useState } from 'react';
 import { VscClose } from "react-icons/vsc";
 
 const Filtering = ({ data, setProjects }) => {

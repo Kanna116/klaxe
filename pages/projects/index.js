@@ -9,9 +9,9 @@ import Filtering from './components/filtering'
 import ProjectBigListType from './components/projectbiglisttype'
 import ProjectCardType from './components/projectcardtype'
 import ProjectListType from './components/projectlisttype'
+import ProjectsNotFound from './components/projectsnotfound'
 import Sorting from './components/sorting'
 import projectdata from './projectdata'
-import ProjectsNotFound from './components/projectsnotfound'
 
 const Projects = () => {
     const [data, setData] = useState(projectdata);

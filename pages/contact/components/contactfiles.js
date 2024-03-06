@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import { IoIosClose } from 'react-icons/io'
+import { IoIosClose } from 'react-icons/io';
 
 const ContactFiles = ({ inputName, setFormData, formData }) => {
 

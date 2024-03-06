@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { FiArrowUpRight } from 'react-icons/fi'
 
-const ProjectListType = ({ title, desc, liveLink, codeLink, heroImage, details, problemSolved, demoVideo, collection, url }) => {
+const ProjectListType = ({ title, details, collection, url }) => {
 
     const [floatingValues, setFloatingValues] = useState({
         left: 0,

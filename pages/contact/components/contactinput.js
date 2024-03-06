@@ -1,4 +1,3 @@
-import React from 'react'
 import { PiStarFourFill } from 'react-icons/pi'
 
 const ContactInput = ({ inputName, setFormData, formData }) => {
