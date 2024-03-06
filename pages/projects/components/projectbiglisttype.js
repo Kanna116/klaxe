@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { FiArrowUpRight } from 'react-icons/fi'
 
-const ProjectBigListType = ({ id, title, desc, codeLink, heroImage, details, problemSolved, demoVideo, collection, url }) => {
+const ProjectBigListType = ({ id, title, desc, codeLink, collection, url }) => {
 
     const [type, setType] = useState(false);
     useEffect(() => {

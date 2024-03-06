@@ -2,8 +2,8 @@ import { BsMouseFill } from "react-icons/bs";
 import { HiArrowDown } from "react-icons/hi2";
 import { heroText } from '../constants';
 
-import QuickSocialLinks from "./quicksociallinks";
 import Link from "next/link";
+import QuickSocialLinks from "./quicksociallinks";
 
 const HeroSection = () => {
 
