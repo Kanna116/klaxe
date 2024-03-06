@@ -24,12 +24,12 @@ const SocialIcon = ({ item }) => {
         <div
             onMouseMove={(e) => handleMouseMove(e)}
             onMouseLeave={handleMouseLeave}
-            className="w-fit h-fit p-4 icon-container flex items-center justify-center">
+            className="w-fit h-fit lg:p-4 md:p-2 p-3 icon-container flex items-center justify-center cursor-pointer">
             <a
                 style={transformStyle}
                 href={item.link}
                 target='_blank'
-                className='w-fit h-fit duration-75 ease-linear cursor-pointer'>
+                className='w-fit h-fit duration-75 ease-linear'>
                 <span
                     className="text-xl text-white">
                     {item.icon}

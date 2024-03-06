@@ -3,6 +3,7 @@ import { HiArrowDown } from "react-icons/hi2";
 import { heroText } from '../constants';
 
 import QuickSocialLinks from "./quicksociallinks";
+import Link from "next/link";
 
 const HeroSection = () => {
 
@@ -14,16 +15,18 @@ const HeroSection = () => {
                 <h1 className='lg:text-6xl md:text-4xl text-white text-2xl font-bold capitalize'>{heroText[1]}</h1>
                 <h1 className='lg:text-5xl md:text-3xl text-white text-2xl font-semibold capitalize'>{heroText[2]}</h1>
                 <h4 className='font-semibold text-[#ffffff] text-xs lg:text-xl'>{heroText[3]}</h4>
-                <button className='lg:px-[30px] px-[20px] lg:py-[10px] py-[10px] rounded-[3px] bg-white text-black font-semibold text-xs lg:text-xl mt-5'>Connect</button>
-            
-            {/* scroll down suggestion */}
-            <div className="scroll-down absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col gap-3">
-                <span className="text-2xl rotate-180"><BsMouseFill /></span>
-                <span className="text-2xl arrow scrolldownarrow"><HiArrowDown /></span>
-            </div>
-            
-            {/* Quick social icons */}
-            <QuickSocialLinks />
+                <Link href={`/contact`} className="w-fit h-fit">
+                    <button className='lg:px-[30px] px-[20px] lg:py-[10px] py-[10px] rounded-[3px] bg-white text-black font-semibold text-xs lg:text-xl mt-5'>Connect</button>
+                </Link>
+
+                {/* scroll down suggestion */}
+                <div className="scroll-down absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col gap-3">
+                    <span className="text-2xl rotate-180"><BsMouseFill /></span>
+                    <span className="text-2xl arrow scrolldownarrow"><HiArrowDown /></span>
+                </div>
+
+                {/* Quick social icons */}
+                <QuickSocialLinks />
 
 
             </div>
