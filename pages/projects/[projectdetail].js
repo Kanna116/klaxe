@@ -1,16 +1,10 @@
-import projectdata from '@/data/projectdata';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import ProjectContext from '../context/projectcontext';
 import ProjectDisplay from './projectdisplay';
-export async function getServerSideProps() {
-    return {
-        props: {},
-    };
-}
 
 const ProjectDetail = () => {
-
-
+    const { allProjects } = useContext(ProjectContext);
 
     const router = useRouter();
     const { projectdetail } = router.query
@@ -18,8 +12,8 @@ const ProjectDetail = () => {
     const [projectsData, setProjectsData] = useState(null);
 
     useEffect(() => {
-        if (projectdetail && projectdata.length > 0) {
-            setProjectsData(projectdata);
+        if (projectdetail && allProjects.length > 0) {
+            setProjectsData(allProjects);
         }
     }, [projectdetail]);
 
@@ -35,8 +29,6 @@ const ProjectDetail = () => {
             Sorry The page You are looking for is not made yet  <br /> {`:'(`}
         </div>;
     }
-
-
 
 
     return (
