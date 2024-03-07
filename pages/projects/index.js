@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { BsList } from "react-icons/bs"
 import { IoGrid } from 'react-icons/io5'
 import { PiRowsFill } from "react-icons/pi"
 import Footer from '../components/footer'
 import Navbar from '../components/navbar'
+import ProjectContext from '../context/projectcontext'
 import Connect from './components/connect'
 import Filtering from './components/filtering'
 import ProjectBigListType from './components/projectbiglisttype'
@@ -11,16 +12,12 @@ import ProjectCardType from './components/projectcardtype'
 import ProjectListType from './components/projectlisttype'
 import ProjectsNotFound from './components/projectsnotfound'
 import Sorting from './components/sorting'
-import projectdata from '@/data/projectdata'
 
-export async function getServerSideProps() {
-    return {
-        props: {},
-    };
-}
 
 const Projects = () => {
-    const [data, setData] = useState(projectdata);
+    const { allProjects } = useContext(ProjectContext);
+
+    const [data, setData] = useState(allProjects);
     const [projects, setProjects] = useState(data);
 
     //list style
