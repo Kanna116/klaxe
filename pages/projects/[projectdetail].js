@@ -4,18 +4,18 @@ import ProjectContext from '../context/projectcontext';
 import ProjectDisplay from './projectdisplay';
 
 const ProjectDetail = () => {
+    const [projectsData, setProjectsData] = useState(null);
     const { allProjects } = useContext(ProjectContext);
 
     const router = useRouter();
     const { projectdetail } = router.query
 
-    const [projectsData, setProjectsData] = useState(null);
 
     useEffect(() => {
         if (projectdetail && allProjects.length > 0) {
             setProjectsData(allProjects);
         }
-    }, [projectdetail,allProjects]);
+    }, [projectdetail, allProjects]);
 
 
     if (!projectdetail || projectsData === null) {

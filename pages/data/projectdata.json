@@ -36,14 +36,15 @@
             "/images/projects/velvet-vista/collection-image-3.png"
         ],
         "ranking": 1,
+        "handpickedProject":true,
         "url": "velvet-vista"
     },
     {
         "id": 1,
         "title": "Klick It",
         "desc": "It is mobile app design which allows the user buy the products from nearby store. It can be either home delivery or Take away this also also allow the user to prebook the things they want from a store and skip the very long line in the store",
-        "liveLink": "",
-        "codeLink": "",
+        "liveLink": "https://www.figma.com/proto/j98Qg7Gac7V2Z9XoR3KMje/Klick-shopping-app-(Copy)?page-id=810%3A3&type=design&node-id=815-835&viewport=494%2C520%2C0.04&t=Zaxt9Cyy1zuxSRCK-1&scaling=scale-down&starting-point-node-id=815%3A835&mode=design",
+        "codeLink": "https://www.figma.com/file/j98Qg7Gac7V2Z9XoR3KMje/Klick-shopping-app-(Copy)?type=design&node-id=810%3A3&mode=design&t=WPOUuOazXan12mWq-1",
         "heroImage": "/images/projects/Klick-it/hero-image.png",
         "details": [
             {
@@ -68,14 +69,16 @@
             }
         ],
         "problemSolved": "Provided the functionality to the user to get the products either by getting them to delivered to home or Give them the opportunity to explore nearby shops and their products and get the delivery done as soon as possible. And provide seamless user journey ",
-        "demoVideo": "",
+        "demoVideo": "/videos/projects/velvet-vista-demo-video.webm",
         "collection": [
             "/images/projects/Klick-it/collection-image-1.png",
             "/images/projects/Klick-it/collection-image-2.png",
             "/images/projects/Klick-it/collection-image-3.png"
         ],
         "ranking": 1,
+        "handpickedProject":true,
         "url": "klick-it"
+
     },
     {
         "id": 2,
@@ -107,13 +110,14 @@
             }
         ],
         "problemSolved": "Provided the functionality to the user to get the products either by getting them to delivered to home or Give them the opportunity to explore nearby shops and their products and get the delivery done as soon as possible. And provide seamless user journey ",
-        "demoVideo": "",
+        "demoVideo":"/videos/projects/velvet-vista-demo-video.webm",
         "collection": [
             "/images/projects/mira/collection-image-1.png",
             "/images/projects/mira/collection-image-2.png",
             "/images/projects/mira/collection-image-3.png"
         ],
         "ranking": 3,
+        "handpickedProject":true,
         "url": "mira"
     },
     {
@@ -146,13 +150,14 @@
             }
         ],
         "problemSolved": "Provided the functionality to the user to get the products either by getting them to delivered to home or Give them the opportunity to explore nearby shops and their products and get the delivery done as soon as possible. And provide seamless user journey ",
-        "demoVideo": "",
+        "demoVideo": "/videos/projects/velvet-vista-demo-video.webm",
         "collection": [
             "/images/projects/zinav/collection-image-1.png",
             "/images/projects/zinav/collection-image-2.png",
             "/images/projects/zinav/collection-image-3.png"
         ],
         "ranking": 3,
+        "handpickedProject":true,
         "url": "zinav"
     },
     {
@@ -185,13 +190,14 @@
             }
         ],
         "problemSolved": "Recreated the online platform of Mount String with providing information about their products ,services, mission, and other relavant details. This is a multiple-page website consisting home page,careers page and many more.",
-        "demoVideo": "",
+        "demoVideo": "/videos/projects/velvet-vista-demo-video.webm",
         "collection": [
             "/images/projects/mount-string-redesign/collection-image-1.png",
             "/images/projects/mount-string-redesign/collection-image-2.png",
             "/images/projects/mount-string-redesign/collection-image-3.png"
         ],
         "ranking": 2,
+        "handpickedProject":true,
         "url": "mount-string-redesign"
     },
     {
@@ -224,13 +230,14 @@
             }
         ],
         "problemSolved": "Converted a the design of this into code. Showcasing the services and the brands uniqueness through simple and minimalistic UI, the concept is on point and direct matter conveying that theyu create web related services such as making sites for brands or updating the previous site.",
-        "demoVideo": "",
+        "demoVideo": "/videos/projects/velvet-vista-demo-video.webm",
         "collection": [
             "/images/projects/edie-web-services/collection-image-1.png",
             "/images/projects/edie-web-services/collection-image-2.png",
             "/images/projects/edie-web-services/collection-image-3.png"
         ],
         "ranking": 4,
+        "handpickedProject":false,
         "url": "edie-web-services"
     },
     {
@@ -263,13 +270,14 @@
             }
         ],
         "problemSolved": "Facilitated the availability of a fresh coffee products from a company coco which sells coffee as well as coffee beans freshly made. The platform provides the users to quickly connect to stores of coco and let them buy the products with ease.",
-        "demoVideo": "",
+        "demoVideo": "/videos/projects/velvet-vista-demo-video.webm",
         "collection": [
             "/images/projects/coco/collection-image-1.png",
             "/images/projects/coco/collection-image-2.png",
             "/images/projects/coco/collection-image-3.png"
         ],
         "ranking": 3,
+        "handpickedProject":true,
         "url": "coco"
     }
 ]

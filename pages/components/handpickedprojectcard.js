@@ -1,15 +1,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-const HandPickedProjectCard = ({ title, link, image }) => {
+const HandPickedProjectCard = ({ title, url, heroImage, }) => {
 
     return (
-        <Link href={link}>
+        <Link href={`/projects/${url}`}>
             <div
                 className='group h-[40vh] aspect-square shrink-0 relative overflow-hidden'
             >
                 <Image
-                    src={image}
+                    src={heroImage}
                     width={500}
                     height={500}
                     alt={`project image of ${title}`}

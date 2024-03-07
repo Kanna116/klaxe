@@ -34,27 +34,27 @@ import { FaXTwitter } from "react-icons/fa6";
 export const socialIcons = [
     {
         icon: <FaLinkedinIn />,
-        socialHandleName:`LinkedIn`,
+        socialHandleName: `LinkedIn`,
         link: 'https://www.linkedin.com/in/murali-krishna-sake/'
     },
     {
         icon: <FaGithub />,
-        socialHandleName:`GitHub`,
+        socialHandleName: `GitHub`,
         link: 'https://github.com/Kanna116'
     },
     {
         icon: <FaGlobeAmericas />,
-        socialHandleName:`Design Portfolio`,
+        socialHandleName: `Design Portfolio`,
         link: 'https://muralikanna77.wixsite.com/designerkanna'
     },
     {
         icon: <FaXTwitter />,
-        socialHandleName:`Twitter`,
+        socialHandleName: `Twitter`,
         link: 'https://twitter.com/klax_e'
     },
     {
         icon: <FaCodepen />,
-        socialHandleName:`Codepen`,
+        socialHandleName: `Codepen`,
         link: 'https://codepen.io/Klax'
     }
 ]
@@ -115,38 +115,8 @@ export const techStackIcons = [
 ]
 
 
-export const handpickedProjects = [
-    {
-        title: 'Klick It',
-        link: '/projects/klick-it',
-        image: '/images/projects/Klick-it/collection-image-1.png',
-    },
-    {
-        title: 'Mount String Company',
-        link: '/projects/mount-string-redesign',
-        image: '/images/projects/mount-string-redesign/collection-image-1.png',
-    },
-    {
-        title: 'Velvet Vista',
-        link: '/projects/velvet-vista',
-        image: '/images/projects/velvet-vista/collection-image-1.png',
-    },
-    {
-        title: 'Zinav',
-        link: '/projects/zinav',
-        image: '/images/projects/zinav/collection-image-1.png',
-    },
-    {
-        title: 'Mira',
-        link: '/projects/mira',
-        image: '/images/projects/mira/collection-image-1.png',
-    },
-    {
-        title: 'COCO Coffee',
-        link: '/projects/coco',
-        image: '/images/projects/coco/collection-image-1.png',
-    },
-]
+
+
 
 
 //about
@@ -154,21 +124,21 @@ export const heroAbout = {
     desc: [`Hey, I am Murali Krishna. I am Frontend Developer and UX Designer.  I specialize in making modern designs with functional interfaces. My goals are always towards great User Experience while enhancing the brand power.`,
         `I am Mechanical Engineering Graduate but my strength in designing and developing made me revise my goals and choose the best path for me.`
     ],
-    link: ''
+    link: '/about'
 }
 
 export const whatIDoChips = [
     {
         id: 1,
         title: `Web development`,
-        desc: `Transforming great UI’s into code from the past year. With immense concentration and pixel perfection weaved into every product.
+        desc: `Transforming great UI's into code from the past year. With immense concentration and pixel perfection weaved into every product.
         Transforming modern designs into actual working projects through mastery in code`,
         isOpen: true,
     },
     {
         id: 2,
         title: `UX design`,
-        desc: `Transforming great UI’s into code from the past year. With immense concentration and pixel perfection weaved into every product.
+        desc: `Transforming great UI's into code from the past year. With immense concentration and pixel perfection weaved into every product.
         Transforming modern designs into actual working projects through mastery in code`,
         isOpen: false,
     },
