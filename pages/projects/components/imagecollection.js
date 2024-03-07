@@ -1,6 +1,11 @@
 import Image from 'next/image'
 
 const ImageCollection = ({ title, collection }) => {
+
+    if(!title && !collection){
+        return <div className='w-full h-full flex items-center justify-center bg-zinc-700 text-white'>Loading...</div>; 
+    }
+
     return (
         <div className="image-collection w-full lg:h-[70vh] h-fit py-[10vh] flex items-center justify-between flex-col lg:flex-row md:flex-row lg:gap-0 gap-5">
             {

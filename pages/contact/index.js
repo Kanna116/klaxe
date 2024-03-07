@@ -1,12 +1,10 @@
 import { useState } from 'react';
 import { FiArrowUpRight } from 'react-icons/fi';
-import { IoMdCheckmark } from 'react-icons/io';
+import { IoIosClose, IoMdCheckmark } from 'react-icons/io';
+import { PiStarFourFill } from 'react-icons/pi';
 import Footer from '../components/footer';
 import Navbar from '../components/navbar';
-import ContactFiles from './components/contactfiles';
 import ContactHero from './components/contacthero';
-import ContactInput from './components/contactinput';
-import ContactMessage from './components/contactmessage';
 import OtherSocialOptions from './components/othersocialoptions';
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -19,6 +17,28 @@ const Contact = () => {
 
 
     const [submitted, setSubmitted] = useState(false);
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target
+        setFormData(prevData => ({
+            ...prevData,
+            [name]: value
+        }))
+    }
+
+    const handleFileChange = (e) => {
+        const addedfile = e.target.files[0];
+        setFormData(prevData => ({
+            ...prevData,
+            file: addedfile
+        }))
+    }
+    const handleFileRemove = (e) => {
+        setFormData(prevData => ({
+            ...prevData,
+            file: null
+        }))
+    }
 
 
     const handleSubmit = async (e) => {
@@ -53,11 +73,91 @@ const Contact = () => {
                     onSubmit={e => handleSubmit(e)}
                     className='lg:w-1/2 w-full h-full flex flex-col items-start justify-start lg:mt-0 mt-5'
                 >
-                    <ContactInput inputName='name' formData={formData} setFormData={setFormData} />
-                    <ContactInput inputName='mail' formData={formData} setFormData={setFormData} />
-                    <ContactInput inputName='phone' formData={formData} setFormData={setFormData} />
-                    <ContactMessage inputName='message' formData={formData} setFormData={setFormData} />
-                    <ContactFiles inputName='files' formData={formData} setFormData={setFormData} />
+                    <div className='w-full h-fit mt-3'>
+                        <label
+                            htmlFor='name'
+                            className='flex items-center gap-2 capitalize h-[50px] text-2xl'>
+                            Name<sup><PiStarFourFill /></sup>
+                        </label>
+                        <input
+                            id='name'
+                            type="text"
+                            required
+                            name='name'
+                            value={formData.name}
+                            onChange={(e) => handleInputChange(e)}
+                            className='text-black h-[50px] w-full border-0 outline-0 px-5 text-secondary'
+                        />
+                    </div>
+                    <div className='w-full h-fit mt-3'>
+                        <label
+                            htmlFor='mail'
+                            className='flex items-center gap-2 capitalize h-[50px] text-2xl'>
+                            Mail<sup><PiStarFourFill /></sup>
+                        </label>
+                        <input
+                            id='mail'
+                            type="text"
+                            required
+                            name='mail'
+                            value={formData.mail}
+                            onChange={(e) => handleInputChange(e)}
+                            className='text-black h-[50px] w-full border-0 outline-0 px-5 text-secondary'
+                        />
+                    </div>
+                    <div className='w-full h-fit mt-3'>
+                        <label
+                            htmlFor='phone'
+                            className='flex items-center gap-2 capitalize h-[50px] text-2xl'>
+                            Phone<sup><PiStarFourFill /></sup>
+                        </label>
+                        <input
+                            id='phone'
+                            type="text"
+                            required
+                            name='phone'
+                            value={formData.phone}
+                            onChange={(e) => handleInputChange(e)}
+                            className='text-blacks h-[50px] w-full border-0 outline-0 px-5 text-secondary'
+                        />
+                    </div>
+
+                    <div className='w-full h-fit mt-3'>
+                        <label
+                            htmlFor='message'
+                            className='flex items-center gap-2 capitalize h-[50px] text-2xl'>
+                            Message
+                        </label>
+                        <textarea
+                            name='message'
+                            id='message'
+                            cols="30" rows="10"
+                            onChange={(e) => handleInputChange(e)}
+                            value={formData.message}
+                            className='text-black resize-y max-h-[350px] min-h-[40px] h-[150px] w-full p-5 outline-0 border-0'>
+                        </textarea>
+                    </div>
+
+
+                    <div className='w-full h-fit mt-3'>
+                        <h4 className='h-[50px] text-2xl'>Upload Files <span>(if any)</span></h4>
+                        <div className='w-full lg:h-[50px] h-fit border-[2px] border-zinc-950  flex lg:flex-row flex-col items-center justify-between lg:pr-4 pr-0 lg:gap-5 gap-0'>
+                            <input
+                                type='file'
+                                name='file'
+                                id='file'
+                                className='hidden'
+                                onChange={e => handleFileChange(e)}
+                            />
+                            <label htmlFor='file' className="cursor-pointer shrink-0 bg-white text-black lg:h-full h-[50px] lg:w-1/2 w-full grid place-items-center">
+                                {formData.file === null ? 'Choose File' : 'Choose another file'}
+                            </label>
+                            <p className='text-xs w-full flex items-center justify-center h-[50px] px-3 lg:px-0'>
+                                {formData.file === null ? 'No file Uploaded' : formData.file.name}
+                                {formData.file !== null && <span className='text-xl border-[1px] rounded-full ml-auto' onClick={handleFileRemove}><IoIosClose /></span>}
+                            </p>
+                        </div>
+                    </div>
 
                     <button
                         type='submit'
@@ -83,6 +183,7 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
+
             <div className='lg:hidden md:block block pb-20'>
                 <OtherSocialOptions />
             </div>

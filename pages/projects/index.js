@@ -17,8 +17,7 @@ import Sorting from './components/sorting'
 const Projects = () => {
     const { allProjects } = useContext(ProjectContext);
 
-    const [data, setData] = useState(allProjects);
-    const [projects, setProjects] = useState(data);
+    const [projects, setProjects] = useState(allProjects);
 
     //list style
     const [listStyle, setListStyle] = useState('grid');
@@ -41,29 +40,30 @@ const Projects = () => {
             </div>
 
             <div className='w-full h-fit min-h-[50px] flex lg:items-center items-start justify-between mt-5 mb-10 lg:px-[10px] px-0 flex-col lg:flex-row md:flex-row lg:gap-0 gap-5'>
-                <Filtering data={data} setProjects={setProjects} />
+                <Filtering setProjects={setProjects} />
                 <Sorting setProjects={setProjects} />
             </div>
-
-
             {
-
-                //used ternary to seperate the grid style as it seeming to have a disturbance in the UI
-                listStyle === 'grid' ?
-                    <div className='flex w-full h-fit flex-wrap lg:my-20 md:my-10 my-0 justify-between lg:gap-y-5 gap-y-10'>
-                        {
-                            projects.map((project) => <ProjectCardType key={project.id} {...project} />)
-                        }
+                listStyle === 'grid' &&
+                <div className='flex w-full h-fit flex-wrap lg:my-20 md:my-10 my-0 justify-between lg:gap-y-5 gap-y-10'>
+                    {
+                        projects.map((project) => <ProjectCardType key={project.id} {...project} />)
+                    }
+                </div>
+            }
+            {
+                listStyle === 'list' && (
+                    <div className='flex flex-col'>
+                        {projects.map((project) => <ProjectListType key={project.id} id={project.id} />)}
                     </div>
-                    :
-                    projects.map((project) => {
-                        if (listStyle === 'list') {
-                            return <ProjectListType key={project.id} {...project} />
-                        }
-                        else if (listStyle === 'bigList') {
-                            return <ProjectBigListType key={project.id} {...project} />
-                        }
-                    })
+                )
+            }
+            {
+                listStyle === 'bigList' && (
+                    <div className='flex flex-col'>
+                        {projects.map((project) => <ProjectBigListType key={project.id} id={project.id} />)}
+                    </div>
+                )
             }
             {
                 projects.length === 0 &&

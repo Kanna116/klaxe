@@ -1,9 +1,12 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { useState } from 'react'
-import { FiArrowUpRight } from 'react-icons/fi'
+import { useContext, useState } from 'react';
+import { FiArrowUpRight } from 'react-icons/fi';
+import Link from 'next/link';
+import Image from 'next/image';
+import ProjectContext from '@/pages/context/projectcontext';
 
-const ProjectListType = ({ title, details, collection, url }) => {
+const ProjectListType = ({ id }) => {
+    const { allProjects } = useContext(ProjectContext);
+    const project = allProjects.find(item => id === item.id);
 
     const [floatingValues, setFloatingValues] = useState({
         left: 0,
@@ -12,24 +15,32 @@ const ProjectListType = ({ title, details, collection, url }) => {
 
     const [cardOpen, setCardOpen] = useState(false);
 
-    const handleMouseMove = (e) => {
-
-        const rect = e.currentTarget.getBoundingClientRect();
-
-        setFloatingValues(prevValues => {
-            return {
-                ...prevValues,
-                left: e.clientX,
-                rotate: - Math.floor((rect.width / 2 - e.clientX) / 50),
-            }
-        })
+    //don't access the props when it is undefined
+    if (!project) {
+        return <div className='w-full h-screen flex items-center justify-center bg-zinc-700 text-white'>Loading...</div>;
     }
 
+    const { title, details, collection, url } = project;
+
+    const handleMouseMove = (e) => {
+        const rect = e.currentTarget.getBoundingClientRect();
+        setFloatingValues({
+            left: e.clientX,
+            rotate: -Math.floor((rect.width / 2 - e.clientX) / 50),
+        });
+        //Making the card open whenever the mouse is moved on above
+        setCardOpen(true);
+    };
+
+    const handleMouseLeave = () => {
+        //closing the card when not hovered
+        setCardOpen(false);
+    };
 
     return (
         <div
-            onMouseMove={(e) => { handleMouseMove(e); setCardOpen(true) }}
-            onMouseLeave={() => setCardOpen(false)}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
             className='group w-full h-fit lg:min-h-[80px] md:min-h-[80px] min-h-[100px] lg:p-[10px] p-0 md:p-0 flex items-center justify-between gap-10 border-b-[1px] border-zinc-100 relative cursor-pointer'>
             <div className='w-full h-full flex lg:items-center items-start justify-between lg:gap-8 md:gap-4 gap-2  z-0 group-hover:z-30 flex-col lg:flex-row md:flex-row'>
                 <h1 className='w-full lg:text-3xl text-2xl font-semibold capitalize  mix-blend-difference'>{title}</h1>
@@ -41,7 +52,8 @@ const ProjectListType = ({ title, details, collection, url }) => {
                 </button>
             </Link>
 
-            {cardOpen &&
+            {
+                cardOpen &&
                 <div
                     style={{ left: floatingValues.left, rotate: floatingValues.rotate + 'deg' }}
                     className="hovering-card  w-[15vw] aspect-[1/1.5] absolute  pointer-events-none rounded-special overflow-hidden ease-linear duration-100 origin-center -translate-x-full  z-10 hidden md:block lg:block">
@@ -52,10 +64,11 @@ const ProjectListType = ({ title, details, collection, url }) => {
                         alt={`project image of ${title}`}
                         className='w-full h-full object-cover object-center'
                     />
-                </div>}
+                </div>
+            }
 
         </div>
-    )
-}
+    );
+};
 
-export default ProjectListType
+export default ProjectListType;

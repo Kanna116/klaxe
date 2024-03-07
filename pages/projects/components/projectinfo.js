@@ -1,4 +1,9 @@
 const ProjectInfo = ({ details }) => {
+
+    if(!details){
+        return <div className='w-full h-full flex items-center justify-center bg-zinc-700 text-white'>Loading...</div>; 
+    }
+
     return (
 
         <div className='information w-full pt-20 pb-10 h-fit flex items-start justify-start lg:justify-evenly flex-wrap gap-10 lg:gap-0'>
