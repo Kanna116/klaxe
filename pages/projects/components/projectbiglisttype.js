@@ -1,21 +1,24 @@
+import ProjectContext from '@/pages/context/projectcontext'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { FiArrowUpRight } from 'react-icons/fi'
 
-const ProjectBigListType = ({ id, title, desc, codeLink, collection, url }) => {
+const ProjectBigListType = ({ id }) => {
 
-    const [type, setType] = useState(false);
-    
-    useEffect(() => {
-        if (id % 2 === 0) {
-            setType(true)
-        }
-    }, [id]);
+    const { allProjects } = useContext(ProjectContext);
+    const project = allProjects.find(item => id === item.id);
+
+    // Don't access the props when it is undefined
+    if (!project) {
+        return <div className='w-full h-screen flex items-center justify-center bg-zinc-700 text-white'>Loading...</div>; 
+    }
+
+    const { title, desc, codeLink, collection, url } = project
 
 
     return (
-        <div className={`lg:w-2/3 md:w-full w-full lg:h-[50vh] md:h-[40vh] h-fit flex gap-5 mx-auto lg:mt-[50px] md:mt-[100px] mt-[50px] ${type ? "lg:flex-row" : "lg:flex-row-reverse"} ${type ? "md:flex-row" : "md:flex-row-reverse"} flex-col`}>
+        <div className={`lg:w-2/3 md:w-full w-full lg:h-[50vh] md:h-[40vh] h-fit flex gap-5 mx-auto lg:mt-[50px] md:mt-[100px] mt-[50px] lg:flex-row md:flex-row  flex-col`}>
             <div className='lg:h-full md:h-full h-fit lg:w-fit md:w-fit w-full  lg:aspect-square md:aspect-square aspect-video rounded-special overflow-hidden'>
                 <Image
                     src={collection[0]}

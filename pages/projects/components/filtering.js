@@ -1,8 +1,9 @@
-import { useCallback, useEffect, useState } from 'react';
+import ProjectContext from '@/pages/context/projectcontext';
+import { useCallback, useContext, useEffect, useState } from 'react';
 import { VscClose } from "react-icons/vsc";
 
-const Filtering = ({ data, setProjects }) => {
-
+const Filtering = ({ setProjects }) => {
+    const { allProjects } = useContext(ProjectContext);
 
     const [filters, setFilters] = useState({
         skill: 'all',
@@ -15,7 +16,7 @@ const Filtering = ({ data, setProjects }) => {
     const allSkills = new Set();
     const allYears = new Set();
     const allTypes = new Set();
-    data.forEach(item => {
+    allProjects.forEach(item => {
         const skillsDetail = item.details.find(detail => detail.heading === 'Skills Used');
         if (skillsDetail) {
             skillsDetail.information.forEach(skill => allSkills.add(skill));
@@ -39,7 +40,7 @@ const Filtering = ({ data, setProjects }) => {
     }
 
     const applyFilters = useCallback(() => {
-        let filteredData = [...data];
+        let filteredData = [...allProjects];
         if (filters.skill !== 'all') {
             filteredData = filteredData.filter(item => {
                 const skillsDetail = item.details.find(detail => detail.heading === 'Skills Used');
@@ -62,7 +63,7 @@ const Filtering = ({ data, setProjects }) => {
         }
 
         setProjects(filteredData);
-    }, [filters, data, setProjects]);
+    }, [filters, allProjects, setProjects]);
 
 
 

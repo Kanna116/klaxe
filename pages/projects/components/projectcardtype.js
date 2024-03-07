@@ -1,7 +1,19 @@
+import ProjectContext from '@/pages/context/projectcontext';
 import Image from 'next/image'
 import Link from 'next/link'
+import { useContext } from 'react'
 
-const ProjectCardType = ({ id, title, desc, collection, url }) => {
+const ProjectCardType = ({ id }) => {
+
+    const { allProjects } = useContext(ProjectContext);
+    const project = allProjects.find(item => item.id === id);
+    // Don't access the props when it is undefined
+    if (!project) {
+        return <div className='w-full h-screen flex items-center justify-center bg-zinc-700 text-white'>Loading...</div>;
+    }
+
+    const { title, desc, collection, url } = project
+
     return (
         <Link
             className='w-fit h-fit shrink-0'

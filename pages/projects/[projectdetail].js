@@ -1,7 +1,15 @@
 import { useRouter } from 'next/router';
 import { useContext, useEffect, useState } from 'react';
 import ProjectContext from '../context/projectcontext';
-import ProjectDisplay from './projectdisplay';
+import Navbar from '../components/navbar';
+import ProjectHero from './components/projecthero';
+import ProjectInfo from './components/projectinfo';
+import ProblemSolved from './components/problemsolved';
+import DemoVideo from './components/demovideo';
+import ImageCollection from './components/imagecollection';
+import ProjectOpinion from './components/projectopinion';
+import Connect from '../components/connect';
+import Footer from '../components/footer';
 
 const ProjectDetail = () => {
     const [projectsData, setProjectsData] = useState(null);
@@ -30,10 +38,21 @@ const ProjectDetail = () => {
         </div>;
     }
 
+    const { title, details, problemSolved, demoVideo, collection } = project
 
     return (
         <div className='px-[24px] md:px-[64px] lg:px-[96px] min-h-screen w-full mt-[60px]'>
-            <ProjectDisplay {...project} />
+
+            <Navbar />
+            <ProjectHero {...project} />
+            <ProjectInfo details={details} />
+            <ProblemSolved problemSolved={problemSolved} />
+            <DemoVideo demoVideo={demoVideo} />
+            <ImageCollection collection={collection} title={title} />
+            <ProjectOpinion />
+            <Connect />
+            <Footer />
+
         </div>
     )
 }
