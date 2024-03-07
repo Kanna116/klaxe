@@ -15,7 +15,7 @@ const ProjectDetail = () => {
         if (projectdetail && allProjects.length > 0) {
             setProjectsData(allProjects);
         }
-    }, [projectdetail]);
+    }, [projectdetail,allProjects]);
 
 
     if (!projectdetail || projectsData === null) {
