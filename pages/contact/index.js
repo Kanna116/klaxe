@@ -7,8 +7,6 @@ import ContactFiles from './components/contactfiles';
 import ContactHero from './components/contacthero';
 import ContactInput from './components/contactinput';
 import ContactMessage from './components/contactmessage';
-import { socialIcons } from '../constants';
-import { BsClipboard } from "react-icons/bs";
 import OtherSocialOptions from './components/othersocialoptions';
 const Contact = () => {
     const [formData, setFormData] = useState({
