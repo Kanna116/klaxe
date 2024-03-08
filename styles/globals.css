@@ -10,15 +10,18 @@
   --secondary-font: 'Satoshi', sans-serif;
   --display: none;
   --logo-color: black;
+
+
   --primary-background: #ffffff;
   --secondary-background: #000000;
-
+  --base: #000000;
   --primary-text: #000000;
   --secondary-text: #ffffff;
+  --acent-color: #e5383b;
 
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -27,11 +30,13 @@
     --logo-color: white;
     --primary-background: #000000;
     --secondary-background: #ffffff;
+    --base: #ffffff;
     --primary-text: #ffffff;
     --secondary-text: #000000;
+    --acent-color: #892223;
   }
 
-}
+} */
 
 body {
   font-family: var(--primary-font);
