@@ -166,7 +166,7 @@ const Contact = () => {
                     </button>
 
                     {
-                        submitted && <p className='text-primary lg:text-xl text-sm font-light  mt-10 flex gap-5 items-center text-green-500'><span className='border-[1px] font-semibold p-2 rounded-full bg-green-400 text-black bg-light-primary dark:bg-dark-secondary'><IoMdCheckmark /></span> Thank you for sending the details. I will connect with you ASAP</p>
+                        submitted && <p className='text-primary lg:text-xl text-sm font-light  mt-10 flex gap-5 items-center text-green-500'><span className='border-[1px] font-semibold p-2 rounded-full bg-green-400 text-black'><IoMdCheckmark /></span> Thank you for sending the details. I will connect with you ASAP</p>
                     }
 
                 </form>
