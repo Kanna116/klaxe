@@ -27,7 +27,7 @@ const ProjectDetail = () => {
 
 
     if (!projectdetail || projectsData === null) {
-        return <div className='w-screen min-h-screen flex items-center justify-center bg-primary text-primary'>Loading...</div>;
+        return <div className='w-screen min-h-screen flex items-center justify-center bg-light-primary dark:bg-dark-primary text-light-primary dark:text-dark-primary'>Loading...</div>;
     }
 
     const project = projectsData.find(item => item.url === projectdetail)

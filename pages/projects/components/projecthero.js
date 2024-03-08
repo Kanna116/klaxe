@@ -12,10 +12,12 @@ const ProjectHero = ({ title, desc, liveLink, codeLink, heroImage }) => {
                 </div>
                 <div className='w-fit h-full lg:px-10 md:px-5 px-0 flex-wrap flex lg:flex-col md:flex-col flex-row items-start justify-start gap-5'>
                     <a href={liveLink} target='_blank'>
-                        <button className='px-[40px] py-[15px] bg-secondary rounded-special text-secondary font-semibold text-lg flex items-center gap-3'>View <span className='text-2xl'><FiArrowUpRight /></span></button>
+                        <button className='px-[40px] py-[15px] bg-light-secondary dark:bg-dark-secondary rounded-special text-light-secondary dark:text-dark-secondary font-semibold text-lg flex items-center gap-3'>
+                            View <span className='text-2xl'><FiArrowUpRight /></span>
+                        </button>
                     </a>
                     <a href={codeLink} target='_blank'>
-                        <button className='px-[40px] py-[15px]  rounded-special font-semibold text-lg border-[1px] border-secondary'>Code</button>
+                        <button className='px-[40px] py-[15px]  rounded-special font-semibold text-lg border-[1px] border-light-secondary dark:border-dark-secondary'>Code</button>
                     </a>
                 </div>
             </div>

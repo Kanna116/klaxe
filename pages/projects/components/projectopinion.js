@@ -10,9 +10,9 @@ const ProjectOpinion = () => {
                 cols="30"
                 rows="10"
                 placeholder='Please express your insights of the project openly'
-                className='w-full  bg-transparent mt-5 rounded-special p-5 resize-y min-h-[15vh] max-h-[30vh] text-sm border-[1px] border-secondary'
+                className='w-full  bg-transparent mt-5 rounded-special p-5 resize-y min-h-[15vh] max-h-[30vh] text-sm border-[1px] border-light-secondary dark:border-dark-secondary'
             ></textarea>
-            <button className='py-[15px] text-primary rounded-special font-semibold text-xl flex items-center gap-3'>Send <span className='text-2xl'><FiArrowUpRight /></span></button>
+            <button className='py-[15px] text-light-primary dark:text-dark-primary rounded-special font-semibold text-xl flex items-center gap-3'>Send <span className='text-2xl'><FiArrowUpRight /></span></button>
         </div>
 
     )
