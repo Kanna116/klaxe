@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode:'class',
+  darkMode: 'class',
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -11,7 +11,7 @@ module.exports = {
       backgroundColor: {
         "primary": 'var(--primary-background)',
         "secondary": 'var(--secondary-background)',
-        "base":"var(--base)",
+        "base": "var(--base)",
       },
       textColor: {
         "primary": 'var(--primary-text)',
@@ -28,6 +28,11 @@ module.exports = {
       },
       borderRadius: {
         'special': '3px',
+      },
+      borderColor: {
+        "primary": 'var(--primary-background)',
+        "secondary": 'var(--secondary-background)',
+        "base": "var(--base)",
       }
     },
   },

@@ -18,7 +18,7 @@ function Navbar() {
           <Logo />
         </Link>
       </div>
-      <ul className='lg:flex md:flex items-center  bg-zinc-100 w-fit text-black  rounded-sm text-xs hidden border-[0.01px] border-[#ffffff10]'>
+      <ul className='lg:flex md:flex items-center  bg-primary w-fit text-primary  rounded-sm text-xs hidden border-[0.01px] border-secondary'>
         {
           navitems.map((item, index) => <Link key={index} href={item.link}><li className={`cursor-pointer hover:bg-black hover:text-white h-full py-1 px-4 duration-150 ease-in-out ${router.pathname === item.link ? 'bg-black' : 'bg-white'} ${router.pathname === item.link ? 'text-white' : 'text-black'}`}>{item.name}</li></Link>)
         }
@@ -26,12 +26,12 @@ function Navbar() {
 
       {/* menu for mobile  */}
 
-      <div className='w-10 aspect-square bg-white rounded-full flex items-center justify-evenly gap-[1px]  flex-col p-[10px] z-50 lg:hidden md:hidden '
+      <div className='w-10 aspect-square bg-secondary rounded-full flex items-center justify-evenly gap-[1px]  flex-col p-[10px] z-50 lg:hidden md:hidden '
         onClick={() => SetIsMenuOpen(prevValue => !prevValue)}
       >
-        <div className='w-5 shrink-0 h-[2px] bg-black duration-200' style={{ transform: (isMenuOpen) ? `translate(0px,6px) rotate(-45deg)` : `translate(0px,0px) rotate(0deg)` }}></div>
-        <div className='w-5 shrink-0 h-[2px] bg-black duration-300 origin-center ' style={{ transform: (isMenuOpen) ? `scaleX(0)` : `scaleX(1)` }}></div>
-        <div className='w-5 shrink-0 h-[2px] bg-black duration-200' style={{ transform: (isMenuOpen) ? `translate(0px,-6px) rotate(45deg)` : `translate(0px,0px) rotate(0deg)` }}></div>
+        <div className='w-5 shrink-0 h-[2px] bg-primary duration-200' style={{ transform: (isMenuOpen) ? `translate(0px,6px) rotate(-45deg)` : `translate(0px,0px) rotate(0deg)` }}></div>
+        <div className='w-5 shrink-0 h-[2px] bg-primary duration-300 origin-center ' style={{ transform: (isMenuOpen) ? `scaleX(0)` : `scaleX(1)` }}></div>
+        <div className='w-5 shrink-0 h-[2px] bg-primary duration-200' style={{ transform: (isMenuOpen) ? `translate(0px,-6px) rotate(45deg)` : `translate(0px,0px) rotate(0deg)` }}></div>
       </div>
 
       <ul

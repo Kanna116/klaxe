@@ -19,6 +19,10 @@
   --secondary-text: #ffffff;
   --acent-color: #e5383b;
 
+
+
+  --scollbar-background: #00000050;
+
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -34,6 +38,7 @@
     --primary-text: #ffffff;
     --secondary-text: #000000;
     --acent-color: #892223;
+      --scollbar-background:#ffffff10;
   }
 
 } */
@@ -84,13 +89,15 @@ body {
 }
 
 ::-webkit-scrollbar-track:hover {
-  background-color: #ffffff10;
+  background-color: var(--scollbar-background);
+  backdrop-filter: brightness(0.5);
+
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: white;
+  background-color: var(--secondary-background);
   border-radius: 30px;
-  border: 3px solid black;
+  border: 3px solid var(--primary-background);
 }
 
 .animateChippara {
