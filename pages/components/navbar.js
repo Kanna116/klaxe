@@ -13,7 +13,7 @@ function Navbar() {
 
   return (
     <div className='w-full h-[50px] p-[10px] fixed top-[10px] left-0 lg:px-[96px] md:px-[64px] px-[24px] flex items-center justify-between z-[100]'>
-      <div className='h-full w-fit shrink-0'>
+      <div className='h-full w-fit shrink-0 text-red-400'>
         <Link href={`/`}>
           <Logo />
         </Link>
