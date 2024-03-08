@@ -78,7 +78,7 @@ const Filtering = ({ setProjects }) => {
 
 
     return (
-        <div className='w-fit h-full flex lg:items-center items-start justify-start gap-2 flex-col lg:flex-row'>
+        <div className='w-fit h-full flex lg:items-center items-start justify-start gap-2 flex-col lg:flex-row text-primary'>
             Filter By :
             <select
                 id="skillsFilter"
@@ -122,14 +122,14 @@ const Filtering = ({ setProjects }) => {
                 (filters.skill !== 'all' || filters.year !== 'all' || filters.type !== 'all')
                 &&
                 <button
-                    className='rounded-full border-[1px] p-2'
+                    className='rounded-full border-[1px] p-2 border-secondary'
                     onClick={() => setFilters({
                         skill: 'all',
                         year: 'all',
                         type: 'all',
                     })}
                 >
-                    <span className='hidden lg:block'>
+                    <span className='hidden lg:block text-primary'>
                         <VscClose />
                     </span>
                     <span className='block lg:hidden px-5 text-sm'>

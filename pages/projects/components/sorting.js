@@ -28,7 +28,7 @@ const Sorting = ({ setProjects }) => {
             <select
                 name="sorting"
                 id="sorting"
-                className='bg-transparent px-2 ml-5 focus:border-0 outline-0'
+                className='bg-transparent px-2 ml-5 focus:border-0 outline-0 text-primary'
                 onChange={(e) => setSort(e.target.value)}
             >
                 <option className='text-black' value="Date - old to new">Date - old to new</option>
