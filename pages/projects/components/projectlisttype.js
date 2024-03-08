@@ -17,7 +17,7 @@ const ProjectListType = ({ id }) => {
 
     //don't access the props when it is undefined
     if (!project) {
-        return <div className='w-full h-screen flex items-center justify-center bg-zinc-700 text-white'>Loading...</div>;
+        return <div className='w-full h-screen flex items-center justify-center bg-light-primary dark:bg-dark-primary text-light-primary dark:text-dark-primary'>Loading...</div>;
     }
 
     const { title, details, collection, url } = project;
@@ -41,13 +41,13 @@ const ProjectListType = ({ id }) => {
         <div
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
-            className='group w-full h-fit lg:min-h-[80px] md:min-h-[80px] min-h-[100px] lg:p-[10px] p-0 md:p-0 flex items-center justify-between gap-10 border-b-[1px] border-zinc-100 relative cursor-pointer'>
+            className='group w-full h-fit lg:min-h-[80px] md:min-h-[80px] min-h-[100px] lg:p-[10px] p-0 md:p-0 flex items-center justify-between gap-10 border-b-[1px] border-light-secondary dark:border-dark-secondary relative cursor-pointer'>
             <div className='w-full h-full flex lg:items-center items-start justify-between lg:gap-8 md:gap-4 gap-2  z-0 group-hover:z-30 flex-col lg:flex-row md:flex-row'>
-                <h1 className='w-full lg:text-3xl text-2xl font-semibold capitalize  mix-blend-difference'>{title}</h1>
-                <h3 className='shrink-0 lg:text-xl text-sm font-thin lg:hover:font-semibold lg:hover:text-black'>{details[0].information[0]}</h3>
+                <h1 className='w-full lg:text-3xl text-2xl font-semibold capitalize'>{title}</h1>
+                <h3 className='shrink-0 lg:text-xl text-sm font-light lg:hover:font-semibold duration-200'>{details[0].information[0]}</h3>
             </div>
-            <Link href={`/projects/${url}`} className='z-0 group-hover:z-30 bg-black px-5 py-2'>
-                <button className='mix-blend-difference rounded-special font-semibold text-lg flex items-center gap-3 '>
+            <Link href={`/projects/${url}`} className='z-0 group-hover:z-30 bg-light-primary dark:bg-dark-primary px-5 py-2 rounded-special'>
+                <button className='rounded-special font-semibold tracking-wider text-lg flex items-center gap-3 text-light-primary dark:text-dark-primary'>
                     View <span className='text-2xl'><FiArrowUpRight /></span>
                 </button>
             </Link>
@@ -56,7 +56,7 @@ const ProjectListType = ({ id }) => {
                 cardOpen &&
                 <div
                     style={{ left: floatingValues.left, rotate: floatingValues.rotate + 'deg' }}
-                    className="hovering-card  w-[15vw] aspect-[1/1.5] absolute  pointer-events-none rounded-special overflow-hidden ease-linear duration-100 origin-center -translate-x-full  z-10 hidden md:block lg:block">
+                    className="hovering-card  w-[15vw] aspect-[1/1.5] absolute  pointer-events-none rounded-special overflow-hidden ease-linear duration-100 origin-center -translate-x-full  z-10 hidden md:block lg:block shadow-xl">
                     <Image
                         src={collection[0]}
                         width={1000}

@@ -9,7 +9,7 @@ const ProjectCardType = ({ id }) => {
     const project = allProjects.find(item => item.id === id);
     // Don't access the props when it is undefined
     if (!project) {
-        return <div className='w-full h-screen flex items-center justify-center bg-zinc-700 text-white'>Loading...</div>;
+        return <div className='w-full h-screen flex items-center justify-center bg-primary text-primary'>Loading...</div>;
     }
 
     const { title, desc, collection, url } = project
@@ -19,7 +19,7 @@ const ProjectCardType = ({ id }) => {
             className='w-fit h-fit shrink-0'
             href={`/projects/${url}`}>
             <div className='lg:w-[25vw] md:w-[40vw] w-full h-fit flex flex-col gap-2 lg:p-5 p-0 md:p-2 shrink-0'>
-                <div className='w-full aspect-square rounded-special overflow-hidden'>
+                <div className='w-full aspect-square rounded-special overflow-hidden shadow-xl'>
                     <Image
                         src={collection[0]}
                         width={1000}
@@ -29,8 +29,8 @@ const ProjectCardType = ({ id }) => {
                         className='w-full h-full object-cover object-center'
                     />
                 </div>
-                <h1 className='text-2xl '>{title}</h1>
-                <p className='line-clamp-2 text-xs font-thin'>{desc}</p>
+                <h1 className='text-2xl'>{title}</h1>
+                <p className='line-clamp-2 text-xs font-light'>{desc}</p>
             </div>
         </Link>
 

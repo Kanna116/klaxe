@@ -31,16 +31,16 @@ const HeroSection = () => {
             onMouseMove={handleMouseMove}
             className='w-full h-screen relative'>
             <div className="front w-full h-full pt-[60px] flex flex-col items-center justify-center lg:gap-6 gap-2">
-                <h4 className='font-thin text-[#ffffff] text-xs lg:text-3xl'>{heroText[0]}</h4>
-                <h1 className='lg:text-6xl md:text-4xl text-white text-xl font-medium capitalize'>{heroText[1]}</h1>
-                <h1 className='lg:text-5xl md:text-3xl text-white text-xl font-medium capitalize'>{heroText[2]}</h1>
-                <h4 className='font-thin text-[#ffffff] text-xs lg:text-xl'>{heroText[3]}</h4>
+                <h4 className='font-light text-light-primary dark:text-dark-primary text-xs lg:text-3xl'>{heroText[0]}</h4>
+                <h1 className='lg:text-6xl md:text-4xl text-light-primary dark:text-dark-primary text-xl font-medium capitalize'>{heroText[1]}</h1>
+                <h1 className='lg:text-5xl md:text-3xl text-light-primary dark:text-dark-primary text-xl font-medium capitalize'>{heroText[2]}</h1>
+                <h4 className='font-light text-light-primary dark:text-dark-primary text-xs lg:text-xl'>{heroText[3]}</h4>
                 <Link href={`/contact`} className="w-fit h-fit">
-                    <button className='lg:px-[30px] px-[20px] lg:py-[10px] py-[10px] rounded-[3px] bg-white text-black font-semibold text-xs lg:text-xl mt-5'>Connect</button>
+                    <button className='lg:px-[30px] px-[20px] lg:py-[10px] py-[10px] rounded-[3px] bg-light-secondary dark:bg-dark-secondary text-light-secondary dark:text-dark-secondary font-semibold text-xs lg:text-xl mt-5'>Connect</button>
                 </Link>
 
                 {/* scroll down suggestion */}
-                <div className="scroll-down absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col gap-3">
+                <div className="scroll-down absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col gap-3 text-light-primary dark:text-dark-primary">
                     <span className="text-2xl rotate-180"><BsMouseFill /></span>
                     <span className="text-2xl arrow scrolldownarrow"><HiArrowDown /></span>
                 </div>

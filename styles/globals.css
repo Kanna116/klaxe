@@ -2,44 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 255, 255, 255;
   --primary-font: 'Poppins', sans-serif;
   --secondary-font: 'Satoshi', sans-serif;
-  --display: none;
-  --logo-color: black;
-  --primary-background: #ffffff;
-  --secondary-background: #000000;
-
-  --primary-text: #000000;
-  --secondary-text: #ffffff;
-
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-    --display: visible;
-    --logo-color: white;
-    --primary-background: #000000;
-    --secondary-background: #ffffff;
-    --primary-text: #ffffff;
-    --secondary-text: #000000;
-  }
-
-}
 
 body {
   font-family: var(--primary-font);
-  color: rgb(var(--foreground-rgb));
   overflow-x: hidden;
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+
 }
 
 @layer utilities {
@@ -48,12 +21,12 @@ body {
   }
 }
 
-
+/* 
 .navbar-logo,
 .star {
   fill: var(--logo-color);
 
-}
+} */
 
 .scrolldownarrow {
   animation: scrolldownarrow 750ms ease-in-out 0s infinite alternate;
@@ -79,13 +52,15 @@ body {
 }
 
 ::-webkit-scrollbar-track:hover {
-  background-color: #ffffff10;
+  background-color: var(--scollbar-background);
+  backdrop-filter: brightness(0.5);
+
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: white;
+  background-color: #000000;
   border-radius: 30px;
-  border: 3px solid black;
+  border: 2px solid #ffffff;
 }
 
 .animateChippara {

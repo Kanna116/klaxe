@@ -15,7 +15,7 @@ const MyPics = () => {
                                 height={500}
                                 alt={`Murali Krishna photo ${item.id}`}
                                 draggable={false}
-                                className='w-full h-full object-contain object-center'
+                                className='w-full h-full object-contain object-center drop-shadow-2xl'
                             />
                         </div>
                     )

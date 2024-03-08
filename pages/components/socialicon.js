@@ -31,7 +31,7 @@ const SocialIcon = ({ icon, link }) => {
                 target='_blank'
                 className='w-fit h-fit duration-75 ease-linear'>
                 <span
-                    className="text-xl text-white">
+                    className="text-xl text-light-primary dark:text-dark-primary">
                     {icon}
                 </span>
             </a>
