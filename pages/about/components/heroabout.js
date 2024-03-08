@@ -5,14 +5,14 @@ import { FiArrowUpRight } from 'react-icons/fi'
 const HeroAbout = () => {
     return (
         <div className='w-full h-fit py-16 mt-[60px] flex flex-col lg:flex-row md:flex-row lg:items-center items-center lg:justify-between md:justify-between justify-start gap-5 lg:gap-20 md:gap-20'>
-            <div className='lg:w-[30vw] md:w-[30vw] w-[50vw] aspect-square rounded-full overflow-hidden shrink-0'>
+            <div className='lg:w-[30vw] md:w-[30vw] w-full lg:aspect-square md:aspect-square aspect-video lg:rounded-full md:rounded-full rounded-special overflow-hidden shrink-0'>
                 <Image
                     src={"/images/about/hero-about-image.webp"}
                     width={1000}
                     height={1000}
                     priority
                     alt='image of Murali Krishna Sake'
-                    className='w-full h-full object-center object-cover'
+                    className='w-full h-full lg:object-center md:object-center object-[center_40%] object-cover'
                 />
             </div>
 
@@ -22,7 +22,7 @@ const HeroAbout = () => {
                     heroAbout.desc.map((item, index) => <p key={index} className='w-full lg:text-2xl md:text-xl text-base font-normal'>{item}</p>)
                 }
                 <a href={heroAbout.link}>
-                    <button className='lg:px-[30px] px-[20px] lg:py-[10px] py-[10px] rounded-[3px] bg-white text-black font-semibold text-xs lg:text-xl mt-5 flex gap-2 items-center'>
+                    <button className='lg:px-[30px] px-[20px] lg:py-[10px] py-[10px] rounded-[3px] bg-secondary text-secondary font-semibold text-xs lg:text-xl mt-5 flex gap-2 items-center'>
                         Support <span className='text-2xl'><FiArrowUpRight /></span>
                     </button>
                 </a>
