@@ -5,21 +5,21 @@ import { FiArrowUpRight } from 'react-icons/fi'
 const ProjectHero = ({ title, desc, liveLink, codeLink, heroImage }) => {
     return (
         <>
-            <div className='w-full h-fit flex py-20 lg:flex-row md:flex-row flex-col gap-5'>
-                <div className='w-full flex gap-5 flex-col md:flex-col lg:flex-row px-5'>
+            <div className='w-full h-fit flex lg;py-20 md:py-20 py-10 lg:flex-row md:flex-row flex-col gap-5'>
+                <div className='w-full flex gap-5 flex-col md:flex-col lg:flex-row lg:px-5 md:px-5 px-0'>
                     <h1 className='text-5xl font-semibold lg:w-1/2 w-full'>{title}</h1>
-                    <p className='text-sm lg:w-1/2 w-full font-extralight'>{desc}</p>
+                    <p className='text-sm lg:w-1/2 w-full font-light'>{desc}</p>
                 </div>
-                <div className='w-fit h-full lg:px-10 px-5 flex-wrap flex lg:flex-col md:flex-col flex-row items-start justify-start gap-5'>
+                <div className='w-fit h-full lg:px-10 md:px-5 px-0 flex-wrap flex lg:flex-col md:flex-col flex-row items-start justify-start gap-5'>
                     <a href={liveLink} target='_blank'>
-                        <button className='px-[40px] py-[15px] bg-white mix-blend-difference rounded-special text-black font-semibold text-lg flex items-center gap-3'>View <span className='text-2xl'><FiArrowUpRight /></span></button>
+                        <button className='px-[40px] py-[15px] bg-secondary rounded-special text-secondary font-semibold text-lg flex items-center gap-3'>View <span className='text-2xl'><FiArrowUpRight /></span></button>
                     </a>
                     <a href={codeLink} target='_blank'>
-                        <button className='px-[40px] py-[15px]  mix-blend-difference rounded-special  font-semibold text-lg border-2'>Code</button>
+                        <button className='px-[40px] py-[15px]  rounded-special font-semibold text-lg border-[1px] border-secondary'>Code</button>
                     </a>
                 </div>
             </div>
-            <div className='hero-image w-[80vw] aspect-video rounded-special mx-auto'>
+            <div className='hero-image lg:w-[80vw] md:w-[80vw] w-[100vw] aspect-video rounded-special lg:mx-auto md:mx-auto -mx-[24px]'>
                 <Image
                     src={heroImage}
                     width={3000}

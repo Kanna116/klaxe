@@ -27,13 +27,13 @@ const ProjectDetail = () => {
 
 
     if (!projectdetail || projectsData === null) {
-        return <div className='w-screen min-h-screen flex items-center justify-center'>Loading...</div>;
+        return <div className='w-screen min-h-screen flex items-center justify-center bg-primary text-primary'>Loading...</div>;
     }
 
     const project = projectsData.find(item => item.url === projectdetail)
 
     if (!project) {
-        return <div className='w-screen min-h-screen flex items-center justify-center'>
+        return <div className='w-screen min-h-screen flex items-center justify-center bg-primary text-primary'>
             Sorry The page You are looking for is not made yet  <br /> {`:'(`}
         </div>;
     }
