@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 
-
+:root {
+  --primary-font: 'Poppins', sans-serif;
+  --secondary-font: 'Satoshi', sans-serif;
+}
 
 
 body {
   font-family: var(--primary-font);
-  color: rgb(var(--foreground-rgb));
   overflow-x: hidden;
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+
 }
 
 @layer utilities {
@@ -60,7 +60,7 @@ body {
 ::-webkit-scrollbar-thumb {
   background-color: #000000;
   border-radius: 30px;
-  border:2px solid #ffffff;
+  border: 2px solid #ffffff;
 }
 
 .animateChippara {

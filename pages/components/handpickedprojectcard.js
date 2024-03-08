@@ -6,7 +6,7 @@ const HandPickedProjectCard = ({ title, url, heroImage, }) => {
     return (
         <Link href={`/projects/${url}`}>
             <div
-                className='group h-[40vh] aspect-square shrink-0 relative overflow-hidden'
+                className='group h-[40vh] aspect-square shrink-0 relative overflow-hidden shadow-2xl'
             >
                 <Image
                     src={heroImage}

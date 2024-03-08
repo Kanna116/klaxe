@@ -20,8 +20,10 @@ const ThemeChanger = () => {
     };
 
     return (
-        <div className='ml-auto h-full aspect-square rounded-full bg-secondary text-secondary mr-5 flex items-center justify-center'>
-            <button onClick={toggleTheme}>
+        <div className='ml-auto h-full aspect-square rounded-full bg-light-secondary dark:bg-dark-secondary text-light-secondary dark:text-dark-secondary mr-5 '>
+            <button
+            className='w-full h-full flex items-center justify-center'
+            onClick={toggleTheme}>
                 {theme === 'dark' ? <CiLight /> : <MdDarkMode />}
             </button>
         </div>

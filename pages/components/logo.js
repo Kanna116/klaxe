@@ -4,7 +4,7 @@ const Logo = () => {
     return (
         <>
             <svg
-                className='w-full h-full navbar-logo'
+                className='w-full h-full navbar-logo fill-light-primary dark:fill-dark-primary'
                 width="371"
                 height="90"
                 viewBox="0 0 371 90"
