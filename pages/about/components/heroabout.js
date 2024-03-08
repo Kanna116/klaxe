@@ -22,7 +22,7 @@ const HeroAbout = () => {
                     heroAbout.desc.map((item, index) => <p key={index} className='w-full lg:text-2xl md:text-xl text-base font-normal'>{item}</p>)
                 }
                 <a href={heroAbout.link}>
-                    <button className='lg:px-[30px] px-[20px] lg:py-[10px] py-[10px] rounded-[3px] bg-secondary text-secondary font-semibold text-xs lg:text-xl mt-5 flex gap-2 items-center'>
+                    <button className='lg:px-[30px] px-[20px] lg:py-[10px] py-[10px] rounded-[3px] bg-light-secondary dark:bg-dark-secondary text-light-secondary dark:text-dark-secondary font-semibold text-xs lg:text-xl mt-5 flex gap-2 items-center'>
                         Support <span className='text-2xl'><FiArrowUpRight /></span>
                     </button>
                 </a>

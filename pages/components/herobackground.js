@@ -15,7 +15,7 @@ const HeroBackground = ({ interactiveValues }) => {
                     }}
                 ></div>
 
-                <div className="interactive-mover md:hidden lg:hidden block absolute top-1/2 left-1/2 w-full aspect-[3/1] origin-center rounded-[50%] duration-700 ease-linear bg-light-heroBackground dark:bg-dark-heroBackground border-[1px] border-light-secondary dark:border-dark-secondary border-[1px] -translate-x-1/2 -translate-y-1/2 rotate-[20deg]"></div>
+                <div className="interactive-mover md:hidden lg:hidden block absolute top-1/2 left-1/2 w-full aspect-[3/1] origin-center rounded-[50%] duration-700 ease-linear bg-light-heroBackground dark:bg-dark-heroBackground border-light-secondary dark:border-dark-secondary border-[1px] -translate-x-1/2 -translate-y-1/2 rotate-[20deg]"></div>
             </div>
 
         </div>
