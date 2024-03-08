@@ -4,21 +4,21 @@ import Link from 'next/link'
 import { useContext, useEffect, useState } from 'react'
 import { FiArrowUpRight } from 'react-icons/fi'
 
-const ProjectBigListType = ({ id }) => {
+const ProjectBigListType = ({ id, index }) => {
 
     const { allProjects } = useContext(ProjectContext);
     const project = allProjects.find(item => id === item.id);
 
     // Don't access the props when it is undefined
     if (!project) {
-        return <div className='w-full h-screen flex items-center justify-center bg-zinc-700 text-white'>Loading...</div>;
+        return <div className='w-full h-screen flex items-center justify-center bg-light-primary dark:bg-dark-primary text-light-white dark:text-dark-primary'>Loading...</div>;
     }
 
     const { title, desc, codeLink, collection, url } = project
 
 
     return (
-        <div className={`lg:w-2/3 md:w-full w-full lg:h-[50vh] md:h-[40vh] h-fit flex justify-between gap-5 mx-auto lg:mt-[50px] md:mt-[100px] mt-[50px]   flex-col  ${id % 2 === 0 ? `lg:flex-row md:flex-row` : `lg:flex-row-reverse md:flex-row-reverse`}`}>
+        <div className={`lg:w-2/3 md:w-full w-full lg:h-[50vh] md:h-[40vh] h-fit flex justify-between gap-5 mx-auto lg:mt-[50px] md:mt-[100px] mt-[50px] flex-col  ${index % 2 === 1 ? `lg:flex-row md:flex-row` : `lg:flex-row-reverse md:flex-row-reverse`}`}>
             <div className='lg:h-full md:h-full h-fit lg:w-fit md:w-fit w-full  lg:aspect-square md:aspect-square aspect-video rounded-special overflow-hidden shadow-2xl'>
                 <Image
                     src={collection[0]}
@@ -34,12 +34,12 @@ const ProjectBigListType = ({ id }) => {
                 <p className='line-clamp-4 lg:text-base text-xs lg:font-normal font-thin'>{desc}</p>
                 <div className='flex items-center justify-start gap-[25px]'>
                     <Link href={`/projects/${url}`}>
-                        <button className='px-[40px] py-[15px] bg-secondary rounded-special text-secondary font-light text-lg flex items-center gap-3'>
+                        <button className='px-[40px] py-[15px] bg-light-secondary dark:bg-dark-secondary rounded-special text-light-secondary dark:text-dark-secondary font-light text-lg flex items-center gap-3'>
                             Open <span className='text-2xl'><FiArrowUpRight /></span>
                         </button>
                     </Link>
                     <a href={codeLink} target='_blank'>
-                        <button className='px-[40px] py-[15px]  rounded-special  font-semibold text-lg border-2 border-secondary'>Code</button>
+                        <button className='px-[40px] py-[15px]  rounded-special  font-semibold text-lg border-[1px] border-light-secondary dark:border-dark-secondary'>Code</button>
                     </a>
 
                 </div>

@@ -34,9 +34,9 @@ const Projects = () => {
 
 
             <div className='list-style-controller flex items-center gap-2 w-fit h-fit mx-auto'>
-                <span title='list style' onClick={() => setListStyle('list')} className={`h-full aspect-square rounded-full p-2 border-[1px] border-secondary ${listStyle === 'list' ? 'bg-secondary' : 'bg-primary'} ${listStyle === 'list' ? 'text-secondary' : 'text-primary'}`}><BsList /></span>
-                <span title='card style' onClick={() => setListStyle('grid')} className={`h-full aspect-square rounded-full p-2 border-[1px] border-secondary ${listStyle === 'grid' ? 'bg-secondary' : 'bg-primary'} ${listStyle === 'grid' ? 'text-secondary' : 'text-primary'}`}><IoGrid /></span>
-                <span title='bigList style' onClick={() => setListStyle('bigList')} className={`h-full aspect-square rounded-full p-2 border-[1px] border-secondary ${listStyle === 'bigList' ? 'bg-secondary' : 'bg-primary'} ${listStyle === 'bigList' ? 'text-secondary' : 'text-primary'}`}><PiRowsFill /></span>
+                <span title='list style' onClick={() => setListStyle('list')} className={`h-full aspect-square rounded-full p-2 border-[1px] border-light-secondary dark:border-dark-secondary ${listStyle === 'list' ? 'bg-light-secondary dark:bg-dark-secondary' : 'bg-light-primary dark:bg-dark-primary'} ${listStyle === 'list' ? 'text-light-secondary dark:text-dark-secondary' : 'text-light-primary dark:text-dark-primary'}`}><BsList /></span>
+                <span title='card style' onClick={() => setListStyle('grid')} className={`h-full aspect-square rounded-full p-2 border-[1px] border-light-secondary dark:border-dark-secondary ${listStyle === 'grid' ? 'bg-light-secondary dark:bg-dark-secondary' : 'bg-light-primary dark:bg-dark-primary'} ${listStyle === 'grid' ? 'text-light-secondary dark:text-dark-secondary' : 'text-light-primary dark:text-dark-primary'}`}><IoGrid /></span>
+                <span title='bigList style' onClick={() => setListStyle('bigList')} className={`h-full aspect-square rounded-full p-2 border-[1px] border-light-secondary dark:border-dark-secondary ${listStyle === 'bigList' ? 'bg-light-secondary dark:bg-dark-secondary' : 'bg-light-primary dark:bg-dark-primary'} ${listStyle === 'bigList' ? 'text-light-secondary dark:text-dark-secondary' : 'text-light-primary dark:text-dark-primary'}`}><PiRowsFill /></span>
             </div>
 
             <div className='w-full h-fit min-h-[50px] flex lg:items-center items-start justify-between mt-5 mb-10 lg:px-[10px] px-0 flex-col lg:flex-row md:flex-row lg:gap-0 gap-5'>
@@ -61,7 +61,7 @@ const Projects = () => {
             {
                 listStyle === 'bigList' && (
                     <div className='flex flex-col'>
-                        {projects.map((project) => <ProjectBigListType key={project.id} id={project.id} />)}
+                        {projects.map((project,index) => <ProjectBigListType key={project.id} id={project.id} index={index}/>)}
                     </div>
                 )
             }
@@ -71,7 +71,7 @@ const Projects = () => {
 
             }
 
-            < Connect />
+            <Connect />
             <Footer />
         </div>
     )
