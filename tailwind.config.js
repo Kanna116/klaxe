@@ -8,15 +8,38 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fill: {
+        light: {
+          'primary': '#000000',
+        },
+        dark: {
+          'primary': "#ffffff",
+        },
+      },
       backgroundColor: {
-        "primary": 'var(--primary-background)',
-        "secondary": 'var(--secondary-background)',
-        "base": "var(--base)",
-        "heroBackground":"var(--hero-background-circle-bg)",
+        light: {
+          "primary": '#ffffff',
+          "secondary": '#000000',
+          "base": "#000000",
+          "heroBackground": "#00000030"
+        },
+        dark: {
+          "primary": '#000000',
+          "secondary": '#ffffff',
+          "base": "#ffffff",
+          "heroBackground": "#ffffff10"
+        },
       },
       textColor: {
-        "primary": 'var(--primary-text)',
-        "secondary": 'var(--secondary-text)'
+        light: {
+          "primary": '#000000',
+          "secondary": '#ffffff'
+        },
+        dark: {
+          "primary": '#ffffff',
+          "secondary": '#000000'
+        }
+
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -31,10 +54,18 @@ module.exports = {
         'special': '3px',
       },
       borderColor: {
-        "primary": 'var(--primary-background)',
-        "secondary": 'var(--secondary-background)',
-        "base": "var(--base)",
-      }
+        light: {
+          "primary": '#ffffff',
+          "secondary": '#000000',
+          "base": "#000000",
+        },
+        dark: {
+          "primary": '#000000',
+          "secondary": '#ffffff',
+          "base": "#ffffff",
+        },
+
+      },
     },
   },
   plugins: [],

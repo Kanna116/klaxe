@@ -3,6 +3,7 @@ import Logo from './logo';
 import { navitems } from '../constants';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import ThemeChanger from './themechanger';
 
 function Navbar() {
 
@@ -18,6 +19,7 @@ function Navbar() {
           <Logo />
         </Link>
       </div>
+      <ThemeChanger />
       <ul className='lg:flex md:flex items-center  bg-primary w-fit text-primary  rounded-sm text-xs hidden border-[0.01px] border-secondary'>
         {
           navitems.map((item, index) => <Link key={index} href={item.link}><li className={`cursor-pointer hover:bg-black hover:text-white h-full py-1 px-4 duration-150 ease-in-out ${router.pathname === item.link ? 'bg-black' : 'bg-white'} ${router.pathname === item.link ? 'text-white' : 'text-black'}`}>{item.name}</li></Link>)

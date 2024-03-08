@@ -8,7 +8,7 @@ function SimpleAbout() {
     const { text, link } = simpleAbout
 
     return (
-        <div className='w-full flex items-center justify-center flex-col gap-5 py-20'>
+        <div className='w-full flex items-center justify-center flex-col gap-5 py-20 bg-light-primary dark:bg-dark-primary'>
             <p className='lg:text-3xl text-xl lg:font-medium font-normal lg:w-4/5 w-full'>{text}</p>
             <Link href={link}
                 className='w-fit h-fit'>

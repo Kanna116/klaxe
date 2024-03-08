@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
     {/* theme provider */}
-      <ThemeProvider>
+      <ThemeProvider attribute="class">
         {/* project data provider */}
         <ProjectState>
           <Component {...pageProps} />
