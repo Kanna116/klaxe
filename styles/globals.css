@@ -18,6 +18,7 @@
   --primary-text: #000000;
   --secondary-text: #ffffff;
   --acent-color: #e5383b;
+  --hero-background-circle-bg: #00000030;
 
 
 
@@ -38,7 +39,8 @@
     --primary-text: #ffffff;
     --secondary-text: #000000;
     --acent-color: #892223;
-      --scollbar-background:#ffffff10;
+    --scollbar-background: #ffffff10;
+    --hero-background-circle-bg: #ffffff10;
   }
 
 } */

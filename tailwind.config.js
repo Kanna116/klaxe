@@ -12,6 +12,7 @@ module.exports = {
         "primary": 'var(--primary-background)',
         "secondary": 'var(--secondary-background)',
         "base": "var(--base)",
+        "heroBackground":"var(--hero-background-circle-bg)",
       },
       textColor: {
         "primary": 'var(--primary-text)',
