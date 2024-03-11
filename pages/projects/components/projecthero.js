@@ -21,7 +21,7 @@ const ProjectHero = ({ title, desc, liveLink, codeLink, heroImage }) => {
                     </a>
                 </div>
             </div>
-            <div className='hero-image lg:w-[80vw] md:w-[80vw] w-[100vw] aspect-video rounded-special lg:mx-auto md:mx-auto -mx-[24px]'>
+            <div className='hero-image lg:w-[80vw] md:w-[80vw] w-[100vw] aspect-video rounded-special lg:mx-auto md:mx-auto -mx-[24px] shadow-2xl'>
                 <Image
                     src={heroImage}
                     width={3000}
