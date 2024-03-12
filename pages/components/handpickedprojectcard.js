@@ -17,7 +17,7 @@ const HandPickedProjectCard = ({ title, url, heroImage, }) => {
                     priority
                     className='w-full h-full object-cover object-center'
                 />
-                <div className='absolute inset-0  lg:group-hover:bg-[#000000aa] bg-gradient-to-t lg:from-transparent from-black duration-200 ease-in-out'></div>
+                <div className='absolute inset-0  lg:group-hover:bg-[#00000090] bg-gradient-to-t lg:from-transparent from-[#000000aa] to-transparent duration-200 ease-in-out'></div>
                 <h1 className='absolute bottom-5 left-5 text-xl font-semibold lg:translate-y-14 translate-y-0 group-hover:translate-y-0 duration-200 ease-in-out text-white'>{title}</h1>
             </div>
         </Link>
