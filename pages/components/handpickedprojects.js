@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import ProjectContext from '../context/projectcontext';
 import HandPickedProjectCard from './handpickedprojectcard';
+import Link from 'next/link';
 
 const HandPickedProjects = () => {
 
@@ -16,6 +17,10 @@ const HandPickedProjects = () => {
                     handPickedProjects.map((item, index) => <HandPickedProjectCard key={index} {...item} />)
                 }
             </div>
+            <Link href={'/projects'} className='w-full h-fit flex items-center justify-center'>
+                <button className=' cursor-pointer  text-light-secondary dark:text-dark-secondary bg-light-secondary dark:bg-dark-secondary px-[30px] py-[10px] rounded-[3px] text-base font-semibold'>All Projects</button>
+            </Link>
+
         </div>
     )
 }

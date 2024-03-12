@@ -2,7 +2,7 @@
     {
         "id": 0,
         "title": "Velvet Vista",
-        "desc": "It is an Ecommerce site for the most fine international qualitied jewellary  starting from silver to diamonds. This is a multi-page site made based on next js framework and react js as library. This has been enhanced in many ways to represent the quality and prestige a consumer get through the jewellary. Made with keen eye towards style and brand empowering in the all the ways possible. Constantly striving for the enhancement of royalty",
+        "desc": "It is an Ecommerce site for the most fine international jewellary  starting from silver to diamonds. This is a multi-page site made based on next js framework and react js as library. This has been enhanced in many ways to represent the quality and prestige a consumer get through the jewellary. Made with keen eye towards style and brand empowering in the all the ways possible. Constantly striving for the enhancement of royalty",
         "liveLink": "https://velvet-vista-klax.vercel.app/",
         "codeLink": "https://github.com/Kanna116/velvet-vista",
         "heroImage": "/images/projects/velvet-vista/hero-image.png",
@@ -83,7 +83,7 @@
     {
         "id": 2,
         "title": "Mira",
-        "desc": "Mira is one of the clothing brand which sells cloths through online only ",
+        "desc": "Mira is one of the clothing brand which sells cloths through online only. The motive behind mira is to make each product that elevates the style of user. It is made with simple animation to keep the fun as it is. ",
         "liveLink": "https://kanna116.github.io/MIRA-Clothing-online/",
         "codeLink": "https://github.com/Kanna116/MIRA-Clothing-online",
         "heroImage": "/images/projects/mira/hero-image.png",
