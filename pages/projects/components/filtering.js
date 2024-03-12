@@ -81,6 +81,18 @@ const Filtering = ({ setProjects }) => {
         <div className='w-fit h-full flex lg:items-center items-start justify-start gap-2 flex-col lg:flex-row text-light-primary dark:text-dark-primary'>
             Filter By :
             <select
+                name="yearFilter"
+                id="yearFilter"
+                className='bg-transparent lg:px-2 px-0 focus:border-0 outline-0 h-fit pr-5'
+                onChange={e => handleFilter('year', e.target.value)}
+                value={filters.year}
+            >
+                <option className='text-black' value='all'>Year</option>
+                {
+                    [...allYears].sort().map((year, index) => <option key={index} className='text-black' value={year}>{year}</option>)
+                }
+            </select>
+            <select
                 id="skillsFilter"
                 className='bg-transparent lg:px-2 px-0 focus:border-0 outline-0 h-fit'
                 onChange={e => {
@@ -104,25 +116,14 @@ const Filtering = ({ setProjects }) => {
                     [...allTypes].sort().map((type, index) => <option key={index} className='text-black' value={type}>{type}</option>)
                 }
             </select>
-            <select
-                name="yearFilter"
-                id="yearFilter"
-                className='bg-transparent lg:px-2 px-0 focus:border-0 outline-0 h-fit'
-                onChange={e => handleFilter('year', e.target.value)}
-                value={filters.year}
-            >
-                <option className='text-black' value='all'>Year</option>
-                {
-                    [...allYears].sort().map((year, index) => <option key={index} className='text-black' value={year}>{year}</option>)
-                }
-            </select>
+
 
             {/* filter removing button */}
             {
                 (filters.skill !== 'all' || filters.year !== 'all' || filters.type !== 'all')
                 &&
                 <button
-                    className='rounded-full border-[1px] p-2 border-light-secondary dark:border-dark-secondary'
+                    className='rounded-full border-[1px] p-2 border-light-secondary dark:border-dark-secondary mt-3 lg:mt-0 md:mt-0'
                     onClick={() => setFilters({
                         skill: 'all',
                         year: 'all',
